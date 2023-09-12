@@ -1,51 +1,62 @@
+use wasm_bindgen::prelude::*;
 use rand::Rng;
 
 // TODO: should split names first and last into categories
 // for more realistic name generation
 
+#[wasm_bindgen]
 pub fn male_prefix_standard() -> String {
     "Mr.".to_string()
 }
 
+#[wasm_bindgen]
 pub fn female_prefix_standard() -> String {
     "Ms.".to_string()
 }
 
+#[wasm_bindgen]
 pub fn male_prefix() -> String {
     let mut rng = rand::thread_rng();
     MALE_PREFIX[rng.gen_range(0..MALE_PREFIX_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn female_prefix() -> String {
     let mut rng = rand::thread_rng();
     FEMALE_PREFIX[rng.gen_range(0..FEMALE_PREFIX_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn neutral_prefix() -> String {
     let mut rng = rand::thread_rng();
     NEUTRAL_PREFIX[rng.gen_range(0..NEUTRAL_PREFIX_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn suffix() -> String {
     let mut rng = rand::thread_rng();
     SUFFIX[rng.gen_range(0..SUFFIX_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn male_first_name() -> String {
     let mut rng = rand::thread_rng();
     MALE_FIRST_NAME[rng.gen_range(0..MALE_FIRST_NAME_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn female_first_name() -> String {
     let mut rng = rand::thread_rng();
     FEMALE_FIRST_NAME[rng.gen_range(0..FEMALE_FIRST_NAME_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn neutral_first_name() -> String {
     let mut rng = rand::thread_rng();
     NEUTRAL_FIRST_NAME[rng.gen_range(0..NEUTRAL_FIRST_NAME_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn last_name() -> String {
     let mut rng = rand::thread_rng();
     LAST_NAME[rng.gen_range(0..LAST_NAME_LEN)].to_string()
