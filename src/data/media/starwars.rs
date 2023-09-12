@@ -110,17 +110,29 @@ static STARWARS_CHARACTERS: [&'static str; 60] = [
     "Rose Tico",
     "Vice Admiral Holdo",
 ];
-
 static STARWARS_CHARACTERS_LEN: usize = STARWARS_CHARACTERS.len();
 
 static CALL_SQUADRONS: [&'static str; 9] = [
-    "Rogue", "Red", "Gray", "Green", "Blue", "Gold", "Black", "Yellow", "Phoenix",
+    "Rogue",
+    "Red",
+    "Gray",
+    "Green",
+    "Blue",
+    "Gold",
+    "Black",
+    "Yellow",
+    "Phoenix",
 ];
-
 static CALL_SQUADRONS_LEN: usize = CALL_SQUADRONS.len();
 
-static CALL_NUMBERS: [&'static str; 6] = ["Leader", "1", "2", "3", "4", "5"];
-
+static CALL_NUMBERS: [&'static str; 6] = [
+    "Leader",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+];
 static CALL_NUMBERS_LEN: usize = CALL_NUMBERS.len();
 
 static DROIDS: [&'static str; 31] = [
@@ -156,7 +168,6 @@ static DROIDS: [&'static str; 31] = [
     "BB-9E",
     "K-2SO",
 ];
-
 static DROIDS_LEN: usize = DROIDS.len();
 
 static PLANETS: [&'static str; 35] = [
@@ -196,7 +207,6 @@ static PLANETS: [&'static str; 35] = [
     "Utapau",
     "Yavin 4",
 ];
-
 static PLANETS_LEN: usize = PLANETS.len();
 
 static SPECIES: [&'static str; 15] = [
@@ -216,7 +226,6 @@ static SPECIES: [&'static str; 15] = [
     "Twi'lek",
     "Porg",
 ];
-
 static SPECIES_LEN: usize = SPECIES.len();
 
 static VEHICLES: [&'static str; 36] = [
@@ -257,5 +266,4 @@ static VEHICLES: [&'static str; 36] = [
     "Resistance Bomber",
     "Resistance Ski Speeder",
 ];
-
 static VEHICLES_LEN: usize = VEHICLES.len();
