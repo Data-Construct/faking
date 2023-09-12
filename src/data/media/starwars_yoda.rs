@@ -3,8 +3,8 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn yoda() -> String {
-    let mut rng = rand::thread_rng();
-    YODA_QUOTES[rng.gen_range(0..YODA_QUOTES_LEN)].to_string()
+	let mut rng = rand::thread_rng();
+	YODA_QUOTES[rng.gen_range(0..YODA_QUOTES_LEN)].to_string()
 }
 
 static YODA_QUOTES: [&'static str; 37] = [
