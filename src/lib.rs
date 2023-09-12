@@ -8,6 +8,8 @@ pub mod data {
     }
     pub mod misc {
         pub mod animals;
+        pub mod starwars;
+        pub mod yoda;
     }
 }
 
