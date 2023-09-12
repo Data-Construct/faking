@@ -1,9 +1,6 @@
 use rand::Rng;
 use wasm_bindgen::prelude::*;
 
-// TODO: should split names first and last into categories
-// for more realistic name generation
-
 #[wasm_bindgen]
 pub fn animal() -> String {
     let mut rng = rand::thread_rng();
