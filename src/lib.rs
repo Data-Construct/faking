@@ -11,6 +11,7 @@ pub mod data {
 	pub mod misc {
 		pub mod animals;
 		pub mod business;
+		pub mod fashion;
 	}
 	pub mod media {
 		pub mod starwars;
