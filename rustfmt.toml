@@ -1,5 +1,5 @@
-hard_tabs = true
 edition = "2021"
+hard_tabs = true
 
 short_array_element_width_threshold = 5
 array_width = 1

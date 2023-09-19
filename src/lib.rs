@@ -1,6 +1,6 @@
 pub use self::data::defaults;
-
 pub use self::data::misc;
+pub use self::data::media;
 
 pub mod data {
 	pub mod defaults {
@@ -14,6 +14,7 @@ pub mod data {
 	pub mod media {
 		pub mod starwars;
 		pub mod starwars_yoda;
+		pub mod movies;
 	}
 }
 

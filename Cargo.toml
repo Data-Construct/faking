@@ -1,6 +1,6 @@
 [package]
-name = "faking"
-version = "0.1.0"
+name = "data_faking"
+version = "0.0.1"
 edition = "2021"
 
 [lib]
