@@ -1,9 +1,8 @@
 use rand::Rng;
+use std::collections::HashMap;
 use wasm_bindgen::prelude::*;
-//Ask about making call_sign
-//Ask about how to deal with quotes and alternative character spellings
 
-//TODO left off at wookie words
+//TODO Ask again how to deal with quotes
 
 #[wasm_bindgen]
 pub fn starwars_character() -> String {
@@ -51,6 +50,11 @@ pub fn species() -> String {
 pub fn vehicle() -> String {
 	let mut rng = rand::thread_rng();
 	VEHICLES[rng.gen_range(0..VEHICLES_LEN)].to_string()
+}
+
+pub fn wookie_word() -> String {
+	let mut rng = rand::thread_rng();
+	WOOKIE_WORDS[rng.gen_range(0..WOOKIE_WORDS_LEN)].to_string()
 }
 static STARWARS_CHARACTERS: [&'static str; 60] = [
 	"Padme Amidala",
@@ -271,3 +275,29 @@ static VEHICLES: [&'static str; 36] = [
 	"Resistance Ski Speeder",
 ];
 static VEHICLES_LEN: usize = VEHICLES.len();
+
+static WOOKIE_WORDS: [&'static str; 22] = [
+	"wyaaaaaa",
+	"ruh",
+	"huewaa",
+	"muaa",
+	"mumwa",
+	"wua",
+	"ga",
+	"ma",
+	"ahuma",
+	"ooma",
+	"youw",
+	"kabukk",
+	"wyogg",
+	"gwyaaaag",
+	"roooarrgh",
+	"ur",
+	"ru",
+	"roo",
+	"hnn-rowr",
+	"yrroonn",
+	"nng",
+	"rarr",
+];
+static WOOKIE_WORDS_LEN: usize = WOOKIE_WORDS.len();
