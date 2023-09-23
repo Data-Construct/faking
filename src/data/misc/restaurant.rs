@@ -9,32 +9,38 @@ pub fn name_prefix() -> String {
 	NAME_PREFIX[rng.gen_range(0..NAME_PREFIX_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn name_suffix() -> String {
 	let mut rng = rand::thread_rng();
 	NAME_SUFFIX[rng.gen_range(0..NAME_SUFFIX_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn restaurant_full_name() -> String {
 	let prefix = name_prefix();
 	let suffix = name_suffix();
 	return format!("{} {}", prefix, suffix);
 }
 
+#[wasm_bindgen]
 pub fn restaurant_type() -> String {
 	let mut rng = rand::thread_rng();
 	RESTAURANT_TYPE[rng.gen_range(0..RESTAURANT_TYPE_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn restaurant_description() -> String {
 	let mut rng = rand::thread_rng();
 	RESTAURANT_DESCRIPTION[rng.gen_range(0..RESTAURANT_DESCRIPTION_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn restaurant_review() -> String {
 	let mut rng = rand::thread_rng();
 	RESTAURANT_REVIEW[rng.gen_range(0..RESTAURANT_REVIEW_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn generate_full_restaurant() -> String {
 	let full_name = restaurant_full_name();
 	let restaurant_type = restaurant_type();
