@@ -77,7 +77,6 @@ static NAME_PREFIX: [&'static str; 23] = [
 	"Green",
 	"Orange",
 ];
-
 static NAME_PREFIX_LEN: usize = NAME_PREFIX.len();
 
 static NAME_SUFFIX: [&'static str; 29] = [
@@ -111,7 +110,6 @@ static NAME_SUFFIX: [&'static str; 29] = [
 	"Subs",
 	"Sushi",
 ];
-
 static NAME_SUFFIX_LEN: usize = NAME_SUFFIX.len();
 
 static RESTAURANT_TYPE: [&'static str; 36] = [
@@ -152,7 +150,6 @@ static RESTAURANT_TYPE: [&'static str; 36] = [
 	"Vegetarian",
 	"Vietnamese",
 ];
-
 static RESTAURANT_TYPE_LEN: usize = RESTAURANT_TYPE.len();
 
 static RESTAURANT_DESCRIPTION: [&'static str; 14] = [
@@ -171,7 +168,6 @@ static RESTAURANT_DESCRIPTION: [&'static str; 14] = [
     "Our mission has been to help people achieve their health and wellness goals. though weve changed over the years, our values have remained the same.",
     "To deliver an exceptional shopping experience by offering the best service, value, quality, and freshest products while being good stewards of our environment and giving back to the communities we serve."
 ];
-
 static RESTAURANT_DESCRIPTION_LEN: usize = RESTAURANT_DESCRIPTION.len();
 
 static RESTAURANT_REVIEW: [&'static str; 17] = [
@@ -193,5 +189,4 @@ static RESTAURANT_REVIEW: [&'static str; 17] = [
     "My only critique would be that the rice could of used more vingaer and for them to use real wasabi. Also the variety of fish in stock wasnt a lot but hopefully that can change over time. The cost justify the quality youre getting. A solid 4 stars.",
     "In terms of omakase, they had a few options but the one we chose was the 87 dollar version which include sashimi and sushi."
 ];
-
 static RESTAURANT_REVIEW_LEN: usize = RESTAURANT_REVIEW.len();

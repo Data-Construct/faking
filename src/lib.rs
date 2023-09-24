@@ -9,9 +9,12 @@ pub mod data {
 		pub mod uuids;
 	}
 	pub mod misc {
+		pub mod adjective;
 		pub mod animals;
 		pub mod business;
 		pub mod commerce;
+		pub mod demographic;
+		pub mod device;
 		pub mod fashion;
 		pub mod restaurant;
 	}

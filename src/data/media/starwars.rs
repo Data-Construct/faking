@@ -1,5 +1,4 @@
 use rand::Rng;
-use std::collections::HashMap;
 use wasm_bindgen::prelude::*;
 
 //TODO Ask again how to deal with quotes

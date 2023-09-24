@@ -105,7 +105,6 @@ static DEPARTMENT: [&'static str; 22] = [
 	"Automotive",
 	"Industrial",
 ];
-
 static DEPARTMENT_LEN: usize = DEPARTMENT.len();
 
 static PRODUCT_ADJECTIVE: [&'static str; 17] = [
@@ -127,7 +126,6 @@ static PRODUCT_ADJECTIVE: [&'static str; 17] = [
 	"Aerodynamic",
 	"Durable",
 ];
-
 static PRODUCT_ADJECTIVE_LEN: usize = PRODUCT_ADJECTIVE.len();
 
 static MATERIAL: [&'static str; 17] = [
@@ -149,7 +147,6 @@ static MATERIAL: [&'static str; 17] = [
 	"Aluminum",
 	"Paper",
 ];
-
 static MATERIAL_LEN: usize = MATERIAL.len();
 
 static PRODUCT: [&'static str; 20] = [
@@ -174,7 +171,6 @@ static PRODUCT: [&'static str; 20] = [
 	"Watch",
 	"Wallet",
 ];
-
 static PRODUCT_LEN: usize = PRODUCT.len();
 
 static PROMOTION_CODE_ADJECTIVE: [&'static str; 11] = [
@@ -190,7 +186,6 @@ static PROMOTION_CODE_ADJECTIVE: [&'static str; 11] = [
 	"Stellar",
 	"Sweet",
 ];
-
 static PROMOTION_CODE_ADJECTIVE_LEN: usize = PROMOTION_CODE_ADJECTIVE.len();
 
 static PROMOTION_CODE_NOUN: [&'static str; 8] = [
@@ -203,7 +198,6 @@ static PROMOTION_CODE_NOUN: [&'static str; 8] = [
 	"Sale",
 	"Savings",
 ];
-
 static PROMOTION_CODE_NOUN_LEN: usize = PROMOTION_CODE_NOUN.len();
 
 static BRAND: [&'static str; 10] = [
@@ -218,7 +212,6 @@ static BRAND: [&'static str; 10] = [
 	"Beats",
 	"GoPro",
 ];
-
 static BRAND_LEN: usize = BRAND.len();
 
 static VENDOR: [&'static str; 4] = [
@@ -227,5 +220,4 @@ static VENDOR: [&'static str; 4] = [
 	"Walmart",
 	"Target",
 ];
-
 static VENDOR_LEN: usize = VENDOR.len();
