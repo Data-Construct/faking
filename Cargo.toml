@@ -20,7 +20,16 @@ wasm-bindgen = "0.2.84"
 # all the `std::fmt` and `std::panicking` infrastructure, so isn't great for
 # code size when deploying.
 console_error_panic_hook = { version = "0.1.7", optional = true }
-uuid = { version = "1.4.1", features = [ "fast-rng", "v1", "v3", "v4", "v5", "v6", "v7", "v8" ] }
+uuid = { version = "1.4.1", features = [
+    "fast-rng",
+    "v1",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7",
+    "v8",
+] }
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.34"

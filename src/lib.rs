@@ -1,6 +1,6 @@
 pub use self::data::defaults;
-pub use self::data::misc;
 pub use self::data::media;
+pub use self::data::misc;
 
 pub mod data {
 	pub mod defaults {
@@ -9,14 +9,21 @@ pub mod data {
 		pub mod uuids;
 	}
 	pub mod misc {
+		pub mod adjective;
 		pub mod animals;
 		pub mod business;
+		pub mod commerce;
+		pub mod demographic;
+		pub mod device;
 		pub mod fashion;
+		pub mod relationship;
+		pub mod restaurant;
 	}
 	pub mod media {
+		pub mod movies;
+		pub mod pokemon;
 		pub mod starwars;
 		pub mod starwars_yoda;
-		pub mod movies;
 	}
 }
 

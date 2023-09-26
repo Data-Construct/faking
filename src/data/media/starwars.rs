@@ -1,9 +1,7 @@
 use rand::Rng;
 use wasm_bindgen::prelude::*;
-//Ask about making call_sign
-//Ask about how to deal with quotes and alternative character spellings
 
-//TODO left off at wookie words
+//TODO Ask again how to deal with quotes
 
 #[wasm_bindgen]
 pub fn starwars_character() -> String {
@@ -11,46 +9,53 @@ pub fn starwars_character() -> String {
 	STARWARS_CHARACTERS[rng.gen_range(0..STARWARS_CHARACTERS_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn call_squadron() -> String {
 	let mut rng = rand::thread_rng();
 	CALL_SQUADRONS[rng.gen_range(0..CALL_SQUADRONS_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn call_number() -> String {
 	let mut rng = rand::thread_rng();
 	CALL_NUMBERS[rng.gen_range(0..CALL_NUMBERS_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn call_sign() -> String {
-	let mut rng = rand::thread_rng();
-	let call_num = CALL_NUMBERS[rng.gen_range(0..CALL_NUMBERS_LEN)].to_string();
-	let call_squad = CALL_SQUADRONS[rng.gen_range(0..CALL_SQUADRONS_LEN)].to_string();
-	//return format!("{} {}", call_num, call_squad);
-	return [
-		call_squad,
-		call_num,
-	]
-	.join(" ");
+	let call_num = call_number();
+	let call_squad = call_squadron();
+	return format!("{} {}", call_num, call_squad);
 }
 
+#[wasm_bindgen]
 pub fn droid() -> String {
 	let mut rng = rand::thread_rng();
 	DROIDS[rng.gen_range(0..DROIDS_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn planet() -> String {
 	let mut rng = rand::thread_rng();
 	PLANETS[rng.gen_range(0..PLANETS_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn species() -> String {
 	let mut rng = rand::thread_rng();
 	SPECIES[rng.gen_range(0..SPECIES_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn vehicle() -> String {
 	let mut rng = rand::thread_rng();
 	VEHICLES[rng.gen_range(0..VEHICLES_LEN)].to_string()
+}
+
+#[wasm_bindgen]
+pub fn wookie_word() -> String {
+	let mut rng = rand::thread_rng();
+	WOOKIE_WORDS[rng.gen_range(0..WOOKIE_WORDS_LEN)].to_string()
 }
 static STARWARS_CHARACTERS: [&'static str; 60] = [
 	"Padme Amidala",
@@ -271,3 +276,29 @@ static VEHICLES: [&'static str; 36] = [
 	"Resistance Ski Speeder",
 ];
 static VEHICLES_LEN: usize = VEHICLES.len();
+
+static WOOKIE_WORDS: [&'static str; 22] = [
+	"wyaaaaaa",
+	"ruh",
+	"huewaa",
+	"muaa",
+	"mumwa",
+	"wua",
+	"ga",
+	"ma",
+	"ahuma",
+	"ooma",
+	"youw",
+	"kabukk",
+	"wyogg",
+	"gwyaaaag",
+	"roooarrgh",
+	"ur",
+	"ru",
+	"roo",
+	"hnn-rowr",
+	"yrroonn",
+	"nng",
+	"rarr",
+];
+static WOOKIE_WORDS_LEN: usize = WOOKIE_WORDS.len();
