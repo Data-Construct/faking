@@ -1,7 +1,7 @@
 use rand::Rng;
 use wasm_bindgen::prelude::*;
 // ask about ### and  ???
-// TODO kevinly77: Ask about generating a restuarant object?\
+// TODO kevinly77: Ask about generating a restuarant object?
 
 #[wasm_bindgen]
 pub fn name_prefix() -> String {

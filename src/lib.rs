@@ -16,10 +16,12 @@ pub mod data {
 		pub mod demographic;
 		pub mod device;
 		pub mod fashion;
+		pub mod relationship;
 		pub mod restaurant;
 	}
 	pub mod media {
 		pub mod movies;
+		pub mod pokemon;
 		pub mod starwars;
 		pub mod starwars_yoda;
 	}
