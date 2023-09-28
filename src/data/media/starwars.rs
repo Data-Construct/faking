@@ -1,8 +1,6 @@
 use rand::Rng;
 use wasm_bindgen::prelude::*;
 
-//TODO Ask again how to deal with quotes
-
 #[wasm_bindgen]
 pub fn starwars_character() -> String {
 	let mut rng = rand::thread_rng();
