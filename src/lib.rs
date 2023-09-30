@@ -1,7 +1,6 @@
 pub use self::data::defaults;
 pub use self::data::media;
 pub use self::data::misc;
-
 pub mod data {
 	pub mod defaults {
 		pub mod name;
@@ -16,8 +15,11 @@ pub mod data {
 		pub mod demographic;
 		pub mod device;
 		pub mod fashion;
+		pub mod job;
 		pub mod relationship;
 		pub mod restaurant;
+		pub mod space;
+		pub mod subscription;
 	}
 	pub mod media {
 		pub mod movies;
