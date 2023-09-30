@@ -25,6 +25,9 @@ pub mod data {
 		pub mod starwars;
 		pub mod starwars_yoda;
 	}
+	pub mod religion {
+		pub mod bible;
+	}
 }
 
 #[cfg(test)]
