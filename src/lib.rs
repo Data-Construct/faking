@@ -12,9 +12,11 @@ pub mod data {
 		pub mod animals;
 		pub mod business;
 		pub mod commerce;
+		pub mod currencies;
 		pub mod demographic;
 		pub mod device;
 		pub mod fashion;
+		pub mod food;
 		pub mod job;
 		pub mod relationship;
 		pub mod restaurant;
@@ -26,6 +28,9 @@ pub mod data {
 		pub mod pokemon;
 		pub mod starwars;
 		pub mod starwars_yoda;
+	}
+	pub mod religion {
+		pub mod bible;
 	}
 }
 
