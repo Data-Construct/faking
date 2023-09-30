@@ -13,6 +13,7 @@ pub mod data {
 		pub mod animals;
 		pub mod business;
 		pub mod commerce;
+		pub mod currencies;
 		pub mod demographic;
 		pub mod device;
 		pub mod fashion;
