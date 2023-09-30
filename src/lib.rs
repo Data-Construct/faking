@@ -16,6 +16,7 @@ pub mod data {
 		pub mod demographic;
 		pub mod device;
 		pub mod fashion;
+		pub mod food;
 		pub mod relationship;
 		pub mod restaurant;
 	}
