@@ -19,6 +19,7 @@ pub mod data {
 		pub mod relationship;
 		pub mod restaurant;
 		pub mod space;
+		pub mod sports;
 		pub mod subscription;
 	}
 	pub mod media {
