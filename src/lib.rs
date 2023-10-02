@@ -10,6 +10,9 @@ pub mod data {
 	pub mod misc {
 		pub mod adjective;
 		pub mod animals;
+		pub mod artists;
+		pub mod blood;
+		pub mod books;
 		pub mod business;
 		pub mod commerce;
 		pub mod demographic;
