@@ -1,5 +1,6 @@
 use rand::Rng;
 use wasm_bindgen::prelude::*;
+use std::collections::HashMap;
 
 #[wasm_bindgen]
 pub fn starwars_character() -> String {
@@ -55,6 +56,7 @@ pub fn wookie_word() -> String {
 	let mut rng = rand::thread_rng();
 	WOOKIE_WORDS[rng.gen_range(0..WOOKIE_WORDS_LEN)].to_string()
 }
+
 static STARWARS_CHARACTERS: [&'static str; 60] = [
 	"Padme Amidala",
 	"Jar Jar Binks",
@@ -300,3 +302,26 @@ static WOOKIE_WORDS: [&'static str; 22] = [
 	"rarr",
 ];
 static WOOKIE_WORDS_LEN: usize = WOOKIE_WORDS.len();
+
+lazy_static! {
+	static ref CHARACTER_QUOTES_HASHMAP: HashMap<&'static str, Vec<String>> = {
+		let mut m = HashMap::new();
+		m.insert(
+			"admiral_ackbar",
+			vec![
+				"It's a trap!".to_owned(),
+				"The Shield is down! Commence attack on the Death Star's main reactor.".to_owned(),
+				"We have no choice, General Calrissian! Our cruisers can't repel firepower of that magnitude!".to_owned(),
+			],
+		);
+		m
+	};
+}
+
+
+#[wasm_bindgen]
+pub fn general_ackbar_quote() -> String {
+	let mut rng = rand::thread_rng();
+	let aa = CHARACTER_QUOTES_HASHMAP.get(&"admiral_ackbar").unwrap();
+	aa[rng.gen_range(0..aa.len())].to_string()
+}

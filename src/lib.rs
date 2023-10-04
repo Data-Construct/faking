@@ -1,6 +1,10 @@
+#[macro_use]
+extern crate lazy_static;
+
 pub use self::data::defaults;
 pub use self::data::media;
 pub use self::data::misc;
+
 pub mod data {
 	pub mod defaults {
 		pub mod name;
@@ -9,7 +13,9 @@ pub mod data {
 	}
 	pub mod misc {
 		pub mod adjective;
+		pub mod ancients;
 		pub mod animals;
+		pub mod appliances;
 		pub mod artists;
 		pub mod blood;
 		pub mod books;
