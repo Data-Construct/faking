@@ -31,7 +31,9 @@ pub mod data {
 		pub mod restaurant;
 		pub mod space;
 		pub mod sports;
+		pub mod stripe;
 		pub mod subscription;
+		pub mod tea;
 	}
 	pub mod media {
 		pub mod movies;
