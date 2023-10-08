@@ -34,6 +34,7 @@ pub mod data {
 		pub mod stripe;
 		pub mod subscription;
 		pub mod tea;
+		pub mod addresses;
 	}
 	pub mod media {
 		pub mod movies;
