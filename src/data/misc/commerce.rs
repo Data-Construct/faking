@@ -5,49 +5,49 @@ use wasm_bindgen::prelude::*;
 #[wasm_bindgen]
 pub fn department() -> String {
 	let mut rng = rand::thread_rng();
-	DEPARTMENT[rng.gen_range(0..DEPARTMENT_LEN)].to_string()
+	DEPARTMENTS[rng.gen_range(0..DEPARTMENTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn product_adjective() -> String {
 	let mut rng = rand::thread_rng();
-	PRODUCT_ADJECTIVE[rng.gen_range(0..PRODUCT_ADJECTIVE_LEN)].to_string()
+	PRODUCT_ADJECTIVES[rng.gen_range(0..PRODUCT_ADJECTIVES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn material() -> String {
 	let mut rng = rand::thread_rng();
-	MATERIAL[rng.gen_range(0..MATERIAL_LEN)].to_string()
+	MATERIALS[rng.gen_range(0..MATERIALS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn product() -> String {
 	let mut rng = rand::thread_rng();
-	PRODUCT[rng.gen_range(0..PRODUCT_LEN)].to_string()
+	PRODUCTS[rng.gen_range(0..PRODUCTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn promotion_code_adjective() -> String {
 	let mut rng = rand::thread_rng();
-	PROMOTION_CODE_ADJECTIVE[rng.gen_range(0..PROMOTION_CODE_ADJECTIVE_LEN)].to_string()
+	PROMOTION_CODE_ADJECTIVES[rng.gen_range(0..PROMOTION_CODE_ADJECTIVES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn promotion_code_noun() -> String {
 	let mut rng = rand::thread_rng();
-	PROMOTION_CODE_NOUN[rng.gen_range(0..PROMOTION_CODE_NOUN_LEN)].to_string()
+	PROMOTION_CODE_NOUNS[rng.gen_range(0..PROMOTION_CODE_NOUNS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn brand() -> String {
 	let mut rng = rand::thread_rng();
-	BRAND[rng.gen_range(0..BRAND_LEN)].to_string()
+	BRANDS[rng.gen_range(0..BRANDS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn vendor() -> String {
 	let mut rng = rand::thread_rng();
-	VENDOR[rng.gen_range(0..VENDOR_LEN)].to_string()
+	VENDORS[rng.gen_range(0..VENDORS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
@@ -81,7 +81,7 @@ pub fn full_product_info() -> String {
 	);
 }
 
-static DEPARTMENT: [&'static str; 22] = [
+static DEPARTMENTS: [&'static str; 22] = [
 	"Books",
 	"Movies",
 	"Music",
@@ -105,9 +105,9 @@ static DEPARTMENT: [&'static str; 22] = [
 	"Automotive",
 	"Industrial",
 ];
-static DEPARTMENT_LEN: usize = DEPARTMENT.len();
+static DEPARTMENTS_LEN: usize = DEPARTMENTS.len();
 
-static PRODUCT_ADJECTIVE: [&'static str; 17] = [
+static PRODUCT_ADJECTIVES: [&'static str; 17] = [
 	"Small",
 	"Ergonomic",
 	"Rustic",
@@ -126,9 +126,9 @@ static PRODUCT_ADJECTIVE: [&'static str; 17] = [
 	"Aerodynamic",
 	"Durable",
 ];
-static PRODUCT_ADJECTIVE_LEN: usize = PRODUCT_ADJECTIVE.len();
+static PRODUCT_ADJECTIVES_LEN: usize = PRODUCT_ADJECTIVES.len();
 
-static MATERIAL: [&'static str; 17] = [
+static MATERIALS: [&'static str; 17] = [
 	"Steel",
 	"Wooden",
 	"Concrete",
@@ -147,9 +147,9 @@ static MATERIAL: [&'static str; 17] = [
 	"Aluminum",
 	"Paper",
 ];
-static MATERIAL_LEN: usize = MATERIAL.len();
+static MATERIALS_LEN: usize = MATERIALS.len();
 
-static PRODUCT: [&'static str; 20] = [
+static PRODUCTS: [&'static str; 20] = [
 	"Chair",
 	"Car",
 	"Computer",
@@ -171,9 +171,9 @@ static PRODUCT: [&'static str; 20] = [
 	"Watch",
 	"Wallet",
 ];
-static PRODUCT_LEN: usize = PRODUCT.len();
+static PRODUCTS_LEN: usize = PRODUCTS.len();
 
-static PROMOTION_CODE_ADJECTIVE: [&'static str; 11] = [
+static PROMOTION_CODE_ADJECTIVES: [&'static str; 11] = [
 	"Amazing",
 	"Awesome",
 	"Cool",
@@ -186,9 +186,9 @@ static PROMOTION_CODE_ADJECTIVE: [&'static str; 11] = [
 	"Stellar",
 	"Sweet",
 ];
-static PROMOTION_CODE_ADJECTIVE_LEN: usize = PROMOTION_CODE_ADJECTIVE.len();
+static PROMOTION_CODE_ADJECTIVES_LEN: usize = PROMOTION_CODE_ADJECTIVES.len();
 
-static PROMOTION_CODE_NOUN: [&'static str; 8] = [
+static PROMOTION_CODE_NOUNS: [&'static str; 8] = [
 	"Code",
 	"Deal",
 	"Discount",
@@ -198,9 +198,9 @@ static PROMOTION_CODE_NOUN: [&'static str; 8] = [
 	"Sale",
 	"Savings",
 ];
-static PROMOTION_CODE_NOUN_LEN: usize = PROMOTION_CODE_NOUN.len();
+static PROMOTION_CODE_NOUNS_LEN: usize = PROMOTION_CODE_NOUNS.len();
 
-static BRAND: [&'static str; 10] = [
+static BRANDS: [&'static str; 10] = [
 	"Samsung",
 	"Dell",
 	"Nike",
@@ -212,12 +212,12 @@ static BRAND: [&'static str; 10] = [
 	"Beats",
 	"GoPro",
 ];
-static BRAND_LEN: usize = BRAND.len();
+static BRANDS_LEN: usize = BRANDS.len();
 
-static VENDOR: [&'static str; 4] = [
+static VENDORS: [&'static str; 4] = [
 	"Amazon",
 	"Dollar General",
 	"Walmart",
 	"Target",
 ];
-static VENDOR_LEN: usize = VENDOR.len();
+static VENDORS_LEN: usize = VENDORS.len();
