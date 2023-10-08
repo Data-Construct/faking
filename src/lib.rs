@@ -20,6 +20,7 @@ pub mod data {
 		pub mod food;
 		pub mod relationship;
 		pub mod restaurant;
+		pub mod addresses;
 	}
 	pub mod media {
 		pub mod movies;
