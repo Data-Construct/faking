@@ -27,6 +27,7 @@ pub mod data {
 		pub mod fashion;
 		pub mod food;
 		pub mod job;
+		pub mod programming_languages;
 		pub mod relationship;
 		pub mod restaurant;
 		pub mod space;
@@ -37,6 +38,7 @@ pub mod data {
 		pub mod addresses;
 	}
 	pub mod media {
+		pub mod games;
 		pub mod movies;
 		pub mod pokemon;
 		pub mod starwars;
