@@ -21,6 +21,7 @@ pub mod data {
 		pub mod blood;
 		pub mod books;
 		pub mod business;
+		pub mod codes;
 		pub mod commerce;
 		pub mod currencies;
 		pub mod demographic;
