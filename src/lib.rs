@@ -12,6 +12,7 @@ pub mod data {
 		pub mod uuids;
 	}
 	pub mod misc {
+		pub mod addresses;
 		pub mod adjective;
 		pub mod ancients;
 		pub mod animals;
@@ -20,6 +21,7 @@ pub mod data {
 		pub mod blood;
 		pub mod books;
 		pub mod business;
+		pub mod codes;
 		pub mod commerce;
 		pub mod currencies;
 		pub mod demographic;
@@ -27,6 +29,7 @@ pub mod data {
 		pub mod fashion;
 		pub mod food;
 		pub mod job;
+		pub mod military;
 		pub mod programming_languages;
 		pub mod relationship;
 		pub mod restaurant;
@@ -35,7 +38,6 @@ pub mod data {
 		pub mod stripe;
 		pub mod subscription;
 		pub mod tea;
-		pub mod addresses;
 	}
 	pub mod media {
 		pub mod games;
