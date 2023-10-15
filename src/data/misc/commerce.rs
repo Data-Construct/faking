@@ -39,7 +39,7 @@ pub fn promotion_code_noun() -> String {
 }
 
 #[wasm_bindgen]
-pub fn brand() -> String {
+pub fn brand_commerce() -> String {
 	let mut rng = rand::thread_rng();
 	BRANDS[rng.gen_range(0..BRANDS_LEN)].to_string()
 }
@@ -73,7 +73,7 @@ pub fn full_product_info() -> String {
 	let department = department();
 	let full_product_name = full_product_name();
 	let promotion_code = full_promotion_code();
-	let brand = brand();
+	let brand = brand_commerce();
 	let vendor = vendor();
 	return format!(
 		"Department: {}\n Product: {}\n Promotion Code: {}\n Brand: {}\n Vendor: {}",

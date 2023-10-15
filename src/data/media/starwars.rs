@@ -34,7 +34,7 @@ pub fn droid() -> String {
 }
 
 #[wasm_bindgen]
-pub fn planet() -> String {
+pub fn starwars_planet() -> String {
 	let mut rng = rand::thread_rng();
 	PLANETS[rng.gen_range(0..PLANETS_LEN)].to_string()
 }
