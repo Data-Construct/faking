@@ -44,7 +44,7 @@ cd my-project
 ### 🛠️ Build with `wasm-pack build`
 
 ```
-wasm-pack build
+wasm-pack build --target bundler
 ```
 
 ### 🔬 Test in Headless Browsers with `wasm-pack test`

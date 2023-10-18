@@ -2,19 +2,19 @@ use rand::Rng;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-pub fn characters() -> String {
+pub fn bible_characters() -> String {
 	let mut rng = rand::thread_rng();
 	CHARACTERS[rng.gen_range(0..CHARACTERS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn locations() -> String {
+pub fn bible_locations() -> String {
 	let mut rng = rand::thread_rng();
 	LOCATIONS[rng.gen_range(0..LOCATIONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn quotes() -> String {
+pub fn bible_quotes() -> String {
 	let mut rng = rand::thread_rng();
 	QUOTES[rng.gen_range(0..QUOTES_LEN)].to_string()
 }
