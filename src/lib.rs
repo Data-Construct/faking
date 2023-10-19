@@ -38,6 +38,7 @@ pub mod data {
 		pub mod stripe;
 		pub mod subscription;
 		pub mod tea;
+		pub mod usernames;
 	}
 	pub mod media {
 		pub mod games;
