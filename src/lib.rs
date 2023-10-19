@@ -13,6 +13,7 @@ pub mod data {
 	}
 	pub mod misc {
 		pub mod addresses;
+		pub mod addresses_canada;
 		pub mod adjective;
 		pub mod ancients;
 		pub mod animals;
