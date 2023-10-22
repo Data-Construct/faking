@@ -1,9 +1,6 @@
 use rand::Rng;
 use wasm_bindgen::prelude::*;
 
-//TODO function overload, take in word/s as arguement and make random username from that (there is some crate for this)
-//TODO more potential formats
-//TODO maybe random words are capitalized
 //NOTE: Some hypenated words appear ex: bite-sized
 
 #[wasm_bindgen]
@@ -56,6 +53,28 @@ pub fn random_username_from_input(word: &str) -> String {
 		3 => format!("{}{}", word, rng.gen_range(0..1000)),
 		4 => format!("{}{}{}", username_adjective(), word, rng.gen_range(0..1000)),
 		5 => format!("{}{}{}{}", "x", word, rng.gen_range(0..1000), "x"),
+		_ => "".to_string(),
+	}
+}
+
+#[wasm_bindgen]
+pub fn corporate_username_from_input(first_name: &str, last_name: &str) -> String {
+	let mut rng = rand::thread_rng();
+	let format = rng.gen_range(0..2);
+	let lower_case_fname = first_name.to_lowercase();
+	let lower_case_lname = last_name.to_ascii_lowercase();
+	match format {
+		0 => format!(
+			"{}{}",
+			lower_case_fname.chars().next().unwrap(),
+			lower_case_lname
+		),
+		1 => format!(
+			"{}{}{}",
+			lower_case_fname.chars().next().unwrap(),
+			lower_case_lname,
+			rng.gen_range(0..1000)
+		),
 		_ => "".to_string(),
 	}
 }
