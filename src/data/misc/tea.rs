@@ -2,31 +2,31 @@ use rand::Rng;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-pub fn black() -> String {
+pub fn black_tea() -> String {
 	let mut rng = rand::thread_rng();
 	BLACK[rng.gen_range(0..BLACK_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn oolong() -> String {
+pub fn oolong_tea() -> String {
 	let mut rng = rand::thread_rng();
 	OOLONG[rng.gen_range(0..OOLONG_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn green() -> String {
+pub fn green_tea() -> String {
 	let mut rng = rand::thread_rng();
 	GREEN[rng.gen_range(0..GREEN_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn white() -> String {
+pub fn white_tea() -> String {
 	let mut rng = rand::thread_rng();
 	WHITE[rng.gen_range(0..WHITE_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn herbal() -> String {
+pub fn herbal_tea() -> String {
 	let mut rng = rand::thread_rng();
 	HERBAL[rng.gen_range(0..HERBAL_LEN)].to_string()
 }

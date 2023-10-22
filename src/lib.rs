@@ -30,6 +30,7 @@ pub mod data {
 		pub mod fashion;
 		pub mod food;
 		pub mod job;
+		pub mod lorem_ipsum;
 		pub mod military;
 		pub mod programming_languages;
 		pub mod relationship;
@@ -39,9 +40,11 @@ pub mod data {
 		pub mod stripe;
 		pub mod subscription;
 		pub mod tea;
+		pub mod usernames;
 	}
 	pub mod media {
 		pub mod games;
+		pub mod mario;
 		pub mod movies;
 		pub mod pokemon;
 		pub mod starwars;
