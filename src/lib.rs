@@ -27,6 +27,7 @@ pub mod data {
 		pub mod currencies;
 		pub mod demographic;
 		pub mod device;
+		pub mod emails;
 		pub mod fashion;
 		pub mod food;
 		pub mod job;
