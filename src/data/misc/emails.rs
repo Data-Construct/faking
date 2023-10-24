@@ -2,24 +2,47 @@ use crate::misc::usernames;
 use rand::Rng;
 use wasm_bindgen::prelude::*;
 
-/* standard_generic_email - basically anything username + combo @ domain + ending
+#[wasm_bindgen]
+pub fn standard_generic_email() -> String {
+	let mut rng = rand::thread_rng();
+	let format = rng.gen_range(0..4);
 
-standard public email
-
-standard business email
-
-standard gov email
-
-standard account email - takes in first name last name or username generates email
-
-
-
-enum - different catgories */
+	match format {
+		0 => standard_public_email_alias(),
+		1 => standard_public_email(),
+		2 => standard_business_email(),
+		3 => standard_government_email(),
+		_ => "".to_string(),
+	}
+}
 
 #[wasm_bindgen]
 pub fn standard_public_email() -> String {
 	let mut rng = rand::thread_rng();
 	let username = usernames::random_username();
+	let domain = PUBLIC_EMAIL_DOMAINS[rng.gen_range(0..PUBLIC_EMAIL_DOMAINS_LEN)].to_string();
+	format!("{}{}{}{}", username, "@", domain, ".com")
+}
+
+#[wasm_bindgen]
+pub fn standard_public_email_alias() -> String {
+	let mut rng = rand::thread_rng();
+	let format = rng.gen_range(0..2);
+	let username = match format {
+		0 => format!(
+			"{}{}{}",
+			usernames::random_username(),
+			"+",
+			rng.gen_range(0..100).to_string()
+		),
+		1 => format!(
+			"{}{}{}",
+			usernames::random_username(),
+			"+",
+			BUSINESS_EMAIL_DOMAINS[rng.gen_range(0..BUSINESS_EMAIL_DOMAINS_LEN)].to_string()
+		),
+		_ => "".to_string(),
+	};
 	let domain = PUBLIC_EMAIL_DOMAINS[rng.gen_range(0..PUBLIC_EMAIL_DOMAINS_LEN)].to_string();
 	format!("{}{}{}{}", username, "@", domain, ".com")
 }
@@ -38,7 +61,16 @@ pub fn standard_government_email() -> String {
 	let username = usernames::random_username();
 	let domain =
 		GOVERNMENT_EMAIL_DOMAINS[rng.gen_range(0..GOVERNMENT_EMAIL_DOMAINS_LEN)].to_string();
-	format!("{}{}{}{}", username, "@", domain, ".gov")
+	//Some government emails end with .gov domain
+	format!("{}{}{}{}", username, "@", domain, ".com")
+}
+
+#[wasm_bindgen]
+pub fn standard_account_email(first_name: &str, last_name: &str) -> String {
+	let mut rng = rand::thread_rng();
+	let username = usernames::corporate_username_from_input(first_name, last_name);
+	let domain = PUBLIC_EMAIL_DOMAINS[rng.gen_range(0..PUBLIC_EMAIL_DOMAINS_LEN)].to_string();
+	format!("{}{}{}{}", username, "@", domain, ".com")
 }
 
 static PUBLIC_EMAIL_DOMAINS: [&'static str; 6] = [
