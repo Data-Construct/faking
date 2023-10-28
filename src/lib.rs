@@ -41,6 +41,7 @@ pub mod data {
 		pub mod stripe;
 		pub mod subscription;
 		pub mod tea;
+		pub mod user_roles;
 		pub mod usernames;
 	}
 	pub mod media {
@@ -48,6 +49,7 @@ pub mod data {
 		pub mod mario;
 		pub mod movies;
 		pub mod pokemon;
+		pub mod simpsons;
 		pub mod starwars;
 		pub mod starwars_yoda;
 	}
