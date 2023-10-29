@@ -41,7 +41,6 @@ pub mod data {
 		pub mod stripe;
 		pub mod subscription;
 		pub mod tea;
-		pub mod user_roles;
 		pub mod usernames;
 	}
 	pub mod media {
