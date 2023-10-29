@@ -48,6 +48,7 @@ pub mod data {
 		pub mod mario;
 		pub mod movies;
 		pub mod pokemon;
+		pub mod simpsons;
 		pub mod starwars;
 		pub mod starwars_yoda;
 	}
