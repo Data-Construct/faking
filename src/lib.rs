@@ -33,6 +33,7 @@ pub mod data {
 		pub mod job;
 		pub mod lorem_ipsum;
 		pub mod military;
+		pub mod nations;
 		pub mod programming_languages;
 		pub mod relationship;
 		pub mod restaurant;
