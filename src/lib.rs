@@ -48,6 +48,7 @@ pub mod data {
 	pub mod media {
 		pub mod games;
 		pub mod mario;
+		pub mod minecraft;
 		pub mod movies;
 		pub mod pokemon;
 		pub mod simpsons;
