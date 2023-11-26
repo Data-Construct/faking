@@ -1,0 +1,67 @@
+use rand::Rng;
+use wasm_bindgen::prelude::*;
+
+//These words can probably be improved?
+
+#[wasm_bindgen]
+pub fn buzzword() -> String {
+	let mut rng = rand::thread_rng();
+	BUZZWORDS[rng.gen_range(0..BUZZWORDS_LEN)].to_string()
+}
+
+static BUZZWORDS: [&'static str; 53] = [
+	"etc. etc.",
+	"put a pin in it",
+	"t-shirt sizes",
+	"heavy lifting",
+	"circle back",
+	"two-way street",
+	"data points",
+	"out of the box",
+	"get value out of the conversation",
+	"penetrate the market",
+	"plug and chug",
+	"deep dive",
+	"SWAG",
+	"bucketize it",
+	"sales funnel",
+	"market share",
+	"impact map",
+	"growth unit",
+	"tee it up",
+	"make it actionable",
+	"put a bow on it",
+	"give you some time back",
+	"bandwidth-constrained",
+	"had to 'punt' on that",
+	"home stretch",
+	"get a pulse on",
+	"value add",
+	"expansion play",
+	"rubber meets the road",
+	"sprint to the finish line",
+	"button up the loose ends",
+	"heads down",
+	"learnings",
+	"ideate",
+	"customer journey",
+	"buying cycle",
+	"synergy",
+	"snackable content",
+	"thought leader",
+	"thought leadership",
+	"immersive experience",
+	"value proposition",
+	"gamification",
+	"agile marketing",
+	"infographic",
+	"granular",
+	"streamline",
+	"swim lane",
+	"best practice",
+	"bleeding edge",
+	"out of pocket",
+	"let's take this offline",
+	"branding",
+];
+static BUZZWORDS_LEN: usize = BUZZWORDS.len();
