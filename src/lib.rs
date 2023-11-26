@@ -10,6 +10,7 @@ pub mod data {
 		pub mod name;
 		pub mod types;
 		pub mod uuids;
+		pub mod colors;
 	}
 	pub mod misc {
 		pub mod addresses;
@@ -54,6 +55,7 @@ pub mod data {
 		pub mod simpsons;
 		pub mod starwars;
 		pub mod starwars_yoda;
+		pub mod spongebob;
 	}
 	pub mod religion {
 		pub mod bible;
