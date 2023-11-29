@@ -35,6 +35,7 @@ pub mod data {
 		pub mod job;
 		pub mod lorem_ipsum;
 		pub mod marketing;
+		pub mod measurements;
 		pub mod military;
 		pub mod nations;
 		pub mod programming_languages;
