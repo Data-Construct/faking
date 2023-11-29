@@ -1,8 +1,6 @@
 use rand::Rng;
 use wasm_bindgen::prelude::*;
 
-//These words can probably be improved?
-
 #[wasm_bindgen]
 pub fn height_measurement() -> String {
 	let mut rng = rand::thread_rng();
