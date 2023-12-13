@@ -37,6 +37,14 @@ pub fn pantone_color() -> (String, String) {
     (pantone_color.0.to_string(), pantone_color.1.to_string())
 }
 
+pub fn pantone_hexcode() -> String {
+    pantone_color().0
+}
+
+pub fn pantone_name() -> String {
+    pantone_color().1
+}
+
 static COLORNAMES: [&'static str; 1057] = [
     "Absolute Zero",
     "Acid green",
