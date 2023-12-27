@@ -50,6 +50,7 @@ pub mod data {
 		pub mod usernames;
 	}
 	pub mod media {
+		pub mod elderscrolls;
 		pub mod games;
 		pub mod mario;
 		pub mod minecraft;
