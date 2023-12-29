@@ -12,6 +12,8 @@ default = ["console_error_panic_hook"]
 [dependencies]
 # rand = { version = "0.8.5", features = ["js"] }
 getrandom = { version = "0.2", features = ["js"] }
+chrono = { version = "0.4.26", features = ["serde"] }
+bitcoin = { version = "0.31.0", features = ["rand-std"] }
 rand = "0.8.5"
 wasm-bindgen = "0.2.84"
 
