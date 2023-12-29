@@ -1,11 +1,15 @@
 #[macro_use]
 extern crate lazy_static;
 
+pub use self::data::blockchain;
 pub use self::data::defaults;
 pub use self::data::media;
 pub use self::data::misc;
 
 pub mod data {
+	pub mod blockchain {
+		pub mod bitcoin;
+	}
 	pub mod defaults {
 		pub mod name;
 		pub mod types;
