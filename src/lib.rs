@@ -11,10 +11,11 @@ pub mod data {
 		pub mod bitcoin;
 	}
 	pub mod defaults {
+		pub mod colors;
+		pub mod languages;
 		pub mod name;
 		pub mod types;
 		pub mod uuids;
-		pub mod colors;
 	}
 	pub mod misc {
 		pub mod addresses;
