@@ -143,7 +143,7 @@ static LANGUAGES: [&'static str; 183] = [
     "Norwegian Bokmål:nb",
     "Norwegian Nynorsk:nn",
     "Sichuan Yi, Nuosu:ii",
-    "Occitan	oc	oci	oci	oci	",
+    "Occitan:oc",
     "Ojibwa:oj",
     "Oriya:or",
     "Oromo:om",
