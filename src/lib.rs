@@ -9,6 +9,7 @@ pub use self::data::misc;
 pub mod data {
 	pub mod blockchain {
 		pub mod bitcoin;
+		pub mod ethereum;
 	}
 	pub mod defaults {
 		pub mod name;
