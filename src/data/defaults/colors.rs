@@ -29,9 +29,9 @@ pub fn color_name() -> String {
 	COLORNAMES[rng.gen_range(0..COLORNAMES_LEN)].to_string()
 }
 
-pub fn pantone_color() -> String {
+pub fn physical_color() -> String {
     let mut rng = rand::thread_rng();
-    PANTONECOLORS[rng.gen_range(0..PANTONECOLORS_LEN)].to_string()
+    PHYSICALCOLORS[rng.gen_range(0..PHYSICALCOLORS_LEN)].to_string()
 }
 
 static COLORNAMES: [&'static str; 1057] = [
@@ -1095,7 +1095,7 @@ static COLORNAMES: [&'static str; 1057] = [
 ];
 static COLORNAMES_LEN: usize = COLORNAMES.len();
 
-static PANTONECOLORS: [&'static str; 4346] = [
+static PHYSICALCOLORS: [&'static str; 4346] = [
     "#f4ed7c",
     "#f7ea5f",
     "#fef27e",
@@ -5443,4 +5443,4 @@ static PANTONECOLORS: [&'static str; 4346] = [
     "#ff665b",
     "#ffd700",
 ];
-static PANTONECOLORS_LEN: usize = PANTONECOLORS.len();
+static PHYSICALCOLORS_LEN: usize = PHYSICALCOLORS.len();
