@@ -45,6 +45,7 @@ pub mod data {
 		pub mod military;
 		pub mod nations;
 		pub mod programming_languages;
+		pub mod quotes;
 		pub mod relationship;
 		pub mod restaurant;
 		pub mod space;
