@@ -66,6 +66,7 @@ pub mod data {
 		pub mod simpsons;
 		pub mod starwars;
 		pub mod starwars_yoda;
+		pub mod studio_ghibli;
 		pub mod spongebob;
 	}
 	pub mod religion {
