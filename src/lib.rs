@@ -12,10 +12,10 @@ pub mod data {
 		pub mod ethereum;
 	}
 	pub mod defaults {
+		pub mod colors;
 		pub mod name;
 		pub mod types;
 		pub mod uuids;
-		pub mod colors;
 	}
 	pub mod misc {
 		pub mod addresses;
@@ -64,10 +64,10 @@ pub mod data {
 		pub mod movies;
 		pub mod pokemon;
 		pub mod simpsons;
+		pub mod spongebob;
 		pub mod starwars;
 		pub mod starwars_yoda;
 		pub mod studio_ghibli;
-		pub mod spongebob;
 	}
 	pub mod religion {
 		pub mod bible;
@@ -76,7 +76,6 @@ pub mod data {
 
 #[cfg(test)]
 mod tests {
-	use super::*;
 
 	#[test]
 	fn it_works() {
