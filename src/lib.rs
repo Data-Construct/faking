@@ -2,6 +2,7 @@
 extern crate lazy_static;
 
 pub use self::data::blockchain;
+pub use self::data::countries;
 pub use self::data::defaults;
 pub use self::data::media;
 pub use self::data::misc;
@@ -19,9 +20,15 @@ pub mod data {
 		pub mod usernames;
 		pub mod uuids;
 	}
+	pub mod countries {
+		pub mod usa {
+			pub mod addresses;
+		}
+		pub mod canada {
+			pub mod addresses;
+		}
+	}
 	pub mod misc {
-		pub mod addresses;
-		pub mod addresses_canada;
 		pub mod adjective;
 		pub mod ancients;
 		pub mod animals;
