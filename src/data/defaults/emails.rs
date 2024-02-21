@@ -1,4 +1,4 @@
-use crate::misc::usernames;
+use crate::defaults::usernames;
 use rand::Rng;
 use wasm_bindgen::prelude::*;
 

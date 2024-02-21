@@ -13,8 +13,10 @@ pub mod data {
 	}
 	pub mod defaults {
 		pub mod colors;
+		pub mod emails;
 		pub mod name;
 		pub mod types;
+		pub mod usernames;
 		pub mod uuids;
 	}
 	pub mod misc {
@@ -35,7 +37,6 @@ pub mod data {
 		pub mod date;
 		pub mod demographic;
 		pub mod device;
-		pub mod emails;
 		pub mod fashion;
 		pub mod food;
 		pub mod job;
@@ -53,7 +54,6 @@ pub mod data {
 		pub mod stripe;
 		pub mod subscription;
 		pub mod tea;
-		pub mod usernames;
 	}
 	pub mod media {
 		pub mod elderscrolls;
