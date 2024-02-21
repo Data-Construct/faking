@@ -62,6 +62,7 @@ pub mod data {
 		pub mod mario;
 		pub mod minecraft;
 		pub mod movies;
+		pub mod one_piece;
 		pub mod pokemon;
 		pub mod simpsons;
 		pub mod spongebob;
