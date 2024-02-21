@@ -21,6 +21,8 @@ pub mod data {
 		pub mod uuids;
 	}
 	pub mod countries {
+		pub mod nations;
+
 		pub mod usa {
 			pub mod addresses;
 		}
@@ -51,7 +53,6 @@ pub mod data {
 		pub mod marketing;
 		pub mod measurements;
 		pub mod military;
-		pub mod nations;
 		pub mod programming_languages;
 		pub mod quotes;
 		pub mod relationship;

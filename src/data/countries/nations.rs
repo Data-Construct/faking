@@ -1,7 +1,7 @@
 use rand::Rng;
 use wasm_bindgen::prelude::*;
 
-//TODO need help with what to do with flag bytes array
+// TODO need help with what to do with flag bytes array
 // Maybe some categories? asia, north america.. etc
 // Could add more languages
 
