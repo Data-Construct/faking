@@ -45,7 +45,7 @@ pub fn lorem_ipsum_paragraph() -> String {
 }
 
 #[wasm_bindgen]
-pub fn generate_lorem_ipsum_paragraphs(amount: i16) -> String {
+pub fn lorem_ipsum_paragraphs(amount: i16) -> String {
 	let mut lorem_text = String::from("");
 
 	//Should i return an error if 0 or ??
