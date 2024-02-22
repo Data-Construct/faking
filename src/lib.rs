@@ -15,6 +15,7 @@ pub mod data {
 	pub mod defaults {
 		pub mod colors;
 		pub mod emails;
+		pub mod longitude_latitude;
 		pub mod name;
 		pub mod types;
 		pub mod usernames;
