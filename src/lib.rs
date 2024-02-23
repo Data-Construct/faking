@@ -66,6 +66,7 @@ pub mod data {
 	pub mod media {
 		pub mod elderscrolls;
 		pub mod games;
+		pub mod hp_lovecraft;
 		pub mod manga;
 		pub mod mario;
 		pub mod minecraft;
