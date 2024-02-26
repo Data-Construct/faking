@@ -14,6 +14,7 @@ pub mod data {
 	}
 	pub mod defaults {
 		pub mod colors;
+		pub mod crypto;
 		pub mod emails;
 		pub mod name;
 		pub mod types;
