@@ -16,6 +16,7 @@ pub mod data {
 		pub mod colors;
 		pub mod crypto;
 		pub mod emails;
+		pub mod longitude_latitude;
 		pub mod name;
 		pub mod types;
 		pub mod usernames;
