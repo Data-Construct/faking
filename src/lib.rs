@@ -44,6 +44,7 @@ pub mod data {
 		pub mod chess;
 		pub mod codes;
 		pub mod commerce;
+		pub mod compass;
 		pub mod cryptocurrency;
 		pub mod currencies;
 		pub mod date;
