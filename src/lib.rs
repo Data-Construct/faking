@@ -74,6 +74,7 @@ pub mod data {
 		pub mod friends;
 		pub mod games;
 		pub mod hp_lovecraft;
+		pub mod lord_of_the_rings;
 		pub mod manga;
 		pub mod mario;
 		pub mod minecraft;
@@ -87,6 +88,8 @@ pub mod data {
 		pub mod starwars;
 		pub mod starwars_yoda;
 		pub mod studio_ghibli;
+		pub mod the_hobbit;
+		pub mod tolkein;
 	}
 	pub mod religion {
 		pub mod bible;
