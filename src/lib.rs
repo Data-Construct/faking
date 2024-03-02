@@ -62,6 +62,7 @@ pub mod data {
 		pub mod quotes;
 		pub mod relationship;
 		pub mod restaurant;
+		pub mod shakespeare;
 		pub mod space;
 		pub mod sports;
 		pub mod stripe;
