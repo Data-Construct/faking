@@ -76,6 +76,7 @@ pub mod data {
 		pub mod movies;
 		pub mod one_piece;
 		pub mod pokemon;
+		pub mod silicon_valley;
 		pub mod simpsons;
 		pub mod spongebob;
 		pub mod starwars;
