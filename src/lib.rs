@@ -38,6 +38,7 @@ pub mod data {
 		pub mod animals;
 		pub mod appliances;
 		pub mod artists;
+    pub mod barcodes;
 		pub mod blood;
 		pub mod books;
 		pub mod business;
