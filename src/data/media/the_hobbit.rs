@@ -126,7 +126,7 @@ static LOCATIONS: [&'static str; 38] = [
 ];
 static LOCATIONS_LEN: usize = LOCATIONS.len();
 
-static QUOTES: [&'static str; 0] = [
+static QUOTES: [&'static str; 12] = [
   "Do you wish me a good morning, or mean that it is a good morning whether I want it or not; or that you feel good this morning; or that it is a morning to be good on?",
   "There is nothing like looking, if you want to find something. You certainly usually find something, if you look, but it is not always quite the something you were after.",
   "In a hole in the ground there lived a hobbit.",

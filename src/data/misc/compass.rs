@@ -3,74 +3,74 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn cardinal_words() -> String {
-  let rng = rand::thread_rng();
-  CARDINAL_WORDS[rng.gen_range(0..CARDINAL_LEN)];
+  let mut rng = rand::thread_rng();
+  CARDINAL_WORDS[rng.gen_range(0..CARDINAL_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn cardinal_abbreviation() -> String {
-  let rng = rand::thread_rng();
-  CARDINAL_ABBREVIATION[rng.gen_range(0..CARDINAL_LEN)];
+  let mut rng = rand::thread_rng();
+  CARDINAL_ABBREVIATION[rng.gen_range(0..CARDINAL_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn cardinal_azimuth() -> String {
-  let rng = rand::thread_rng();
-  CARDINAL_AZIMUTH[rng.gen_range(0..CARDINAL_LEN)];
+  let mut rng = rand::thread_rng();
+  CARDINAL_AZIMUTH[rng.gen_range(0..CARDINAL_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn ordinal_words() -> String {
-  let rng = rand::thread_rng();
- ORDINAL_WORDS[rng.gen_range(0..ORDINAL_LEN)];
+  let mut rng = rand::thread_rng();
+ ORDINAL_WORDS[rng.gen_range(0..ORDINAL_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn ordinal_abbreviation() -> String {
-  let rng = rand::thread_rng();
-  ORDINAL_ABBREVIATION[rng.gen_range(0..ORDINAL_LEN)];
+  let mut rng = rand::thread_rng();
+  ORDINAL_ABBREVIATION[rng.gen_range(0..ORDINAL_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn ordinal_azimuth() -> String {
-  let rng = rand::thread_rng();
-  ORDINAL_AZIMUTH[rng.gen_range(0..ORDINAL_LEN)];
+  let mut rng = rand::thread_rng();
+  ORDINAL_AZIMUTH[rng.gen_range(0..ORDINAL_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn half_wind_words() -> String {
-  let rng = rand::thread_rng();
-  HALF_WIND_WORDS[rng.gen_range(0..HALF_WIND_LEN)];
+  let mut rng = rand::thread_rng();
+  HALF_WIND_WORDS[rng.gen_range(0..HALF_WIND_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn half_wind_abbreviation() -> String {
-  let rng = rand::thread_rng();
-  HALF_WIND_ABBREVIATION[rng.gen_range(0..HALF_WIND_LEN)];
+  let mut rng = rand::thread_rng();
+  HALF_WIND_ABBREVIATION[rng.gen_range(0..HALF_WIND_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn half_wind_azimuth() -> String {
-  let rng = rand::thread_rng();
-  HALF_WIND_AZIMUTH[rng.gen_range(0..HALF_WIND_LEN)];
+  let mut rng = rand::thread_rng();
+  HALF_WIND_AZIMUTH[rng.gen_range(0..HALF_WIND_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn quarter_wind_words() -> String {
-  let rng = rand::thread_rng();
-  QUARTER_WIND_WORDS[rng.gen_range(0..QUARTER_WIND_LEN)];
+  let mut rng = rand::thread_rng();
+  QUARTER_WIND_WORDS[rng.gen_range(0..QUARTER_WIND_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn quarter_wind_abbreviation() -> String {
-  let rng = rand::thread_rng();
-  QUARTER_WIND_ABBREVIATION[rng.gen_range(0..QUARTER_WIND_LEN)];
+  let mut rng = rand::thread_rng();
+  QUARTER_WIND_ABBREVIATION[rng.gen_range(0..QUARTER_WIND_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn quarter_wind_azimuth() -> String {
-  let rng = rand::thread_rng();
-  QUARTER_WIND_AZIMUTH[rng.gen_range(0..QUARTER_WIND_LEN)];
+  let mut rng = rand::thread_rng();
+  QUARTER_WIND_AZIMUTH[rng.gen_range(0..QUARTER_WIND_LEN)].to_string()
 }
 
 static CARDINAL_WORDS: [&'static str; 4] = [
@@ -130,7 +130,7 @@ static HALF_WIND_WORDS: [&'static str; 8] = [
 static HALF_WIND_LEN: usize = HALF_WIND_WORDS.len();
 
 
-static HALF_WIND_ABBREVIATION: [&'static str; 4] = [
+static HALF_WIND_ABBREVIATION: [&'static str; 8] = [
   "NNE",
   "ENE",
   "ESE",
@@ -141,7 +141,7 @@ static HALF_WIND_ABBREVIATION: [&'static str; 4] = [
   "NNW"
 ];
 
-static HALF_WIND_AZIMUTH: [&'static str; 4] = [
+static HALF_WIND_AZIMUTH: [&'static str; 8] = [
   "22.5",
   "67.5",
   "112.5",
