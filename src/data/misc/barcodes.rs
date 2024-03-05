@@ -46,7 +46,7 @@ pub fn upc_a() -> String {
 
 #[wasm_bindgen]
 pub fn upc_a_with_composite_symbology() -> String {
-  let mut astr = get_upc_a();
+  let mut astr = upc_a();
 
   let symbol = get_composite_symbol();
   let cstr = get_composite_string(symbol);
@@ -68,7 +68,7 @@ pub fn upc_e() -> String {
 
 #[wasm_bindgen]
 pub fn upc_e_with_composite_symbology() -> String {
-  let mut estr = get_upc_e();
+  let mut estr = upc_e();
 
   let symbol = get_composite_symbol();
   let cstr = get_composite_string(symbol);
