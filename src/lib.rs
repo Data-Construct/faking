@@ -75,6 +75,7 @@ pub mod data {
 		pub mod friends;
 		pub mod games;
 		pub mod hp_lovecraft;
+    pub mod kpop;
 		pub mod lord_of_the_rings;
 		pub mod manga;
 		pub mod mario;
