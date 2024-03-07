@@ -54,6 +54,7 @@ pub mod data {
 		pub mod fashion;
 		pub mod food;
 		pub mod greek_philosophers;
+    pub mod ipv4;
 		pub mod job;
 		pub mod lorem_ipsum;
 		pub mod marketing;
