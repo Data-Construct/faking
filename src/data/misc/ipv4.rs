@@ -16,16 +16,10 @@ pub fn ipv4_address() -> String {
 
 #[wasm_bindgen]
 pub fn ipv4_address_with_cidr() -> String {
-  let mut rng = rand::thread_rng();
-  let mut slist: Vec<String> = vec![];
-  for _ in 0..4 {
-    let v = rng.gen_range(IP_RANGE_MIN..=IP_RANGE_MAX).to_string();
-    slist.push(v);
-  }
-
-  let mut s = slist.join(".");
+  let mut s = ipv4_address();
   s.push_str("/");
 
+  let mut rng = rand::thread_rng();
   let v = rng.gen_range(CIDR_MIN..=CIDR_MAX).to_string();
   s.push_str(&v);
   s
