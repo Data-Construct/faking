@@ -34,6 +34,7 @@ pub mod data {
 	}
 	pub mod misc {
 		pub mod adjective;
+    pub mod agent_bot;
 		pub mod ancients;
 		pub mod animals;
 		pub mod appliances;
