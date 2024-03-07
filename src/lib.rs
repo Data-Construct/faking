@@ -58,6 +58,7 @@ pub mod data {
     pub mod ipv4;
     pub mod ipv6;
 		pub mod job;
+    pub mod mac_address;
 		pub mod lorem_ipsum;
 		pub mod marketing;
 		pub mod measurements;
