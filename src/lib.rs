@@ -18,6 +18,7 @@ pub mod data {
 		pub mod emails;
 		pub mod longitude_latitude;
 		pub mod name;
+		pub mod phone_numbers;
 		pub mod types;
 		pub mod usernames;
 		pub mod uuids;
@@ -34,12 +35,12 @@ pub mod data {
 	}
 	pub mod misc {
 		pub mod adjective;
-    pub mod agent_bot;
+		pub mod agent_bot;
 		pub mod ancients;
 		pub mod animals;
 		pub mod appliances;
 		pub mod artists;
-    pub mod barcodes;
+		pub mod barcodes;
 		pub mod blood;
 		pub mod books;
 		pub mod business;
@@ -55,12 +56,12 @@ pub mod data {
 		pub mod fashion;
 		pub mod food;
 		pub mod greek_philosophers;
-    pub mod industry_segments;
-    pub mod ipv4;
-    pub mod ipv6;
+		pub mod industry_segments;
+		pub mod ipv4;
+		pub mod ipv6;
 		pub mod job;
-    pub mod mac_address;
 		pub mod lorem_ipsum;
+		pub mod mac_address;
 		pub mod marketing;
 		pub mod measurements;
 		pub mod military;
@@ -80,7 +81,7 @@ pub mod data {
 		pub mod friends;
 		pub mod games;
 		pub mod hp_lovecraft;
-    pub mod kpop;
+		pub mod kpop;
 		pub mod lord_of_the_rings;
 		pub mod manga;
 		pub mod mario;
