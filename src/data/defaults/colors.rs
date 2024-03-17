@@ -1,6 +1,7 @@
 use rand::Rng;
 use wasm_bindgen::prelude::*;
 
+#[wasm_bindgen]
 pub fn hex_color() -> String {
 	let mut rng = rand::thread_rng();
 	let red = rng.gen_range(0..255);
@@ -10,39 +11,31 @@ pub fn hex_color() -> String {
 	format!("{:02x}{:02x}{:02x}", red, green, blue)
 }
 
-pub fn rgb_color() -> (i16, i16, i16) {
+#[wasm_bindgen]
+pub fn rgb_color() -> String {
 	let mut rng = rand::thread_rng();
-	(
-		rng.gen_range(0..255),
-		rng.gen_range(0..255),
-		rng.gen_range(0..255),
-	)
+	format!("{}, {}, {}", rng.gen_range(0..255), rng.gen_range(0..255), rng.gen_range(0..255))
 }
 
-pub fn cmyk_color() -> (i16, i16, i16, i16) {
+#[wasm_bindgen]
+pub fn cmyk_color() -> String {
 	let mut rng = rand::thread_rng();
-	(
-		rng.gen_range(0..100),
-		rng.gen_range(0..100),
-		rng.gen_range(0..100),
-		rng.gen_range(0..100),
-	)
+	format!("{}, {}, {}, {}", rng.gen_range(0..100), rng.gen_range(0..100), rng.gen_range(0..100), rng.gen_range(0..100))
 }
 
-pub fn hsl_color() -> (i16, i16, i16) {
+#[wasm_bindgen]
+pub fn hsl_color() -> String {
 	let mut rng = rand::thread_rng();
-	(
-		rng.gen_range(0..359),
-		rng.gen_range(0..100),
-		rng.gen_range(0..100),
-	)
+	format!("{}, {}, {}", rng.gen_range(0..359), rng.gen_range(0..100), rng.gen_range(0..100))
 }
 
+#[wasm_bindgen]
 pub fn color_name() -> String {
 	let mut rng = rand::thread_rng();
 	COLORNAMES[rng.gen_range(0..COLORNAMES_LEN)].to_string()
 }
 
+#[wasm_bindgen]
 pub fn physical_color() -> String {
 	let mut rng = rand::thread_rng();
 	PHYSICALCOLORS[rng.gen_range(0..PHYSICALCOLORS_LEN)].to_string()
