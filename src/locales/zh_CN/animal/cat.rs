@@ -1,7 +1,6 @@
 use rand::Rng;
 use wasm_bindgen::prelude::*;
 
-// def
 pub fn cat() -> String {
 	let mut rng = rand::thread_rng();
 	ZH_CN__CAT[rng.gen_range(0..ZH_CN__CAT_LEN)].to_string()
