@@ -1,8 +1,14 @@
 use rand::Rng;
 use wasm_bindgen::prelude::*;
 
-#[wasm_bindgen(js_namespace = ZH)]
+// def
 pub fn cat() -> String {
+	let mut rng = rand::thread_rng();
+	ZH_CN__CAT[rng.gen_range(0..ZH_CN__CAT_LEN)].to_string()
+}
+
+#[wasm_bindgen(js_namespace = ZH)]
+pub fn n_cat() -> String {
 	let mut rng = rand::thread_rng();
 	ZH_CN__CAT[rng.gen_range(0..ZH_CN__CAT_LEN)].to_string()
 }
