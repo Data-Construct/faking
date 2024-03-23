@@ -2,6 +2,11 @@
 name = "data-faking"
 version = "0.0.6"
 edition = "2021"
+license = "MPL-2.0"
+description = "Generate massive amounts of fake data"
+repository = "https://github.com/Data-Construct/faking"
+keywords = ["rand", "fake", "data", "webassembly", "wasm"]
+categories = ["wasm", "development-tools "]
 
 [lib]
 crate-type = ["cdylib", "rlib"]
