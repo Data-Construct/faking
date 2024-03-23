@@ -7,6 +7,8 @@ pub use self::data::defaults;
 pub use self::data::media;
 pub use self::data::misc;
 
+pub mod locales;
+
 pub mod data {
 	pub mod blockchain {
 		pub mod bitcoin;
