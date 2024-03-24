@@ -6,6 +6,7 @@ Generate massive amounts of fake (but realistic) data for testing and developmen
 
 [![Docs Status](https://docs.rs/data-faking/badge.svg)](https://docs.rs/data-faking)
 [![Latest Version](https://img.shields.io/crates/v/data-faking.svg)](https://crates.io/crates/data-faking)
+[![npm version](https://badgen.net/npm/v/data-faking)](https://www.npmjs.com/package/data-faking)
 
 Try using our [playground](https://www.dataconstruct.io/organizations/playground/schemas) for your data gen needs, it supports code gen for much more than rust and javascript.
 
