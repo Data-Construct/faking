@@ -106,7 +106,7 @@ pub mod data {
 	}
 }
 
-mod utils {
+pub mod utils {
   pub mod seeder;
 }
 

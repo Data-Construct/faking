@@ -1,6 +1,6 @@
 [package]
 name = "data-faking"
-version = "0.0.8"
+version = "0.0.10"
 edition = "2021"
 license = "MPL-2.0"
 description = "Generate massive amounts of fake data"
@@ -41,6 +41,7 @@ uuid = { version = "1.8.0", features = [
 lazy_static = "1.4.0"
 rand_isaac = "0.3.0"
 regex = "1.10.3"
+rand_pcg = "0.3.1"
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.34"
