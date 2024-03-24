@@ -110,10 +110,35 @@ mod utils {
 
 #[cfg(test)]
 mod tests {
+  const SEED_VALUE: u64 = 1;
 
 	#[test]
 	fn it_works() {
 		// let result = add(2, 2);
 		// assert_eq!(result, 4);
 	}
+
+  #[test]
+  fn test_greek_philosopher_names() {
+    use crate::utils::seeder;
+    seeder::set_seed(SEED_VALUE);
+    
+
+    use crate::misc::greek_philosophers;
+    let name: String = greek_philosophers::greek_philosopher_names();
+    let expected: String = "Galen".to_owned();
+    assert_eq!(expected, name);
+  }
+
+  #[test]
+  fn test_greek_philosopher_quotes() {
+    use crate::utils::seeder;
+    seeder::set_seed(SEED_VALUE);
+    
+
+    use crate::misc::greek_philosophers;
+    let quote: String = greek_philosophers::greek_philosopher_quotes();
+    let expected: String = "Good habits formed at youth make all the difference.".to_owned();
+    assert_eq!(expected, quote);
+  }
 }
