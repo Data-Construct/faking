@@ -26,7 +26,7 @@ pub fn get_seed() -> Option<u64> {
 	return *guard;
 }
 
-pub fn get_value_from_range<T, R>(range: R) -> T
+pub fn gen_range<T, R>(range: R) -> T
 where
 	T: SampleUniform,
 	R: SampleRange<T>,

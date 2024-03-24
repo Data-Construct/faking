@@ -1,10 +1,9 @@
 use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
-use rand::Rng;
 
 #[wasm_bindgen]
 pub fn greek_philosopher_names() -> String {
-	NAMES[seeder::get_value_from_range(0..NAMES_LEN)].to_string()
+	NAMES[seeder::gen_range(0..NAMES_LEN)].to_string()
 }
 
 // Left in for testing against seeder
@@ -16,7 +15,7 @@ pub fn greek_philosopher_names() -> String {
 
 #[wasm_bindgen]
 pub fn greek_philosopher_quotes() -> String {
-	QUOTES[seeder::get_value_from_range(0..QUOTES_LEN)].to_string()
+	QUOTES[seeder::gen_range(0..QUOTES_LEN)].to_string()
 }
 
 static NAMES: [&'static str; 22] = [

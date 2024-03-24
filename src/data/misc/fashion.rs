@@ -1,10 +1,9 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn terms() -> String {
-	let mut rng = rand::thread_rng();
-	FASHION_TERMS[rng.gen_range(0..FASHION_TERMS_LEN)].to_string()
+	FASHION_TERMS[seeder::gen_range(0..FASHION_TERMS_LEN)].to_string()
 }
 
 static FASHION_TERMS: [&'static str; 244] = [
