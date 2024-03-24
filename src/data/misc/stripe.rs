@@ -1,4 +1,5 @@
 use rand::Rng;
+use wasm_bindgen::prelude::wasm_bindgen;
 use std::collections::HashMap;
 
 #[derive(Debug)]
@@ -124,10 +125,12 @@ pub fn valid_card() -> CardData {
 	}
 }
 
+#[wasm_bindgen]
 pub fn valid_card_vendor() -> String {
 	valid_card().vendor
 }
 
+#[wasm_bindgen]
 pub fn valid_card_number() -> String {
 	valid_card().number
 }
@@ -143,10 +146,12 @@ pub fn valid_token() -> TokenData {
 	}
 }
 
+#[wasm_bindgen]
 pub fn valid_token_vendor() -> String {
 	valid_token().vendor
 }
 
+#[wasm_bindgen]
 pub fn valid_token_name() -> String {
 	valid_token().name
 }
@@ -165,6 +170,7 @@ pub fn invalid_token() -> InvalidCardData {
 	}
 }
 
+#[wasm_bindgen]
 pub fn invalid_token_error() -> String {
 	invalid_token().error
 }
