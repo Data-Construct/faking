@@ -7,18 +7,6 @@ pub fn cat() -> String {
 	EN__CAT[rng.gen_range(0..EN__CAT_LEN)].to_string()
 }
 
-#[wasm_bindgen(js_namespace = EN)]
-pub fn n_cat() -> String {
-	let mut rng = rand::thread_rng();
-	EN__CAT[rng.gen_range(0..EN__CAT_LEN)].to_string()
-}
-
-#[wasm_bindgen]
-pub fn en_cat() -> String {
-	let mut rng = rand::thread_rng();
-	EN__CAT[rng.gen_range(0..EN__CAT_LEN)].to_string()
-}
-
 static EN__CAT: [&'static str; 55] = [
   "Abyssinian",
   "American Bobtail",
