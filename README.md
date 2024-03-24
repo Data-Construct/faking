@@ -52,7 +52,7 @@ console.log(faking.f64());
 If you want consistent results, you can set your own seed:
 
 ```rust
-faking.set_seed(2);
+faking::utils::seeder::set_seed(2);
 println!("{}", faking::defaults::types::f64());
 ```
 
