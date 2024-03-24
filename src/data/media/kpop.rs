@@ -1,40 +1,34 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn kpop_group_first_generation() -> String {
-	let mut rng = rand::thread_rng();
-	GROUPS_FIRST_GEN[rng.gen_range(0..GROUPS_FIRST_GEN_LEN)].to_string()
+	GROUPS_FIRST_GEN[seeder::gen_range(0..GROUPS_FIRST_GEN_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn kpop_group_second_generation() -> String {
-	let mut rng = rand::thread_rng();
-	GROUPS_SECOND_GEN[rng.gen_range(0..GROUPS_SECOND_GEN_LEN)].to_string()
+	GROUPS_SECOND_GEN[seeder::gen_range(0..GROUPS_SECOND_GEN_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn kpop_group_third_generation() -> String {
-	let mut rng = rand::thread_rng();
-	GROUPS_THIRD_GEN[rng.gen_range(0..GROUPS_THIRD_GEN_LEN)].to_string()
+	GROUPS_THIRD_GEN[seeder::gen_range(0..GROUPS_THIRD_GEN_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn kpop_girl_groups() -> String {
-	let mut rng = rand::thread_rng();
-	GIRL_GROUPS[rng.gen_range(0..GIRL_GROUPS_LEN)].to_string()
+	GIRL_GROUPS[seeder::gen_range(0..GIRL_GROUPS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn kpop_boy_bands() -> String {
-	let mut rng = rand::thread_rng();
-	BOY_BANDS[rng.gen_range(0..BOY_BANDS_LEN)].to_string()
+	BOY_BANDS[seeder::gen_range(0..BOY_BANDS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn kpop_soloists() -> String {
-	let mut rng = rand::thread_rng();
-	SOLOISTS[rng.gen_range(0..SOLOISTS_LEN)].to_string()
+	SOLOISTS[seeder::gen_range(0..SOLOISTS_LEN)].to_string()
 }
 
 static GROUPS_FIRST_GEN: [&'static str; 27] = [

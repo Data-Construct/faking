@@ -1,76 +1,65 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn allergens() -> String {
-    let mut rng = rand::thread_rng();
-    ALLERGENS[rng.gen_range(0..ALLERGENS_LEN)].to_string()
+    ALLERGENS[seeder::gen_range(0..ALLERGENS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn dishes() -> String {
-    let mut rng = rand::thread_rng();
-    DISHES[rng.gen_range(0..DISHES_LEN)].to_string()
+    DISHES[seeder::gen_range(0..DISHES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn descriptions() -> String {
-    let mut rng = rand::thread_rng();
-    DESCRIPTIONS[rng.gen_range(0..DESCRIPTIONS_LEN)].to_string()
+    DESCRIPTIONS[seeder::gen_range(0..DESCRIPTIONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn ingredients() -> String {
-    let mut rng = rand::thread_rng();
-    INGREDIENTS[rng.gen_range(0..INGREDIENTS_LEN)].to_string()
+    INGREDIENTS[seeder::gen_range(0..INGREDIENTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn fruits() -> String {
-    let mut rng = rand::thread_rng();
-    FRUITS[rng.gen_range(0..FRUITS_LEN)].to_string()
+    FRUITS[seeder::gen_range(0..FRUITS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn vegetables() -> String {
-    let mut rng = rand::thread_rng();
-    VEGETABLES[rng.gen_range(0..VEGETABLES_LEN)].to_string()
+    VEGETABLES[seeder::gen_range(0..VEGETABLES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn spices() -> String {
-    let mut rng = rand::thread_rng();
-    SPICES[rng.gen_range(0..SPICES_LEN)].to_string()
+    SPICES[seeder::gen_range(0..SPICES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn measurements() -> String {
-    let mut rng = rand::thread_rng();
-    MEASUREMENTS[rng.gen_range(0..MEASUREMENTS_LEN)].to_string()
+    MEASUREMENTS[seeder::gen_range(0..MEASUREMENTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn measurement_sizes() -> String {
-    let mut rng = rand::thread_rng();
-    MEASUREMENT_SIZES[rng.gen_range(0..MEASUREMENT_SIZES_LEN)].to_string()
+    MEASUREMENT_SIZES[seeder::gen_range(0..MEASUREMENT_SIZES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn metric_measurements() -> String {
-    let mut rng = rand::thread_rng();
-    METRIC_MEASUREMENTS[rng.gen_range(0..METRIC_MEASUREMENTS_LEN)].to_string()
+    METRIC_MEASUREMENTS[seeder::gen_range(0..METRIC_MEASUREMENTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn sushis() -> String {
-    let mut rng = rand::thread_rng();
-    SUSHIS[rng.gen_range(0..SUSHIS_LEN)].to_string()
+    SUSHIS[seeder::gen_range(0..SUSHIS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn ethnic_categories() -> String {
-    let mut rng = rand::thread_rng();
-    ETHNIC_CATEGORIES[rng.gen_range(0..ETHNIC_CATEGORIES_LEN)].to_string()
+
+    ETHNIC_CATEGORIES[seeder::gen_range(0..ETHNIC_CATEGORIES_LEN)].to_string()
 }
 
 static ALLERGENS: [&'static str; 11] = [

@@ -1,11 +1,10 @@
 use crate::defaults::usernames;
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn standard_generic_email() -> String {
-	let mut rng = rand::thread_rng();
-	let format = rng.gen_range(0..4);
+	let format = seeder::gen_range(0..4);
 
 	match format {
 		0 => standard_public_email_alias(),
@@ -18,58 +17,53 @@ pub fn standard_generic_email() -> String {
 
 #[wasm_bindgen]
 pub fn standard_public_email() -> String {
-	let mut rng = rand::thread_rng();
 	let username = usernames::random_username();
-	let domain = PUBLIC_EMAIL_DOMAINS[rng.gen_range(0..PUBLIC_EMAIL_DOMAINS_LEN)].to_string();
+	let domain = PUBLIC_EMAIL_DOMAINS[seeder::gen_range(0..PUBLIC_EMAIL_DOMAINS_LEN)].to_string();
 	format!("{}{}{}{}", username, "@", domain, ".com")
 }
 
 #[wasm_bindgen]
 pub fn standard_public_email_alias() -> String {
-	let mut rng = rand::thread_rng();
-	let format = rng.gen_range(0..2);
+	let format = seeder::gen_range(0..2);
 	let username = match format {
 		0 => format!(
 			"{}{}{}",
 			usernames::random_username(),
 			"+",
-			rng.gen_range(0..100).to_string()
+			seeder::gen_range(0..100).to_string()
 		),
 		1 => format!(
 			"{}{}{}",
 			usernames::random_username(),
 			"+",
-			BUSINESS_EMAIL_DOMAINS[rng.gen_range(0..BUSINESS_EMAIL_DOMAINS_LEN)].to_string()
+			BUSINESS_EMAIL_DOMAINS[seeder::gen_range(0..BUSINESS_EMAIL_DOMAINS_LEN)].to_string()
 		),
 		_ => "".to_string(),
 	};
-	let domain = PUBLIC_EMAIL_DOMAINS[rng.gen_range(0..PUBLIC_EMAIL_DOMAINS_LEN)].to_string();
+	let domain = PUBLIC_EMAIL_DOMAINS[seeder::gen_range(0..PUBLIC_EMAIL_DOMAINS_LEN)].to_string();
 	format!("{}{}{}{}", username, "@", domain, ".com")
 }
 
 #[wasm_bindgen]
 pub fn standard_business_email() -> String {
-	let mut rng = rand::thread_rng();
 	let username = usernames::random_username();
-	let domain = BUSINESS_EMAIL_DOMAINS[rng.gen_range(0..BUSINESS_EMAIL_DOMAINS_LEN)].to_string();
+	let domain = BUSINESS_EMAIL_DOMAINS[seeder::gen_range(0..BUSINESS_EMAIL_DOMAINS_LEN)].to_string();
 	format!("{}{}{}{}", username, "@", domain, ".com")
 }
 
 #[wasm_bindgen]
 pub fn standard_government_email() -> String {
-	let mut rng = rand::thread_rng();
 	let username = usernames::random_username();
 	let domain =
-		GOVERNMENT_EMAIL_DOMAINS[rng.gen_range(0..GOVERNMENT_EMAIL_DOMAINS_LEN)].to_string();
+		GOVERNMENT_EMAIL_DOMAINS[seeder::gen_range(0..GOVERNMENT_EMAIL_DOMAINS_LEN)].to_string();
 	//Some government emails end with .gov domain
 	format!("{}{}{}{}", username, "@", domain, ".com")
 }
 
 #[wasm_bindgen]
 pub fn standard_account_email(first_name: &str, last_name: &str) -> String {
-	let mut rng = rand::thread_rng();
 	let username = usernames::corporate_username_from_input(first_name, last_name);
-	let domain = PUBLIC_EMAIL_DOMAINS[rng.gen_range(0..PUBLIC_EMAIL_DOMAINS_LEN)].to_string();
+	let domain = PUBLIC_EMAIL_DOMAINS[seeder::gen_range(0..PUBLIC_EMAIL_DOMAINS_LEN)].to_string();
 	format!("{}{}{}{}", username, "@", domain, ".com")
 }
 

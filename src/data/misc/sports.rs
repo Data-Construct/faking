@@ -1,40 +1,34 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn summer_olympic() -> String {
-	let mut rng = rand::thread_rng();
-	SUMMER_OLYMPICS[rng.gen_range(0..SUMMER_OLYMPICS_LEN)].to_string()
+	SUMMER_OLYMPICS[seeder::gen_range(0..SUMMER_OLYMPICS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn winter_olympic() -> String {
-	let mut rng = rand::thread_rng();
-	WINTER_OLYMPICS[rng.gen_range(0..WINTER_OLYMPICS_LEN)].to_string()
+	WINTER_OLYMPICS[seeder::gen_range(0..WINTER_OLYMPICS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn summer_paralympic() -> String {
-	let mut rng = rand::thread_rng();
-	SUMMER_PARALYMPICS[rng.gen_range(0..SUMMER_PARALYMPICS_LEN)].to_string()
+	SUMMER_PARALYMPICS[seeder::gen_range(0..SUMMER_PARALYMPICS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn winter_paralympics() -> String {
-	let mut rng = rand::thread_rng();
-	WINTER_PARALYMPICS[rng.gen_range(0..WINTER_PARALYMPICS_LEN)].to_string()
+	WINTER_PARALYMPICS[seeder::gen_range(0..WINTER_PARALYMPICS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn ancient_olympic() -> String {
-	let mut rng = rand::thread_rng();
-	ANCIENT_OLYMPICS[rng.gen_range(0..ANCIENT_OLYMPICS_LEN)].to_string()
+	ANCIENT_OLYMPICS[seeder::gen_range(0..ANCIENT_OLYMPICS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn unusual() -> String {
-	let mut rng = rand::thread_rng();
-	UNUSUAL[rng.gen_range(0..UNUSUAL_LEN)].to_string()
+	UNUSUAL[seeder::gen_range(0..UNUSUAL_LEN)].to_string()
 }
 static SUMMER_OLYMPICS: [&'static str; 47] = [
 	"3x3 basketball",

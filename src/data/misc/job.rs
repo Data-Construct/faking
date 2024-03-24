@@ -1,40 +1,34 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn field() -> String {
-	let mut rng = rand::thread_rng();
-	FIELDS[rng.gen_range(0..FIELDS_LEN)].to_string()
+	FIELDS[seeder::gen_range(0..FIELDS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn seniority() -> String {
-	let mut rng = rand::thread_rng();
-	SENIORITY[rng.gen_range(0..SENIORITY_LEN)].to_string()
+	SENIORITY[seeder::gen_range(0..SENIORITY_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn position() -> String {
-	let mut rng = rand::thread_rng();
-	POSITIONS[rng.gen_range(0..POSITIONS_LEN)].to_string()
+	POSITIONS[seeder::gen_range(0..POSITIONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn key_skill() -> String {
-	let mut rng = rand::thread_rng();
-	KEY_SKILLS[rng.gen_range(0..KEY_SKILLS_LEN)].to_string()
+	KEY_SKILLS[seeder::gen_range(0..KEY_SKILLS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn employment_type() -> String {
-	let mut rng = rand::thread_rng();
-	EMPLOYMENT_TYPES[rng.gen_range(0..EMPLOYMENT_TYPES_LEN)].to_string()
+	EMPLOYMENT_TYPES[seeder::gen_range(0..EMPLOYMENT_TYPES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn education_level() -> String {
-	let mut rng = rand::thread_rng();
-	EDUCATION_LEVELS[rng.gen_range(0..EDUCATION_LEVELS_LEN)].to_string()
+	EDUCATION_LEVELS[seeder::gen_range(0..EDUCATION_LEVELS_LEN)].to_string()
 }
 
 static FIELDS: [&'static str; 23] = [

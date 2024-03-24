@@ -1,18 +1,16 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 // ask about ### and  ???
 // TODO kevinly77: Ask about generating a restuarant object?
 
 #[wasm_bindgen]
 pub fn name_prefix() -> String {
-	let mut rng = rand::thread_rng();
-	NAME_PREFIX[rng.gen_range(0..NAME_PREFIX_LEN)].to_string()
+	NAME_PREFIX[seeder::gen_range(0..NAME_PREFIX_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn name_suffix() -> String {
-	let mut rng = rand::thread_rng();
-	NAME_SUFFIX[rng.gen_range(0..NAME_SUFFIX_LEN)].to_string()
+	NAME_SUFFIX[seeder::gen_range(0..NAME_SUFFIX_LEN)].to_string()
 }
 
 #[wasm_bindgen]
@@ -24,20 +22,17 @@ pub fn restaurant_full_name() -> String {
 
 #[wasm_bindgen]
 pub fn restaurant_type() -> String {
-	let mut rng = rand::thread_rng();
-	RESTAURANT_TYPE[rng.gen_range(0..RESTAURANT_TYPE_LEN)].to_string()
+	RESTAURANT_TYPE[seeder::gen_range(0..RESTAURANT_TYPE_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn restaurant_description() -> String {
-	let mut rng = rand::thread_rng();
-	RESTAURANT_DESCRIPTION[rng.gen_range(0..RESTAURANT_DESCRIPTION_LEN)].to_string()
+	RESTAURANT_DESCRIPTION[seeder::gen_range(0..RESTAURANT_DESCRIPTION_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn restaurant_review() -> String {
-	let mut rng = rand::thread_rng();
-	RESTAURANT_REVIEW[rng.gen_range(0..RESTAURANT_REVIEW_LEN)].to_string()
+	RESTAURANT_REVIEW[seeder::gen_range(0..RESTAURANT_REVIEW_LEN)].to_string()
 }
 
 #[wasm_bindgen]

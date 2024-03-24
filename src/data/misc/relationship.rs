@@ -1,40 +1,34 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn familial_direct() -> String {
-	let mut rng = rand::thread_rng();
-	FAMILIAL_DIRECT[rng.gen_range(0..FAMILIAL_DIRECT_LEN)].to_string()
+	FAMILIAL_DIRECT[seeder::gen_range(0..FAMILIAL_DIRECT_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn familial_extended() -> String {
-	let mut rng = rand::thread_rng();
-	FAMILIAL_EXTENDED[rng.gen_range(0..FAMILIAL_EXTENDED_LEN)].to_string()
+	FAMILIAL_EXTENDED[seeder::gen_range(0..FAMILIAL_EXTENDED_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn in_law() -> String {
-	let mut rng = rand::thread_rng();
-	IN_LAW[rng.gen_range(0..IN_LAW_LEN)].to_string()
+	IN_LAW[seeder::gen_range(0..IN_LAW_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn spouse() -> String {
-	let mut rng = rand::thread_rng();
-	SPOUSE[rng.gen_range(0..SPOUSE_LEN)].to_string()
+	SPOUSE[seeder::gen_range(0..SPOUSE_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn parent() -> String {
-	let mut rng = rand::thread_rng();
-	PARENT[rng.gen_range(0..PARENT_LEN)].to_string()
+	PARENT[seeder::gen_range(0..PARENT_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn sibling() -> String {
-	let mut rng = rand::thread_rng();
-	SIBLING[rng.gen_range(0..SIBLING_LEN)].to_string()
+	SIBLING[seeder::gen_range(0..SIBLING_LEN)].to_string()
 }
 
 static FAMILIAL_DIRECT: [&'static str; 4] = [

@@ -1,22 +1,19 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn motivational_quote() -> String {
-	let mut rng = rand::thread_rng();
-	MOTIVATIONAL_QUOTES[rng.gen_range(0..MOTIVATIONAL_QUOTES_LEN)].to_string()
+	MOTIVATIONAL_QUOTES[seeder::gen_range(0..MOTIVATIONAL_QUOTES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn philisophical_quote() -> String {
-	let mut rng = rand::thread_rng();
-	PHILISOPHICAL_QUOTES[rng.gen_range(0..PHILISOPHICAL_QUOTES_LEN)].to_string()
+	PHILISOPHICAL_QUOTES[seeder::gen_range(0..PHILISOPHICAL_QUOTES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn movie_quote() -> String {
-	let mut rng = rand::thread_rng();
-	MOVIE_QUOTES[rng.gen_range(0..MOVIE_QUOTES_LEN)].to_string()
+	MOVIE_QUOTES[seeder::gen_range(0..MOVIE_QUOTES_LEN)].to_string()
 }
 
 static MOVIE_QUOTES: [&'static str; 151] = [

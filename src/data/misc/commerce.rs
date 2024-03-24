@@ -1,53 +1,45 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 //TODO kevinly77: Full product object?
 #[wasm_bindgen]
 pub fn department() -> String {
-	let mut rng = rand::thread_rng();
-	DEPARTMENTS[rng.gen_range(0..DEPARTMENTS_LEN)].to_string()
+	DEPARTMENTS[seeder::gen_range(0..DEPARTMENTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn product_adjective() -> String {
-	let mut rng = rand::thread_rng();
-	PRODUCT_ADJECTIVES[rng.gen_range(0..PRODUCT_ADJECTIVES_LEN)].to_string()
+	PRODUCT_ADJECTIVES[seeder::gen_range(0..PRODUCT_ADJECTIVES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn material() -> String {
-	let mut rng = rand::thread_rng();
-	MATERIALS[rng.gen_range(0..MATERIALS_LEN)].to_string()
+	MATERIALS[seeder::gen_range(0..MATERIALS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn product() -> String {
-	let mut rng = rand::thread_rng();
-	PRODUCTS[rng.gen_range(0..PRODUCTS_LEN)].to_string()
+	PRODUCTS[seeder::gen_range(0..PRODUCTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn promotion_code_adjective() -> String {
-	let mut rng = rand::thread_rng();
-	PROMOTION_CODE_ADJECTIVES[rng.gen_range(0..PROMOTION_CODE_ADJECTIVES_LEN)].to_string()
+	PROMOTION_CODE_ADJECTIVES[seeder::gen_range(0..PROMOTION_CODE_ADJECTIVES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn promotion_code_noun() -> String {
-	let mut rng = rand::thread_rng();
-	PROMOTION_CODE_NOUNS[rng.gen_range(0..PROMOTION_CODE_NOUNS_LEN)].to_string()
+	PROMOTION_CODE_NOUNS[seeder::gen_range(0..PROMOTION_CODE_NOUNS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn brand_commerce() -> String {
-	let mut rng = rand::thread_rng();
-	BRANDS[rng.gen_range(0..BRANDS_LEN)].to_string()
+	BRANDS[seeder::gen_range(0..BRANDS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn vendor() -> String {
-	let mut rng = rand::thread_rng();
-	VENDORS[rng.gen_range(0..VENDORS_LEN)].to_string()
+	VENDORS[seeder::gen_range(0..VENDORS_LEN)].to_string()
 }
 
 #[wasm_bindgen]

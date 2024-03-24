@@ -1,22 +1,19 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn names() -> String {
-	let mut rng = rand::thread_rng();
-	NAMES[rng.gen_range(0..NAMES_LEN)].to_string()
+	NAMES[seeder::gen_range(0..NAMES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn symbols() -> String {
-	let mut rng = rand::thread_rng();
-	SYMBOLS[rng.gen_range(0..SYMBOLS_LEN)].to_string()
+	SYMBOLS[seeder::gen_range(0..SYMBOLS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn codes() -> String {
-	let mut rng = rand::thread_rng();
-	CODES[rng.gen_range(0..CODES_LEN)].to_string()
+	CODES[seeder::gen_range(0..CODES_LEN)].to_string()
 }
 
 static NAMES: [&'static str; 169] = [

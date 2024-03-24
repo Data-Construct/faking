@@ -1,22 +1,19 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn seinfeld_characters() -> String {
-	let mut rng = rand::thread_rng();
-	CHARACTERS[rng.gen_range(0..CHARACTERS_LEN)].to_string()
+	CHARACTERS[seeder::gen_range(0..CHARACTERS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn seinfeld_quotes() -> String {
-	let mut rng = rand::thread_rng();
-	QUOTES[rng.gen_range(0..QUOTES_LEN)].to_string()
+	QUOTES[seeder::gen_range(0..QUOTES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn seinfeld_businesses() -> String {
-	let mut rng = rand::thread_rng();
-	BUSINESSES[rng.gen_range(0..BUSINESSES_LEN)].to_string()
+	BUSINESSES[seeder::gen_range(0..BUSINESSES_LEN)].to_string()
 }
 
 static CHARACTERS: [&'static str; 29] = [

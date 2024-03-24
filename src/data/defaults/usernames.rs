@@ -1,30 +1,26 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 //NOTE: Some hypenated words appear ex: bite-sized
 
 #[wasm_bindgen]
 pub fn username_adjective() -> String {
-	let mut rng = rand::thread_rng();
-	USERNAME_ADJECTIVES[rng.gen_range(0..USERNAME_ADJECTIVES_LEN)].to_string()
+	USERNAME_ADJECTIVES[seeder::gen_range(0..USERNAME_ADJECTIVES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn username_proper_name() -> String {
-	let mut rng = rand::thread_rng();
-	USERNAME_PROPER_NAMES[rng.gen_range(0..USERNAME_PROPER_NAMES_LEN)].to_string()
+	USERNAME_PROPER_NAMES[seeder::gen_range(0..USERNAME_PROPER_NAMES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn username_word() -> String {
-	let mut rng = rand::thread_rng();
-	USERNAME_WORDS[rng.gen_range(0..USERNAME_WORDS_LEN)].to_string()
+	USERNAME_WORDS[seeder::gen_range(0..USERNAME_WORDS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn random_username() -> String {
-	let mut rng = rand::thread_rng();
-	let format = rng.gen_range(0..5);
+	let format = seeder::gen_range(0..5);
 
 	match format {
 		0 => format!("{}{}", username_adjective(), username_proper_name()),
@@ -33,34 +29,32 @@ pub fn random_username() -> String {
 			"{}{}{}",
 			username_adjective(),
 			username_word(),
-			rng.gen_range(0..1000)
+			seeder::gen_range(0..1000)
 		),
-		3 => format!("{}{}", username_word(), rng.gen_range(0..1000)),
-		4 => format!("{}{}", username_proper_name(), rng.gen_range(0..1000)),
+		3 => format!("{}{}", username_word(), seeder::gen_range(0..1000)),
+		4 => format!("{}{}", username_proper_name(), seeder::gen_range(0..1000)),
 		_ => "".to_string(),
 	}
 }
 
 #[wasm_bindgen]
 pub fn random_username_from_input(word: &str) -> String {
-	let mut rng = rand::thread_rng();
-	let format = rng.gen_range(0..6);
+	let format = seeder::gen_range(0..6);
 
 	match format {
-		0 => format!("{}{}", word, rng.gen_range(0..1000)),
+		0 => format!("{}{}", word, seeder::gen_range(0..1000)),
 		1 => format!("{}{}", username_adjective(), word),
 		2 => format!("{}{}{}", "x", word, "x"),
-		3 => format!("{}{}", word, rng.gen_range(0..1000)),
-		4 => format!("{}{}{}", username_adjective(), word, rng.gen_range(0..1000)),
-		5 => format!("{}{}{}{}", "x", word, rng.gen_range(0..1000), "x"),
+		3 => format!("{}{}", word, seeder::gen_range(0..1000)),
+		4 => format!("{}{}{}", username_adjective(), word, seeder::gen_range(0..1000)),
+		5 => format!("{}{}{}{}", "x", word, seeder::gen_range(0..1000), "x"),
 		_ => "".to_string(),
 	}
 }
 
 #[wasm_bindgen]
 pub fn corporate_username_from_input(first_name: &str, last_name: &str) -> String {
-	let mut rng = rand::thread_rng();
-	let format = rng.gen_range(0..2);
+	let format = seeder::gen_range(0..2);
 	let lower_case_fname = first_name.to_lowercase();
 	let lower_case_lname = last_name.to_ascii_lowercase();
 	match format {
@@ -73,7 +67,7 @@ pub fn corporate_username_from_input(first_name: &str, last_name: &str) -> Strin
 			"{}{}{}",
 			lower_case_fname.chars().next().unwrap(),
 			lower_case_lname,
-			rng.gen_range(0..1000)
+			seeder::gen_range(0..1000)
 		),
 		_ => "".to_string(),
 	}

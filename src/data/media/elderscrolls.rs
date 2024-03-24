@@ -1,34 +1,29 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn es_characters() -> String {
-	let mut rng = rand::thread_rng();
-	CHARACTERS[rng.gen_range(0..CHARACTERS_LEN)].to_string()
+	CHARACTERS[seeder::gen_range(0..CHARACTERS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn es_games() -> String {
-	let mut rng = rand::thread_rng();
-	GAMES[rng.gen_range(0..GAMES_LEN)].to_string()
+	GAMES[seeder::gen_range(0..GAMES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn es_location() -> String {
-	let mut rng = rand::thread_rng();
-	LOCATIONS[rng.gen_range(0..LOCATIONS_LEN)].to_string()
+	LOCATIONS[seeder::gen_range(0..LOCATIONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn es_factions() -> String {
-	let mut rng = rand::thread_rng();
-	FACTIONS[rng.gen_range(0..FACTIONS_LEN)].to_string()
+	FACTIONS[seeder::gen_range(0..FACTIONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn es_events() -> String {
-	let mut rng = rand::thread_rng();
-	EVENTS[rng.gen_range(0..EVENTS_LEN)].to_string()
+	EVENTS[seeder::gen_range(0..EVENTS_LEN)].to_string()
 }
 
 static CHARACTERS: [&'static str; 700] = [

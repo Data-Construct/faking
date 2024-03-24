@@ -1,34 +1,29 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn race() -> String {
-	let mut rng = rand::thread_rng();
-	RACE[rng.gen_range(0..RACE_LEN)].to_string()
+	RACE[seeder::gen_range(0..RACE_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn sex() -> String {
-	let mut rng = rand::thread_rng();
-	SEX[rng.gen_range(0..SEX_LEN)].to_string()
+	SEX[seeder::gen_range(0..SEX_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn demonym() -> String {
-	let mut rng = rand::thread_rng();
-	DEMONYM[rng.gen_range(0..DEMONYM_LEN)].to_string()
+	DEMONYM[seeder::gen_range(0..DEMONYM_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn educational_attainment() -> String {
-	let mut rng = rand::thread_rng();
-	EDUCATIONAL_ATTAINMENT[rng.gen_range(0..EDUCATIONAL_ATTAINMENT_LEN)].to_string()
+	EDUCATIONAL_ATTAINMENT[seeder::gen_range(0..EDUCATIONAL_ATTAINMENT_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn martial_status() -> String {
-	let mut rng = rand::thread_rng();
-	MARTIAL_STATUS[rng.gen_range(0..MARTIAL_STATUS_LEN)].to_string()
+	MARTIAL_STATUS[seeder::gen_range(0..MARTIAL_STATUS_LEN)].to_string()
 }
 
 static RACE: [&'static str; 5] = [

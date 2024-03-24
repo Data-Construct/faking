@@ -1,34 +1,29 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn plan() -> String {
-	let mut rng = rand::thread_rng();
-	PLANS[rng.gen_range(0..PLANS_LEN)].to_string()
+	PLANS[seeder::gen_range(0..PLANS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn status() -> String {
-	let mut rng = rand::thread_rng();
-	STATUSES[rng.gen_range(0..STATUSES_LEN)].to_string()
+	STATUSES[seeder::gen_range(0..STATUSES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn payment_method() -> String {
-	let mut rng = rand::thread_rng();
-	PAYMENT_METHOD[rng.gen_range(0..PAYMENT_METHOD_LEN)].to_string()
+	PAYMENT_METHOD[seeder::gen_range(0..PAYMENT_METHOD_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn subscription_term() -> String {
-	let mut rng = rand::thread_rng();
-	SUBSCRIPTION_TERMS[rng.gen_range(0..SUBSCRIPTION_TERMS_LEN)].to_string()
+	SUBSCRIPTION_TERMS[seeder::gen_range(0..SUBSCRIPTION_TERMS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn payment_term() -> String {
-	let mut rng = rand::thread_rng();
-	PAYMENT_TERMS[rng.gen_range(0..PAYMENT_TERMS_LEN)].to_string()
+	PAYMENT_TERMS[seeder::gen_range(0..PAYMENT_TERMS_LEN)].to_string()
 }
 
 static PLANS: [&'static str; 14] = [

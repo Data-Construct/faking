@@ -1,44 +1,38 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn hex_color() -> String {
-	let mut rng = rand::thread_rng();
-	let red = rng.gen_range(0..255);
-	let green = rng.gen_range(0..255);
-	let blue = rng.gen_range(0..255);
+	let red = seeder::gen_range(0..255);
+	let green = seeder::gen_range(0..255);
+	let blue = seeder::gen_range(0..255);
 
 	format!("{:02x}{:02x}{:02x}", red, green, blue)
 }
 
 #[wasm_bindgen]
 pub fn rgb_color() -> String {
-	let mut rng = rand::thread_rng();
-	format!("{}, {}, {}", rng.gen_range(0..255), rng.gen_range(0..255), rng.gen_range(0..255))
+	format!("{}, {}, {}", seeder::gen_range(0..255), seeder::gen_range(0..255), seeder::gen_range(0..255))
 }
 
 #[wasm_bindgen]
 pub fn cmyk_color() -> String {
-	let mut rng = rand::thread_rng();
-	format!("{}, {}, {}, {}", rng.gen_range(0..100), rng.gen_range(0..100), rng.gen_range(0..100), rng.gen_range(0..100))
+	format!("{}, {}, {}, {}", seeder::gen_range(0..100), seeder::gen_range(0..100), seeder::gen_range(0..100), seeder::gen_range(0..100))
 }
 
 #[wasm_bindgen]
 pub fn hsl_color() -> String {
-	let mut rng = rand::thread_rng();
-	format!("{}, {}, {}", rng.gen_range(0..359), rng.gen_range(0..100), rng.gen_range(0..100))
+	format!("{}, {}, {}", seeder::gen_range(0..359), seeder::gen_range(0..100), seeder::gen_range(0..100))
 }
 
 #[wasm_bindgen]
 pub fn color_name() -> String {
-	let mut rng = rand::thread_rng();
-	COLORNAMES[rng.gen_range(0..COLORNAMES_LEN)].to_string()
+	COLORNAMES[seeder::gen_range(0..COLORNAMES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn physical_color() -> String {
-	let mut rng = rand::thread_rng();
-	PHYSICALCOLORS[rng.gen_range(0..PHYSICALCOLORS_LEN)].to_string()
+	PHYSICALCOLORS[seeder::gen_range(0..PHYSICALCOLORS_LEN)].to_string()
 }
 
 static COLORNAMES: [&'static str; 1057] = [

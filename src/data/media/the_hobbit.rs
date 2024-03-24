@@ -1,28 +1,24 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn the_hobbit_characters() -> String {
-  let mut rng = rand::thread_rng();
-  CHARACTERS[rng.gen_range(0..CHARACTERS_LEN)].to_string()
+  CHARACTERS[seeder::gen_range(0..CHARACTERS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn the_hobbit_thorins_company() -> String {
-  let mut rng = rand::thread_rng();
-  THORINS_COMPANY[rng.gen_range(0..THORINS_COMPANY_LEN)].to_string()
+  THORINS_COMPANY[seeder::gen_range(0..THORINS_COMPANY_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn the_hobbit_locations() -> String {
-  let mut rng = rand::thread_rng();
-  LOCATIONS[rng.gen_range(0..LOCATIONS_LEN)].to_string()
+  LOCATIONS[seeder::gen_range(0..LOCATIONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn the_hobbit_quotes() -> String {
-  let mut rng = rand::thread_rng();
-  QUOTES[rng.gen_range(0..QUOTES_LEN)].to_string()
+  QUOTES[seeder::gen_range(0..QUOTES_LEN)].to_string()
 }
 
 static CHARACTERS: [&'static str; 36] = [

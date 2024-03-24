@@ -9,8 +9,8 @@ pub fn greek_philosopher_names() -> String {
 // Left in for testing against seeder
 // #[wasm_bindgen]
 // pub fn greek_philosopher_quotes_z() -> String {
-// 	let mut rng = rand::thread_rng();
-// 	QUOTES[rng.gen_range(0..QUOTES_LEN)].to_string()
+//
+// 	QUOTES[seeder::gen_range(0..QUOTES_LEN)].to_string()
 // }
 
 #[wasm_bindgen]

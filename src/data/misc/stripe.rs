@@ -1,4 +1,4 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::wasm_bindgen;
 use std::collections::HashMap;
 
@@ -115,8 +115,7 @@ static INVALID_CARD_TYPES: [&'static str; 13] = [
 static INVALID_CARD_TYPES_LEN: usize = INVALID_CARD_TYPES.len();
 
 pub fn valid_card() -> CardData {
-	let mut rng = rand::thread_rng();
-	let card_type = VALID_CARD_TYPES[rng.gen_range(0..VALID_CARD_TYPES_LEN)].to_string();
+	let card_type = VALID_CARD_TYPES[seeder::gen_range(0..VALID_CARD_TYPES_LEN)].to_string();
 	let card = VALID_CARDS_HASHMAP.get(card_type.as_str()).unwrap();
 
 	CardData {
@@ -136,8 +135,7 @@ pub fn valid_card_number() -> String {
 }
 
 pub fn valid_token() -> TokenData {
-	let mut rng = rand::thread_rng();
-	let token_type = VALID_TOKEN_TYPES[rng.gen_range(0..VALID_TOKEN_TYPES_LEN)].to_string();
+	let token_type = VALID_TOKEN_TYPES[seeder::gen_range(0..VALID_TOKEN_TYPES_LEN)].to_string();
 	let token = VALID_TOKENS_HASHMAP.get(token_type.as_str()).unwrap();
 
 	TokenData {
@@ -157,9 +155,8 @@ pub fn valid_token_name() -> String {
 }
 
 pub fn invalid_token() -> InvalidCardData {
-	let mut rng = rand::thread_rng();
 	let invalid_card_type =
-		INVALID_CARD_TYPES[rng.gen_range(0..INVALID_CARD_TYPES_LEN)].to_string();
+		INVALID_CARD_TYPES[seeder::gen_range(0..INVALID_CARD_TYPES_LEN)].to_string();
 	let number = INVALID_CARDS_HASHMAP
 		.get(invalid_card_type.as_str())
 		.unwrap();

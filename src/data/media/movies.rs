@@ -1,10 +1,9 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn movies() -> String {
-	let mut rng = rand::thread_rng();
-	MOVIES[rng.gen_range(0..MOVIES_LEN)].to_string()
+	MOVIES[seeder::gen_range(0..MOVIES_LEN)].to_string()
 }
 
 static MOVIES: [&'static str; 192] = [

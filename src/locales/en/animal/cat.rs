@@ -1,10 +1,9 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen(js_name = animal_cat)]
 pub fn cat() -> String {
-	let mut rng = rand::thread_rng();
-	EN__CAT[rng.gen_range(0..EN__CAT_LEN)].to_string()
+	EN__CAT[seeder::gen_range(0..EN__CAT_LEN)].to_string()
 }
 
 static EN__CAT: [&'static str; 55] = [

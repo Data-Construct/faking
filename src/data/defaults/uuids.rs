@@ -3,6 +3,8 @@ use rand_isaac::IsaacRng;
 use uuid::Uuid;
 use wasm_bindgen::prelude::*;
 
+// TODO: this needs to support seed repro
+
 /// as per [new_v1](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.new_v1)
 pub fn uuid_v1() -> Uuid {
 	Uuid::new_v1(

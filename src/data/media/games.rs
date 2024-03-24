@@ -1,22 +1,19 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn games_title() -> String {
-	let mut rng = rand::thread_rng();
-	TITLES[rng.gen_range(0..TITLES_LEN)].to_string()
+	TITLES[seeder::gen_range(0..TITLES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn games_genre() -> String {
-	let mut rng = rand::thread_rng();
-	GENRES[rng.gen_range(0..GENRES_LEN)].to_string()
+	GENRES[seeder::gen_range(0..GENRES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn games_platform() -> String {
-	let mut rng = rand::thread_rng();
-	PLATFORMS[rng.gen_range(0..PLATFORMS_LEN)].to_string()
+	PLATFORMS[seeder::gen_range(0..PLATFORMS_LEN)].to_string()
 }
 
 static TITLES: [&'static str; 228] = [

@@ -1,15 +1,12 @@
-use rand::Rng;
-
+use crate::utils::seeder;
 use crate::defaults::name::{last_name, neutral_first_name};
 
 pub fn street_suffix() -> String {
-	let mut rng = rand::thread_rng();
-	STREETSUFFIXES[rng.gen_range(0..STREETSUFFIXES_LEN)].to_string()
+	STREETSUFFIXES[seeder::gen_range(0..STREETSUFFIXES_LEN)].to_string()
 }
 
 pub fn street_name() -> String {
-	let mut rng = rand::thread_rng();
-	let format = rng.gen_range(0..2);
+	let format = seeder::gen_range(0..2);
 
 	match format {
 		0 => format!("{} {}", neutral_first_name(), street_suffix()),
@@ -19,33 +16,29 @@ pub fn street_name() -> String {
 }
 
 pub fn province() -> String {
-	let mut rng = rand::thread_rng();
-	PROVINCES[rng.gen_range(0..PROVINCES_LEN)].to_string()
+	PROVINCES[seeder::gen_range(0..PROVINCES_LEN)].to_string()
 }
 
 pub fn city(province: &str) -> String {
-	let mut rng = rand::thread_rng();
-
 	match &province as &str {
-		"ON" => CITIES_ON[rng.gen_range(0..CITIES_ON_LEN)].to_string(),
-		"QC" => CITIES_QC[rng.gen_range(0..CITIES_QC_LEN)].to_string(),
-		"BC" => CITIES_BC[rng.gen_range(0..CITIES_BC_LEN)].to_string(),
-		"AB" => CITIES_AB[rng.gen_range(0..CITIES_AB_LEN)].to_string(),
-		"SK" => CITIES_SK[rng.gen_range(0..CITIES_SK_LEN)].to_string(),
-		"MB" => CITIES_MB[rng.gen_range(0..CITIES_MB_LEN)].to_string(),
-		"NS" => CITIES_NS[rng.gen_range(0..CITIES_NS_LEN)].to_string(),
-		"NB" => CITIES_NB[rng.gen_range(0..CITIES_NB_LEN)].to_string(),
-		"PE" => CITIES_PE[rng.gen_range(0..CITIES_PE_LEN)].to_string(),
-		"NL" => CITIES_NL[rng.gen_range(0..CITIES_NL_LEN)].to_string(),
-		"YT" => CITIES_YT[rng.gen_range(0..CITIES_YT_LEN)].to_string(),
-		"NT" => CITIES_NT[rng.gen_range(0..CITIES_NT_LEN)].to_string(),
-		"NU" => CITIES_NU[rng.gen_range(0..CITIES_NU_LEN)].to_string(),
+		"ON" => CITIES_ON[seeder::gen_range(0..CITIES_ON_LEN)].to_string(),
+		"QC" => CITIES_QC[seeder::gen_range(0..CITIES_QC_LEN)].to_string(),
+		"BC" => CITIES_BC[seeder::gen_range(0..CITIES_BC_LEN)].to_string(),
+		"AB" => CITIES_AB[seeder::gen_range(0..CITIES_AB_LEN)].to_string(),
+		"SK" => CITIES_SK[seeder::gen_range(0..CITIES_SK_LEN)].to_string(),
+		"MB" => CITIES_MB[seeder::gen_range(0..CITIES_MB_LEN)].to_string(),
+		"NS" => CITIES_NS[seeder::gen_range(0..CITIES_NS_LEN)].to_string(),
+		"NB" => CITIES_NB[seeder::gen_range(0..CITIES_NB_LEN)].to_string(),
+		"PE" => CITIES_PE[seeder::gen_range(0..CITIES_PE_LEN)].to_string(),
+		"NL" => CITIES_NL[seeder::gen_range(0..CITIES_NL_LEN)].to_string(),
+		"YT" => CITIES_YT[seeder::gen_range(0..CITIES_YT_LEN)].to_string(),
+		"NT" => CITIES_NT[seeder::gen_range(0..CITIES_NT_LEN)].to_string(),
+		"NU" => CITIES_NU[seeder::gen_range(0..CITIES_NU_LEN)].to_string(),
 		_ => "".to_string(),
 	}
 }
 
 pub fn province_code(province: &str, city: &str) -> String {
-	let mut rng = rand::thread_rng();
 	let postal_start = match &province as &str {
 		"ON" => {
 			let parts = city.split("::");
@@ -71,29 +64,27 @@ pub fn province_code(province: &str, city: &str) -> String {
 	format!(
 		"{}{}{}{}{}{}",
 		postal_start,
-		rng.gen_range(1..9),
-		rng.gen_range(b'A'..b'Z') as char,
-		rng.gen_range(1..9),
-		rng.gen_range(b'A'..b'Z') as char,
-		rng.gen_range(1..9)
+		seeder::gen_range(1..9),
+		seeder::gen_range(b'A'..b'Z') as char,
+		seeder::gen_range(1..9),
+		seeder::gen_range(b'A'..b'Z') as char,
+		seeder::gen_range(1..9)
 	)
 }
 
 pub fn street_address() -> String {
-	let mut rng = rand::thread_rng();
-	let format = rng.gen_range(3..6);
+	let format = seeder::gen_range(3..6);
 
 	match format {
-		5 => format!("{} {}", rng.gen_range(10000..99999), street_name()),
-		4 => format!("{} {}", rng.gen_range(1000..9999), street_name()),
-		3 => format!("{} {}", rng.gen_range(100..999), street_name()),
+		5 => format!("{} {}", seeder::gen_range(10000..99999), street_name()),
+		4 => format!("{} {}", seeder::gen_range(1000..9999), street_name()),
+		3 => format!("{} {}", seeder::gen_range(100..999), street_name()),
 		_ => "".to_string(),
 	}
 }
 
 pub fn full_address() -> String {
-	let mut rng = rand::thread_rng();
-	let format = rng.gen_range(0..2);
+	let format = seeder::gen_range(0..2);
 	let province = province();
 	let mut city = city(&province);
 	let postal_code = province_code(&province, &city);
@@ -121,11 +112,10 @@ pub fn full_address() -> String {
 }
 
 pub fn secondary_address() -> String {
-	let mut rng = rand::thread_rng();
 	format!(
 		"{} {}",
-		SECONDARY_FORMATS[rng.gen_range(0..SECONDARY_FORMATS_LEN)],
-		rng.gen_range(100..999)
+		SECONDARY_FORMATS[seeder::gen_range(0..SECONDARY_FORMATS_LEN)],
+		seeder::gen_range(100..999)
 	)
 }
 

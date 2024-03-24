@@ -1,28 +1,24 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn spongebob_character() -> String {
-	let mut rng = rand::thread_rng();
-	CHARACTERS[rng.gen_range(0..CHARACTERS_LEN)].to_string()
+	CHARACTERS[seeder::gen_range(0..CHARACTERS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn spongebob_location() -> String {
-	let mut rng = rand::thread_rng();
-	LOCATIONS[rng.gen_range(0..LOCATIONS_LEN)].to_string()
+	LOCATIONS[seeder::gen_range(0..LOCATIONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn spongebob_quote() -> String {
-	let mut rng = rand::thread_rng();
-	QUOTES[rng.gen_range(0..QUOTES_LEN)].to_string()
+	QUOTES[seeder::gen_range(0..QUOTES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn spongebob_episode_title() -> String {
-	let mut rng = rand::thread_rng();
-	EPISODE_TITLES[rng.gen_range(0..EPISODE_TITLES_LEN)].to_string()
+	EPISODE_TITLES[seeder::gen_range(0..EPISODE_TITLES_LEN)].to_string()
 }
 static CHARACTERS: [&'static str; 68] = [
 	"SpongeBob SquarePants",

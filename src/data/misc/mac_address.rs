@@ -1,4 +1,4 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
@@ -16,9 +16,8 @@ pub fn mac_address(prefix: Option<String>) -> String {
     }
   }
 
-  let mut rng = rand::thread_rng();
   for _ in 0..(MAC_SEGMENT_NUM-mac_builder.len()) {
-    mac_builder.push(rng.gen_range(MAC_RANGE_MIN..MAC_RANGE_MAX));
+    mac_builder.push(seeder::gen_range(MAC_RANGE_MIN..MAC_RANGE_MAX));
   }
 
   let mut mac_tokens: Vec<String> = vec![];

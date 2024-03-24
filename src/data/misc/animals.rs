@@ -1,10 +1,9 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn animal() -> String {
-	let mut rng = rand::thread_rng();
-	ANIMALS[rng.gen_range(0..ANIMALS_LEN)].to_string()
+	ANIMALS[seeder::gen_range(0..ANIMALS_LEN)].to_string()
 }
 
 static ANIMALS: [&'static str; 140] = [

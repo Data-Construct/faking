@@ -1,17 +1,16 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn lorem_ipsum_word() -> String {
-	let mut rng = rand::thread_rng();
-	LOREM_IPSUM_WORDS[rng.gen_range(0..LOREM_IPSUM_WORDS_LEN)].to_string()
+	LOREM_IPSUM_WORDS[seeder::gen_range(0..LOREM_IPSUM_WORDS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn lorem_ipsum_sentence() -> String {
 	let mut lorem_text = String::from("");
-	let mut rng = rand::thread_rng();
-	let word_amount = rng.gen_range(10..31);
+
+	let word_amount = seeder::gen_range(10..31);
 	for n in 0..word_amount {
 		if n == 0 {
 			lorem_text.push_str(&capitalize_first(&lorem_ipsum_word()));

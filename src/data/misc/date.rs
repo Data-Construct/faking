@@ -1,6 +1,6 @@
 use std::ops::Sub;
 
-use rand::Rng;
+use crate::utils::seeder;
 use chrono::{NaiveDate, Days, Utc, Datelike};
 
 pub fn random_date(start: String, end: String, exclude: Option<Vec<String>>) -> String {
@@ -9,7 +9,6 @@ pub fn random_date(start: String, end: String, exclude: Option<Vec<String>>) -> 
         return String::from("");
     }
 
-	let mut rng = rand::thread_rng();
     let start_validate = validate_timestamp(start);
     if start_validate.is_none() {
         return String::from("");
@@ -25,13 +24,13 @@ pub fn random_date(start: String, end: String, exclude: Option<Vec<String>>) -> 
     let end_ymd = NaiveDate::from_ymd_opt(end_ts.0, end_ts.1, end_ts.2).unwrap();
 
     let ast = end_ymd.sub(start_ymd);
-    let rand_days = rng.gen_range(0..ast.num_days());
+    let rand_days = seeder::gen_range(0..ast.num_days());
 
     if exclude.is_some() {
         let exclude_list: Vec<String> = exclude.unwrap();
         let mut rand_ymd: Option<String> = None;
         while rand_ymd.is_none() {
-            let ymd = start_ymd.checked_add_days(Days::new(rng.gen_range(0..ast.num_days()) as u64));
+            let ymd = start_ymd.checked_add_days(Days::new(seeder::gen_range(0..ast.num_days()) as u64));
             if !exclude_list.contains(&ymd.unwrap().to_string()){
                 rand_ymd = Some(ymd.unwrap().to_string());
             }
@@ -65,7 +64,6 @@ pub fn random_date_dow(start: String, end: String, day_of_week: String) -> Strin
         return String::from("");
     }
 
-	let mut rng = rand::thread_rng();
     let start_validate = validate_timestamp(start);
     if start_validate.is_none() {
         return String::from("");
@@ -96,8 +94,8 @@ pub fn random_date_dow(start: String, end: String, day_of_week: String) -> Strin
     if available_weeks == 0 {
         return start_dow.to_string();
     }
-    
-    let random_week = rng.gen_range(0..available_weeks);
+
+    let random_week = seeder::gen_range(0..available_weeks);
 
     let rand_days = random_week * 7;
 
@@ -169,7 +167,7 @@ pub fn validate_timestamp(timestamp: String) -> Option<(i32, u32, u32)> {
         10 => 31,
         11 => 30,
         12 => 31,
-        _ => 31 // Should never happpen 
+        _ => 31 // Should never happpen
     };
     if month == 2 {
         let leap_year = max_day % 4;
@@ -191,16 +189,14 @@ pub fn validate_timestamp(timestamp: String) -> Option<(i32, u32, u32)> {
 }
 
 pub fn random_date_future(num_days: i32) -> String {
-	let mut rng = rand::thread_rng();
-    let rand_days = rng.gen_range(0..num_days);
+    let rand_days = seeder::gen_range(0..num_days);
 
     let naive_date_time: NaiveDate = Utc::now().checked_add_days(Days::new(rand_days.try_into().unwrap())).unwrap().naive_utc().into();
     naive_date_time.to_string()
 }
 
 pub fn random_date_past(num_days: i32) -> String {
-	let mut rng = rand::thread_rng();
-    let rand_days = rng.gen_range(0..num_days);
+    let rand_days = seeder::gen_range(0..num_days);
 
     let naive_date_time: NaiveDate = Utc::now().checked_sub_days(Days::new(rand_days.try_into().unwrap())).unwrap().naive_utc().into();
     naive_date_time.to_string()

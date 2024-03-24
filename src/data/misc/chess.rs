@@ -1,40 +1,34 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn chess_player() -> String {
-	let mut rng = rand::thread_rng();
-	PLAYERS[rng.gen_range(0..PLAYERS_LEN)].to_string()
+	PLAYERS[seeder::gen_range(0..PLAYERS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn chess_tournaments() -> String {
-	let mut rng = rand::thread_rng();
-	TOURNAMENTS[rng.gen_range(0..TOURNAMENTS_LEN)].to_string()
+	TOURNAMENTS[seeder::gen_range(0..TOURNAMENTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn chess_opening() -> String {
-	let mut rng = rand::thread_rng();
-	OPENINGS[rng.gen_range(0..OPENINGS_LEN)].to_string()
+	OPENINGS[seeder::gen_range(0..OPENINGS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn chess_titles() -> String {
-	let mut rng = rand::thread_rng();
-	TITLES[rng.gen_range(0..TITLES_LEN)].to_string()
+	TITLES[seeder::gen_range(0..TITLES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn chess_square_name() -> String {
-	let mut rng = rand::thread_rng();
-	SQUARE_NAMES[rng.gen_range(0..SQUARE_NAMES_LEN)].to_string()
+	SQUARE_NAMES[seeder::gen_range(0..SQUARE_NAMES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn chess_piece_name() -> String {
-	let mut rng = rand::thread_rng();
-	PIECE_NAMES[rng.gen_range(0..PIECE_NAMES_LEN)].to_string()
+	PIECE_NAMES[seeder::gen_range(0..PIECE_NAMES_LEN)].to_string()
 }
 
 static PLAYERS: [&'static str; 20] = [

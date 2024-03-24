@@ -1,16 +1,14 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn name() -> String {
-	let mut rng = rand::thread_rng();
-	NAMES[rng.gen_range(0..NAMES_LEN)].to_string()
+	NAMES[seeder::gen_range(0..NAMES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn creator() -> String {
-	let mut rng = rand::thread_rng();
-	CREATORS[rng.gen_range(0..CREATORS_LEN)].to_string()
+	CREATORS[seeder::gen_range(0..CREATORS_LEN)].to_string()
 }
 
 static NAMES: [&'static str; 726] = [

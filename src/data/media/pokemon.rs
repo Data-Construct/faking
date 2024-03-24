@@ -1,22 +1,19 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn pokemon_names() -> String {
-	let mut rng = rand::thread_rng();
-	NAMES[rng.gen_range(0..NAMES_LEN)].to_string()
+	NAMES[seeder::gen_range(0..NAMES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn pokemon_moves() -> String {
-	let mut rng = rand::thread_rng();
-	MOVES[rng.gen_range(0..MOVES_LEN)].to_string()
+	MOVES[seeder::gen_range(0..MOVES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn pokemon_locations() -> String {
-	let mut rng = rand::thread_rng();
-	LOCATIONS[rng.gen_range(0..LOCATIONS_LEN)].to_string()
+	LOCATIONS[seeder::gen_range(0..LOCATIONS_LEN)].to_string()
 }
 
 static NAMES: [&'static str; 151] = [

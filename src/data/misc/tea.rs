@@ -1,40 +1,34 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn black_tea() -> String {
-	let mut rng = rand::thread_rng();
-	BLACK[rng.gen_range(0..BLACK_LEN)].to_string()
+	BLACK[seeder::gen_range(0..BLACK_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn oolong_tea() -> String {
-	let mut rng = rand::thread_rng();
-	OOLONG[rng.gen_range(0..OOLONG_LEN)].to_string()
+	OOLONG[seeder::gen_range(0..OOLONG_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn green_tea() -> String {
-	let mut rng = rand::thread_rng();
-	GREEN[rng.gen_range(0..GREEN_LEN)].to_string()
+	GREEN[seeder::gen_range(0..GREEN_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn white_tea() -> String {
-	let mut rng = rand::thread_rng();
-	WHITE[rng.gen_range(0..WHITE_LEN)].to_string()
+	WHITE[seeder::gen_range(0..WHITE_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn herbal_tea() -> String {
-	let mut rng = rand::thread_rng();
-	HERBAL[rng.gen_range(0..HERBAL_LEN)].to_string()
+	HERBAL[seeder::gen_range(0..HERBAL_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn tea_type() -> String {
-	let mut rng = rand::thread_rng();
-	TEA_TYPES[rng.gen_range(0..TEA_TYPES_LEN)].to_string()
+	TEA_TYPES[seeder::gen_range(0..TEA_TYPES_LEN)].to_string()
 }
 static BLACK: [&'static str; 24] = [
 	"Assam",

@@ -1,52 +1,44 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn height_measurement() -> String {
-	let mut rng = rand::thread_rng();
-	HEIGHT[rng.gen_range(0..HEIGHT_LEN)].to_string()
+	HEIGHT[seeder::gen_range(0..HEIGHT_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn length_measurement() -> String {
-	let mut rng = rand::thread_rng();
-	LENGTH[rng.gen_range(0..LENGTH_LEN)].to_string()
+	LENGTH[seeder::gen_range(0..LENGTH_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn volume_measurement() -> String {
-	let mut rng = rand::thread_rng();
-	VOLUME[rng.gen_range(0..VOLUME_LEN)].to_string()
+	VOLUME[seeder::gen_range(0..VOLUME_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn weight_measurement() -> String {
-	let mut rng = rand::thread_rng();
-	WEIGHT[rng.gen_range(0..WEIGHT_LEN)].to_string()
+	WEIGHT[seeder::gen_range(0..WEIGHT_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn metric_height_measurement() -> String {
-	let mut rng = rand::thread_rng();
-	METRIC_HEIGHT[rng.gen_range(0..METRIC_HEIGHT_LEN)].to_string()
+	METRIC_HEIGHT[seeder::gen_range(0..METRIC_HEIGHT_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn metric_length_measurement() -> String {
-	let mut rng = rand::thread_rng();
-	METRIC_LENGTH[rng.gen_range(0..METRIC_LENGTH_LEN)].to_string()
+	METRIC_LENGTH[seeder::gen_range(0..METRIC_LENGTH_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn metric_volume_measurement() -> String {
-	let mut rng = rand::thread_rng();
-	METRIC_VOLUME[rng.gen_range(0..METRIC_VOLUME_LEN)].to_string()
+	METRIC_VOLUME[seeder::gen_range(0..METRIC_VOLUME_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn metric_weight_measurement() -> String {
-	let mut rng = rand::thread_rng();
-	METRIC_WEIGHT[rng.gen_range(0..METRIC_WEIGHT_LEN)].to_string()
+	METRIC_WEIGHT[seeder::gen_range(0..METRIC_WEIGHT_LEN)].to_string()
 }
 static HEIGHT: [&'static str; 2] = [
 	"inch",

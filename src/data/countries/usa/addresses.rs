@@ -1,27 +1,23 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 use crate::defaults::name::{neutral_first_name, last_name};
 
 #[wasm_bindgen]
 pub fn city_prefix() -> String {
-    let mut rng = rand::thread_rng();
-    CITYPREFIXES[rng.gen_range(0..CITYPREFIXES_LEN)].to_string()
+    CITYPREFIXES[seeder::gen_range(0..CITYPREFIXES_LEN)].to_string()
 }
 
 pub fn city_suffix() -> String {
-    let mut rng = rand::thread_rng();
-    CITYSUFFIXES[rng.gen_range(0..CITYSUFFIXES_LEN)].to_string()
+    CITYSUFFIXES[seeder::gen_range(0..CITYSUFFIXES_LEN)].to_string()
 }
 
 pub fn street_suffix() -> String {
-    let mut rng = rand::thread_rng();
-    STREETSUFFIXES[rng.gen_range(0..STREETSUFFIXES_LEN)].to_string()
+    STREETSUFFIXES[seeder::gen_range(0..STREETSUFFIXES_LEN)].to_string()
 }
 
 pub fn street_name() -> String {
-    let mut rng = rand::thread_rng();
-    let format = rng.gen_range(0..2);
+    let format = seeder::gen_range(0..2);
 
     match format{
         0=>format!("{} {}", neutral_first_name(), street_suffix()),
@@ -31,13 +27,11 @@ pub fn street_name() -> String {
 }
 
 pub fn state() -> String {
-    let mut rng = rand::thread_rng();
-    STATES[rng.gen_range(0..STATES_LEN)].to_string()
+    STATES[seeder::gen_range(0..STATES_LEN)].to_string()
 }
 
 pub fn city() -> String {
-    let mut rng = rand::thread_rng();
-    let format = rng.gen_range(0..4);
+    let format = seeder::gen_range(0..4);
 
     match format{
         0=>format!("{} {}{}", city_prefix(), neutral_first_name(), city_suffix()),
@@ -49,7 +43,6 @@ pub fn city() -> String {
 }
 
 pub fn zip_code(state: &str) -> String {
-    let mut rng = rand::thread_rng();
     let zip_format = match &state as &str{
         "AL"=>"350",
         "AK"=>"995",
@@ -105,24 +98,22 @@ pub fn zip_code(state: &str) -> String {
         "WY"=>"831",
         _=>"",
     };
-    format!("{}{}", zip_format, rng.gen_range(10..99))
+    format!("{}{}", zip_format, seeder::gen_range(10..99))
 }
 
 pub fn street_address() -> String {
-    let mut rng = rand::thread_rng();
-    let format = rng.gen_range(3..6);
+    let format = seeder::gen_range(3..6);
 
     match format{
-        5=>format!("{} {}", rng.gen_range(10000..99999), street_name()),
-        4=>format!("{} {}", rng.gen_range(1000..9999), street_name()),
-        3=>format!("{} {}", rng.gen_range(100..999), street_name()),
+        5=>format!("{} {}", seeder::gen_range(10000..99999), street_name()),
+        4=>format!("{} {}", seeder::gen_range(1000..9999), street_name()),
+        3=>format!("{} {}", seeder::gen_range(100..999), street_name()),
         _=>"".to_string()
     }
 }
 
 pub fn full_address() -> String {
-    let mut rng = rand::thread_rng();
-    let format = rng.gen_range(0..2);
+    let format = seeder::gen_range(0..2);
     let state = state();
     let zipcode = zip_code(&state);
 
@@ -134,8 +125,7 @@ pub fn full_address() -> String {
 }
 
 pub fn secondary_address() -> String {
-    let mut rng = rand::thread_rng();
-    format!("{} {}", SECONDARY_FORMATS[rng.gen_range(0..SECONDARY_FORMATS_LEN)], rng.gen_range(100..999))
+    format!("{} {}", SECONDARY_FORMATS[seeder::gen_range(0..SECONDARY_FORMATS_LEN)], seeder::gen_range(100..999))
 }
 
 static STREETSUFFIXES: [&'static str; 225] = [

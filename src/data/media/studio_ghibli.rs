@@ -1,22 +1,19 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn studio_ghibli_movies() -> String {
-	let mut rng = rand::thread_rng();
-	MOVIES[rng.gen_range(0..MOVIES_LEN)].to_string()
+	MOVIES[seeder::gen_range(0..MOVIES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn studio_ghibli_characters() -> String {
-	let mut rng = rand::thread_rng();
-	CHARACTER_NAMES[rng.gen_range(0..CHARACTER_NAMES_LEN)].to_string()
+	CHARACTER_NAMES[seeder::gen_range(0..CHARACTER_NAMES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn studio_ghibli_quotes() -> String {
-	let mut rng = rand::thread_rng();
-	QUOTES[rng.gen_range(0..QUOTES_LEN)].to_string()
+	QUOTES[seeder::gen_range(0..QUOTES_LEN)].to_string()
 }
 
 static CHARACTER_NAMES: [&'static str; 57] = [

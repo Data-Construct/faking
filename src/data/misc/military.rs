@@ -1,46 +1,39 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn army_rank() -> String {
-	let mut rng = rand::thread_rng();
-	ARMY_RANKS[rng.gen_range(0..ARMY_RANKS_LEN)].to_string()
+	ARMY_RANKS[seeder::gen_range(0..ARMY_RANKS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn marine_rank() -> String {
-	let mut rng = rand::thread_rng();
-	MARINE_RANKS[rng.gen_range(0..MARINE_RANKS_LEN)].to_string()
+	MARINE_RANKS[seeder::gen_range(0..MARINE_RANKS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn navy_rank() -> String {
-	let mut rng = rand::thread_rng();
-	NAVY_RANKS[rng.gen_range(0..NAVY_RANKS_LEN)].to_string()
+	NAVY_RANKS[seeder::gen_range(0..NAVY_RANKS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn coast_guard_rank() -> String {
-	let mut rng = rand::thread_rng();
-	COAST_GUARD_RANKS[rng.gen_range(0..COAST_GUARD_RANKS_LEN)].to_string()
+	COAST_GUARD_RANKS[seeder::gen_range(0..COAST_GUARD_RANKS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn air_force_rank() -> String {
-	let mut rng = rand::thread_rng();
-	AIR_FORCE_RANKS[rng.gen_range(0..AIR_FORCE_RANKS_LEN)].to_string()
+	AIR_FORCE_RANKS[seeder::gen_range(0..AIR_FORCE_RANKS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn space_force_rank() -> String {
-	let mut rng = rand::thread_rng();
-	SPACE_FORCE_RANKS[rng.gen_range(0..SPACE_FORCE_RANKS_LEN)].to_string()
+	SPACE_FORCE_RANKS[seeder::gen_range(0..SPACE_FORCE_RANKS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn dod_paygrade() -> String {
-	let mut rng = rand::thread_rng();
-	DOD_PAYGRADES[rng.gen_range(0..DOD_PAYGRADES_LEN)].to_string()
+	DOD_PAYGRADES[seeder::gen_range(0..DOD_PAYGRADES_LEN)].to_string()
 }
 
 static ARMY_RANKS: [&'static str; 24] = [

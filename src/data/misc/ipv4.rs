@@ -1,14 +1,13 @@
-use rand::Rng;
+use crate::utils::seeder;
 use regex::Regex;
 use std::ops::Range;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn ipv4_address() -> String {
-  let mut rng = rand::thread_rng();
   let mut slist: Vec<String> = vec![];
   for _ in 0..4 {
-    let v = rng.gen_range(IP_RANGE_MIN..=IP_RANGE_MAX).to_string();
+    let v = seeder::gen_range(IP_RANGE_MIN..=IP_RANGE_MAX).to_string();
     slist.push(v);
   }
   slist.join(".")
@@ -19,8 +18,7 @@ pub fn ipv4_address_with_cidr() -> String {
   let mut s = ipv4_address();
   s.push_str("/");
 
-  let mut rng = rand::thread_rng();
-  let v = rng.gen_range(CIDR_MIN..=CIDR_MAX).to_string();
+  let v = seeder::gen_range(CIDR_MIN..=CIDR_MAX).to_string();
   s.push_str(&v);
   s
 }
@@ -42,8 +40,7 @@ pub fn ipv4_address_public() -> String {
 
 #[wasm_bindgen]
 pub fn ipv4_address_private() -> String {
-  let mut rng = rand::thread_rng();
-  let ranges = PRIVATE_RANGES[rng.gen_range(0..(*PRIVATE_RANGES_LEN))];
+  let ranges = PRIVATE_RANGES[seeder::gen_range(0..(*PRIVATE_RANGES_LEN))];
   let mut slist: Vec<String> = vec![];
   for i in ranges {
     if i.start == i.end {
@@ -51,7 +48,7 @@ pub fn ipv4_address_private() -> String {
       continue;
     }
 
-    let v = rng.gen_range(i.start..i.end).to_string();
+    let v = seeder::gen_range(i.start..i.end).to_string();
     slist.push(v);
   }
   slist.join(".")

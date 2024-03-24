@@ -1,52 +1,44 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn silicon_valley_characters() -> String {
-	let mut rng = rand::thread_rng();
-	CHARACTERS[rng.gen_range(0..CHARACTERS_LEN)].to_string()
+	CHARACTERS[seeder::gen_range(0..CHARACTERS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn silicon_valley_companies() -> String {
-	let mut rng = rand::thread_rng();
-	COMPANIES[rng.gen_range(0..COMPANIES_LEN)].to_string()
+	COMPANIES[seeder::gen_range(0..COMPANIES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn silicon_valley_quotes() -> String {
-	let mut rng = rand::thread_rng();
-	QUOTES[rng.gen_range(0..QUOTES_LEN)].to_string()
+	QUOTES[seeder::gen_range(0..QUOTES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn silicon_valley_apps() -> String {
-	let mut rng = rand::thread_rng();
-	APPS[rng.gen_range(0..APPS_LEN)].to_string()
+	APPS[seeder::gen_range(0..APPS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn silicon_valley_inventions() -> String {
-	let mut rng = rand::thread_rng();
-	INVENTIONS[rng.gen_range(0..INVENTIONS_LEN)].to_string()
+	INVENTIONS[seeder::gen_range(0..INVENTIONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn silicon_valley_mottos() -> String {
-	let mut rng = rand::thread_rng();
-	MOTTOS[rng.gen_range(0..MOTTOS_LEN)].to_string()
+	MOTTOS[seeder::gen_range(0..MOTTOS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn silicon_valley_urls() -> String {
-	let mut rng = rand::thread_rng();
-	URLS[rng.gen_range(0..URLS_LEN)].to_string()
+	URLS[seeder::gen_range(0..URLS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn silicon_valley_emails() -> String {
-	let mut rng = rand::thread_rng();
-	EMAILS[rng.gen_range(0..EMAILS_LEN)].to_string()
+	EMAILS[seeder::gen_range(0..EMAILS_LEN)].to_string()
 }
 
 static CHARACTERS: [&'static str; 16] = [

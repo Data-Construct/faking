@@ -1,28 +1,24 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn shakespeare_hamlet_quotes() -> String {
-    let mut rng = rand::thread_rng();
-    HAMLET[rng.gen_range(0..HAMLET_LEN)].to_string()
+    HAMLET[seeder::gen_range(0..HAMLET_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn shakespeare_as_you_like_it_quotes() -> String {
-    let mut rng = rand::thread_rng();
-    AS_YOU_LIKE_IT[rng.gen_range(0..AS_YOU_LIKE_IT_LEN)].to_string()
+    AS_YOU_LIKE_IT[seeder::gen_range(0..AS_YOU_LIKE_IT_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn shakespeare_king_richard_iii_quotes() -> String {
-    let mut rng = rand::thread_rng();
-    KING_RICHARD_III[rng.gen_range(0..KING_RICHARD_III_LEN)].to_string()
+    KING_RICHARD_III[seeder::gen_range(0..KING_RICHARD_III_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn shakespeare_romeo_and_juliet_quotes() -> String {
-    let mut rng = rand::thread_rng();
-    ROMEO_AND_JULIET[rng.gen_range(0..ROMEO_AND_JULIET_LEN)].to_string()
+    ROMEO_AND_JULIET[seeder::gen_range(0..ROMEO_AND_JULIET_LEN)].to_string()
 }
 
 static HAMLET: [&'static str; 16] = [

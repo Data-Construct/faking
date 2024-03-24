@@ -1,88 +1,74 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn planet() -> String {
-	let mut rng = rand::thread_rng();
-	PLANETS[rng.gen_range(0..PLANETS_LEN)].to_string()
+	PLANETS[seeder::gen_range(0..PLANETS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn moon() -> String {
-	let mut rng = rand::thread_rng();
-	MOONS[rng.gen_range(0..MOONS_LEN)].to_string()
+	MOONS[seeder::gen_range(0..MOONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn galaxy() -> String {
-	let mut rng = rand::thread_rng();
-	GALAXYS[rng.gen_range(0..GALAXYS_LEN)].to_string()
+	GALAXYS[seeder::gen_range(0..GALAXYS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn nebula() -> String {
-	let mut rng = rand::thread_rng();
-	NEBULAS[rng.gen_range(0..NEBULAS_LEN)].to_string()
+	NEBULAS[seeder::gen_range(0..NEBULAS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn star_cluster() -> String {
-	let mut rng = rand::thread_rng();
-	STAR_CLUSTERS[rng.gen_range(0..STAR_CLUSTERS_LEN)].to_string()
+	STAR_CLUSTERS[seeder::gen_range(0..STAR_CLUSTERS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn constellation() -> String {
-	let mut rng = rand::thread_rng();
-	CONSTELLATIONS[rng.gen_range(0..CONSTELLATIONS_LEN)].to_string()
+	CONSTELLATIONS[seeder::gen_range(0..CONSTELLATIONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn star() -> String {
-	let mut rng = rand::thread_rng();
-	STARS[rng.gen_range(0..STARS_LEN)].to_string()
+	STARS[seeder::gen_range(0..STARS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn agency() -> String {
-	let mut rng = rand::thread_rng();
-	AGENCYS[rng.gen_range(0..AGENCYS_LEN)].to_string()
+	AGENCYS[seeder::gen_range(0..AGENCYS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn agency_abv() -> String {
-	let mut rng = rand::thread_rng();
-	AGENCYS_ABV[rng.gen_range(0..AGENCYS_ABV_LEN)].to_string()
+	AGENCYS_ABV[seeder::gen_range(0..AGENCYS_ABV_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn nasa_space_craft() -> String {
-	let mut rng = rand::thread_rng();
-	NASA_SPACE_CRAFTS[rng.gen_range(0..NASA_SPACE_CRAFTS_LEN)].to_string()
+	NASA_SPACE_CRAFTS[seeder::gen_range(0..NASA_SPACE_CRAFTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn company() -> String {
-	let mut rng = rand::thread_rng();
-	COMPANYS[rng.gen_range(0..COMPANYS_LEN)].to_string()
+	COMPANYS[seeder::gen_range(0..COMPANYS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn distance_measurement() -> String {
-	let mut rng = rand::thread_rng();
-	DISTANCE_MEASUREMENTS[rng.gen_range(0..DISTANCE_MEASUREMENTS_LEN)].to_string()
+	DISTANCE_MEASUREMENTS[seeder::gen_range(0..DISTANCE_MEASUREMENTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn meteorite() -> String {
-	let mut rng = rand::thread_rng();
-	METEORITES[rng.gen_range(0..METEORITES_LEN)].to_string()
+	METEORITES[seeder::gen_range(0..METEORITES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn launch_vehicle() -> String {
-	let mut rng = rand::thread_rng();
-	LAUNCH_VEHICLES[rng.gen_range(0..LAUNCH_VEHICLES_LEN)].to_string()
+	LAUNCH_VEHICLES[seeder::gen_range(0..LAUNCH_VEHICLES_LEN)].to_string()
 }
 
 static PLANETS: [&'static str; 8] = [

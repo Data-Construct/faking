@@ -1,52 +1,44 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn minecraft_achievement() -> String {
-	let mut rng = rand::thread_rng();
-	ACHIEVEMENTS[rng.gen_range(0..ACHIEVEMENTS_LEN)].to_string()
+	ACHIEVEMENTS[seeder::gen_range(0..ACHIEVEMENTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn minecraft_biome() -> String {
-	let mut rng = rand::thread_rng();
-	BIOMES[rng.gen_range(0..BIOMES_LEN)].to_string()
+	BIOMES[seeder::gen_range(0..BIOMES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn minecraft_block() -> String {
-	let mut rng = rand::thread_rng();
-	BLOCKS[rng.gen_range(0..BLOCKS_LEN)].to_string()
+	BLOCKS[seeder::gen_range(0..BLOCKS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn minecraft_enchantment() -> String {
-	let mut rng = rand::thread_rng();
-	ENCHANTMENTS[rng.gen_range(0..ENCHANTMENTS_LEN)].to_string()
+	ENCHANTMENTS[seeder::gen_range(0..ENCHANTMENTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn minecraft_game_mode() -> String {
-	let mut rng = rand::thread_rng();
-	GAME_MODES[rng.gen_range(0..GAME_MODES_LEN)].to_string()
+	GAME_MODES[seeder::gen_range(0..GAME_MODES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn minecraft_item() -> String {
-	let mut rng = rand::thread_rng();
-	ITEMS[rng.gen_range(0..ITEMS_LEN)].to_string()
+	ITEMS[seeder::gen_range(0..ITEMS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn minecraft_mob() -> String {
-	let mut rng = rand::thread_rng();
-	MOBS[rng.gen_range(0..MOBS_LEN)].to_string()
+	MOBS[seeder::gen_range(0..MOBS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn minecraft_status_effect() -> String {
-	let mut rng = rand::thread_rng();
-	STATUS_EFFECTS[rng.gen_range(0..STATUS_EFFECTS_LEN)].to_string()
+	STATUS_EFFECTS[seeder::gen_range(0..STATUS_EFFECTS_LEN)].to_string()
 }
 static ACHIEVEMENTS: [&'static str; 111] = [
 	"Acquire Hardware",

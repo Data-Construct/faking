@@ -1,28 +1,24 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn god() -> String {
-	let mut rng = rand::thread_rng();
-	GODS[rng.gen_range(0..GODS_LEN)].to_string()
+	GODS[seeder::gen_range(0..GODS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn primordial() -> String {
-	let mut rng = rand::thread_rng();
-	PRIMORDIALS[rng.gen_range(0..PRIMORDIALS_LEN)].to_string()
+	PRIMORDIALS[seeder::gen_range(0..PRIMORDIALS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn titan() -> String {
-	let mut rng = rand::thread_rng();
-	TITANS[rng.gen_range(0..TITANS_LEN)].to_string()
+	TITANS[seeder::gen_range(0..TITANS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn hero() -> String {
-	let mut rng = rand::thread_rng();
-	HEROES[rng.gen_range(0..HEROES_LEN)].to_string()
+	HEROES[seeder::gen_range(0..HEROES_LEN)].to_string()
 }
 
 static GODS: [&'static str; 14] = [

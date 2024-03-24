@@ -1,10 +1,9 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn artist() -> String {
-	let mut rng = rand::thread_rng();
-	ARTISTS[rng.gen_range(0..ARTISTS_LEN)].to_string()
+	ARTISTS[seeder::gen_range(0..ARTISTS_LEN)].to_string()
 }
 
 static ARTISTS: [&'static str; 42] = [

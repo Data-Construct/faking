@@ -1,4 +1,4 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
@@ -57,8 +57,7 @@ pub fn upc_a_with_composite_symbology() -> String {
 
 #[wasm_bindgen]
 pub fn upc_e() -> String {
-  let mut rng = rand::thread_rng();
-  let first: i64 = rng.gen_range(0..1);
+  let first: i64 = seeder::gen_range(0..1);
 
   let mut s: String = first.to_string();
   s.push_str(&get_numeric_string_of_len(8));
@@ -79,8 +78,7 @@ pub fn upc_e_with_composite_symbology() -> String {
 
 #[wasm_bindgen]
 pub fn isbn() -> String {
-  let mut rng = rand::thread_rng();
-  let pre: String = ISBN_PREFIX[rng.gen_range(0..ISBN_PREFIX_LEN)].to_string();
+  let pre: String = ISBN_PREFIX[seeder::gen_range(0..ISBN_PREFIX_LEN)].to_string();
 
   let mut s: String = pre.clone();
   s.push_str(&get_numeric_string_of_len(CONST_ISBN_LEN-s.len() as i64));
@@ -106,9 +104,9 @@ pub fn issn() -> String {
 
 fn get_numeric_string_of_len(l: i64) -> String {
   let mut s: String = "".to_owned();
-  let mut rng = rand::thread_rng();
+
   for _ in 0..(l - 1) {
-    let n = rng.gen_range(0..10);
+    let n = seeder::gen_range(0..10);
     s.push_str(&n.to_string());
   }
   s
@@ -121,17 +119,15 @@ fn append_check_digit(s: &mut String) {
 }
 
 fn get_composite_symbol() -> String {
-  let mut rng = rand::thread_rng();
-  COMPOSITE_SYMBOLS[rng.gen_range(0..COMPOSITE_SYMBOLS_LEN)].to_string()
+  COMPOSITE_SYMBOLS[seeder::gen_range(0..COMPOSITE_SYMBOLS_LEN)].to_string()
 }
 
 fn get_composite_string(s: String) -> String {
-  let mut rng = rand::thread_rng();
   let mut comp: String = "".to_owned();
   for c in s.chars() {
     let mut tmp: String = "".to_owned();
     if c == CHAR_POUND {
-      let n = rng.gen_range(0..10);
+      let n = seeder::gen_range(0..10);
       tmp = n.to_string();
     } else if c == CHAR_QUEST {
       tmp = get_upper_alpha();
@@ -142,9 +138,8 @@ fn get_composite_string(s: String) -> String {
 }
 
 fn get_upper_alpha() -> String {
-  let mut rng = rand::thread_rng();
   // A = 65..Z = 90
-  let res: u8 = rng.gen_range(65..91);
+  let res: u8 = seeder::gen_range(65..91);
   let c = char::from(res);
   c.to_string()
 }

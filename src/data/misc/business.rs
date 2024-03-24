@@ -1,10 +1,9 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn category() -> String {
-	let mut rng = rand::thread_rng();
-	CATEGORIES[rng.gen_range(0..CATEGORIES_LEN)].to_string()
+	CATEGORIES[seeder::gen_range(0..CATEGORIES_LEN)].to_string()
 }
 
 static CATEGORIES: [&'static str; 4074] = [

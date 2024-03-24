@@ -1,22 +1,19 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn model_name() -> String {
-	let mut rng = rand::thread_rng();
-	MODEL_NAME[rng.gen_range(0..MODEL_NAME_LEN)].to_string()
+	MODEL_NAME[seeder::gen_range(0..MODEL_NAME_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn manufacturer() -> String {
-	let mut rng = rand::thread_rng();
-	MANUFACTURER[rng.gen_range(0..MANUFACTURER_LEN)].to_string()
+	MANUFACTURER[seeder::gen_range(0..MANUFACTURER_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn serial() -> String {
-	let mut rng = rand::thread_rng();
-	SERIAL[rng.gen_range(0..SERIAL_LEN)].to_string()
+	SERIAL[seeder::gen_range(0..SERIAL_LEN)].to_string()
 }
 
 static MODEL_NAME: [&'static str; 57] = [

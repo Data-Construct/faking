@@ -1,28 +1,24 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn industry() -> String {
-	let mut rng = rand::thread_rng();
-	INDUSTRY[rng.gen_range(0..INDUSTRY_LEN)].to_string()
+	INDUSTRY[seeder::gen_range(0..INDUSTRY_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn super_sector() -> String {
-	let mut rng = rand::thread_rng();
-	SUPER_SECTOR[rng.gen_range(0..SUPER_SECTOR_LEN)].to_string()
+	SUPER_SECTOR[seeder::gen_range(0..SUPER_SECTOR_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn sector() -> String {
-	let mut rng = rand::thread_rng();
-	SECTOR[rng.gen_range(0..SECTOR_LEN)].to_string()
+	SECTOR[seeder::gen_range(0..SECTOR_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn sub_sector() -> String {
-	let mut rng = rand::thread_rng();
-	SUB_SECTOR[rng.gen_range(0..SUB_SECTOR_LEN)].to_string()
+	SUB_SECTOR[seeder::gen_range(0..SUB_SECTOR_LEN)].to_string()
 }
 
 static INDUSTRY: [&'static str; 10] = [

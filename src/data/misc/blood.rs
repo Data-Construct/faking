@@ -1,16 +1,14 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn blood_type() -> String {
-	let mut rng = rand::thread_rng();
-	BLOOD_TYPES[rng.gen_range(0..BLOOD_TYPES_LEN)].to_string()
+	BLOOD_TYPES[seeder::gen_range(0..BLOOD_TYPES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn rh_factory() -> String {
-	let mut rng = rand::thread_rng();
-	RH_FACTORS[rng.gen_range(0..RH_FACTORS_LEN)].to_string()
+	RH_FACTORS[seeder::gen_range(0..RH_FACTORS_LEN)].to_string()
 }
 
 #[wasm_bindgen]

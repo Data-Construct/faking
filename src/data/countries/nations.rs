@@ -1,4 +1,4 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 // TODO need help with what to do with flag bytes array
@@ -7,20 +7,17 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn random_nationality() -> String {
-	let mut rng = rand::thread_rng();
-	NATIONALITIES[rng.gen_range(0..NATIONALITIES_LEN)].to_string()
+	NATIONALITIES[seeder::gen_range(0..NATIONALITIES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn random_language() -> String {
-	let mut rng = rand::thread_rng();
-	LANGUAGES[rng.gen_range(0..LANGUAGES_LEN)].to_string()
+	LANGUAGES[seeder::gen_range(0..LANGUAGES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn random_capital_city() -> String {
-	let mut rng = rand::thread_rng();
-	CAPITAL_CITIES[rng.gen_range(0..CAPITAL_CITIES_LEN)].to_string()
+	CAPITAL_CITIES[seeder::gen_range(0..CAPITAL_CITIES_LEN)].to_string()
 }
 
 static NATIONALITIES: [&'static str; 185] = [

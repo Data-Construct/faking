@@ -1,28 +1,24 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn tolkein_poems() -> String {
-  let mut rng = rand::thread_rng();
-  POEMS[rng.gen_range(0..POEMS_LEN)].to_string()
+  POEMS[seeder::gen_range(0..POEMS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn tolkein_locations() -> String {
-  let mut rng = rand::thread_rng();
-  LOCATIONS[rng.gen_range(0..LOCATIONS_LEN)].to_string()
+  LOCATIONS[seeder::gen_range(0..LOCATIONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn tolkein_races() -> String {
-  let mut rng = rand::thread_rng();
-  RACES[rng.gen_range(0..RACES_LEN)].to_string()
+  RACES[seeder::gen_range(0..RACES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn tolkein_characters() -> String {
-  let mut rng = rand::thread_rng();
-  CHARACTERS[rng.gen_range(0..CHARACTERS_LEN)].to_string()
+  CHARACTERS[seeder::gen_range(0..CHARACTERS_LEN)].to_string()
 }
 
 static POEMS: [&'static str; 74] = [

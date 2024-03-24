@@ -1,19 +1,17 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 //TODO kevinly77: Full product object?
 #[wasm_bindgen]
 pub fn cryptocurrency_name() -> String {
-	let mut rng = rand::thread_rng();
-	let department_str = DEPARTMENTS[rng.gen_range(0..DEPARTMENTS_LEN)].to_string();
+	let department_str = DEPARTMENTS[seeder::gen_range(0..DEPARTMENTS_LEN)].to_string();
 	let department_split = department_str.split_once("::");
 	department_split.unwrap().0.to_string()
 }
 
 #[wasm_bindgen]
 pub fn cryptocurrency_symbol() -> String {
-	let mut rng = rand::thread_rng();
-	let department_str = DEPARTMENTS[rng.gen_range(0..DEPARTMENTS_LEN)].to_string();
+	let department_str = DEPARTMENTS[seeder::gen_range(0..DEPARTMENTS_LEN)].to_string();
 	let department_split = department_str.split_once("::");
 	department_split.unwrap().1.to_string()
 }

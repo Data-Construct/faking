@@ -1,22 +1,19 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn mario_character() -> String {
-	let mut rng = rand::thread_rng();
-	CHARACTERS[rng.gen_range(0..CHARACTERS_LEN)].to_string()
+	CHARACTERS[seeder::gen_range(0..CHARACTERS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn mario_game() -> String {
-	let mut rng = rand::thread_rng();
-	GAMES[rng.gen_range(0..GAMES_LEN)].to_string()
+	GAMES[seeder::gen_range(0..GAMES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn mario_location() -> String {
-	let mut rng = rand::thread_rng();
-	LOCATIONS[rng.gen_range(0..LOCATIONS_LEN)].to_string()
+	LOCATIONS[seeder::gen_range(0..LOCATIONS_LEN)].to_string()
 }
 
 static CHARACTERS: [&'static str; 23] = [

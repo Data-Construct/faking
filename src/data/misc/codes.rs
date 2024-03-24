@@ -1,10 +1,9 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn asin() -> String {
-	let mut rng = rand::thread_rng();
-	ASINS[rng.gen_range(0..ASINS_LEN)].to_string()
+	ASINS[seeder::gen_range(0..ASINS_LEN)].to_string()
 }
 
 static ASINS: [&'static str; 500] = [

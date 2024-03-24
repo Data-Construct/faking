@@ -1,28 +1,24 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn lovecraft_deity() -> String {
-	let mut rng = rand::thread_rng();
-	DEITIES[rng.gen_range(0..DEITIES_LEN)].to_string()
+	DEITIES[seeder::gen_range(0..DEITIES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn lovecraft_book() -> String {
-	let mut rng = rand::thread_rng();
-	BOOKS[rng.gen_range(0..BOOKS_LEN)].to_string()
+	BOOKS[seeder::gen_range(0..BOOKS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn lovecraft_location() -> String {
-	let mut rng = rand::thread_rng();
-	LOCATIONS[rng.gen_range(0..LOCATIONS_LEN)].to_string()
+	LOCATIONS[seeder::gen_range(0..LOCATIONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn lovecraft_artefact() -> String {
-	let mut rng = rand::thread_rng();
-	ARTEFACTS[rng.gen_range(0..ARTEFACTS_LEN)].to_string()
+	ARTEFACTS[seeder::gen_range(0..ARTEFACTS_LEN)].to_string()
 }
 
 static DEITIES: [&'static str; 8] = [

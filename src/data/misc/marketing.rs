@@ -1,10 +1,9 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn marketing_buzzword() -> String {
-	let mut rng = rand::thread_rng();
-	BUZZWORDS[rng.gen_range(0..BUZZWORDS_LEN)].to_string()
+	BUZZWORDS[seeder::gen_range(0..BUZZWORDS_LEN)].to_string()
 }
 
 static BUZZWORDS: [&'static str; 53] = [

@@ -1,5 +1,5 @@
 use std::{collections::HashMap};
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
@@ -10,11 +10,10 @@ pub fn bot_agent(agent: Option<String>) -> String {
   } else {
     vendor.replace_range(.., &random_vendor())
   }
-  
+
   let agents = AGENT_HASHMAP.get(vendor.as_str());
   if let Some(arg) = agents {
-    let mut rng = rand::thread_rng();
-    let agent = arg[rng.gen_range(0..arg.len())].to_owned();
+    let agent = arg[seeder::gen_range(0..arg.len())].to_owned();
     return agent;
   }
 
@@ -22,8 +21,7 @@ pub fn bot_agent(agent: Option<String>) -> String {
 }
 
 fn random_vendor() -> String {
-  let mut rng = rand::thread_rng();
-  VENDOR_LIST[rng.gen_range(0..VENDOR_LIST_LEN)].to_owned()
+  VENDOR_LIST[seeder::gen_range(0..VENDOR_LIST_LEN)].to_owned()
 }
 
 static AGENT_GOOGLEBOT: &str = "googlebot";

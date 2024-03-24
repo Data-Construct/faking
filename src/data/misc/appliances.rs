@@ -1,16 +1,14 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn brand() -> String {
-	let mut rng = rand::thread_rng();
-	BRANDS[rng.gen_range(0..BRANDS_LEN)].to_string()
+	BRANDS[seeder::gen_range(0..BRANDS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn equipment() -> String {
-	let mut rng = rand::thread_rng();
-	EQUIPMENT[rng.gen_range(0..EQUIPMENT_LEN)].to_string()
+	EQUIPMENT[seeder::gen_range(0..EQUIPMENT_LEN)].to_string()
 }
 
 static BRANDS: [&'static str; 14] = [

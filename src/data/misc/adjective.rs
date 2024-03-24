@@ -1,16 +1,14 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn positive_adjective() -> String {
-	let mut rng = rand::thread_rng();
-	POSITIVE_ADJECTIVE[rng.gen_range(0..POSITIVE_ADJECTIVE_LEN)].to_string()
+	POSITIVE_ADJECTIVE[seeder::gen_range(0..POSITIVE_ADJECTIVE_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn negative_adjective() -> String {
-	let mut rng = rand::thread_rng();
-	NEGATIVE_ADJECTIVE[rng.gen_range(0..NEGATIVE_ADJECTIVE_LEN)].to_string()
+	NEGATIVE_ADJECTIVE[seeder::gen_range(0..NEGATIVE_ADJECTIVE_LEN)].to_string()
 }
 
 static POSITIVE_ADJECTIVE: [&'static str; 90] = [

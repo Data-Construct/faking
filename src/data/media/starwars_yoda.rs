@@ -1,10 +1,9 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn yoda() -> String {
-	let mut rng = rand::thread_rng();
-	YODA_QUOTES[rng.gen_range(0..YODA_QUOTES_LEN)].to_string()
+	YODA_QUOTES[seeder::gen_range(0..YODA_QUOTES_LEN)].to_string()
 }
 
 static YODA_QUOTES: [&'static str; 37] = [

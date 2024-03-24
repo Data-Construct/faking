@@ -1,69 +1,66 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn phone_number_with_country_code() -> String {
-	let mut rng = rand::thread_rng();
-
 	format!(
 		"+{} {}",
-		COUNTRYCODES[rng.gen_range(0..COUNTRYCODES_LEN)].to_string(),
+		COUNTRYCODES[seeder::gen_range(0..COUNTRYCODES_LEN)].to_string(),
 		phone_number()
 	)
 }
 
 #[wasm_bindgen]
 pub fn phone_number() -> String {
-	let mut rng = rand::thread_rng();
-	let format = rng.gen_range(0..6);
+	let format = seeder::gen_range(0..6);
 	let exchange_code = format!(
 		"{}{}{}",
-		rng.gen_range(0..10),
-		rng.gen_range(0..10),
-		rng.gen_range(0..10)
+		seeder::gen_range(0..10),
+		seeder::gen_range(0..10),
+		seeder::gen_range(0..10)
 	);
 	let line_code = format!(
 		"{}{}{}{}",
-		rng.gen_range(0..10),
-		rng.gen_range(0..10),
-		rng.gen_range(0..10),
-		rng.gen_range(0..10)
+		seeder::gen_range(0..10),
+		seeder::gen_range(0..10),
+		seeder::gen_range(0..10),
+		seeder::gen_range(0..10)
 	);
 
 	match format {
 		0 => format!(
 			"{}{}{}",
-			AREACODES[rng.gen_range(0..AREACODES_LEN)].to_string(),
+			AREACODES[seeder::gen_range(0..AREACODES_LEN)].to_string(),
 			exchange_code,
 			line_code
 		),
 		1 => format!(
 			"{} {} {}",
-			AREACODES[rng.gen_range(0..AREACODES_LEN)].to_string(),
+			AREACODES[seeder::gen_range(0..AREACODES_LEN)].to_string(),
 			exchange_code,
 			line_code
 		),
 		2 => format!(
 			"{}-{}-{}",
-			AREACODES[rng.gen_range(0..AREACODES_LEN)].to_string(),
+			AREACODES[seeder::gen_range(0..AREACODES_LEN)].to_string(),
 			exchange_code,
 			line_code
 		),
 		3 => format!(
 			"({}) {}-{}",
-			AREACODES[rng.gen_range(0..AREACODES_LEN)].to_string(),
+			AREACODES[seeder::gen_range(0..AREACODES_LEN)].to_string(),
 			exchange_code,
 			line_code
 		),
 		4 => format!(
 			"{}.{}.{}",
-			AREACODES[rng.gen_range(0..AREACODES_LEN)].to_string(),
+			AREACODES[seeder::gen_range(0..AREACODES_LEN)].to_string(),
 			exchange_code,
 			line_code
 		),
 		5 => format!(
 			"({}) {} {}",
-			AREACODES[rng.gen_range(0..AREACODES_LEN)].to_string(),
+			AREACODES[seeder::gen_range(0..AREACODES_LEN)].to_string(),
 			exchange_code,
 			line_code
 		),

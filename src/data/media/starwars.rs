@@ -1,23 +1,20 @@
-use rand::Rng;
+use crate::utils::seeder;
 use std::collections::HashMap;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn starwars_character() -> String {
-	let mut rng = rand::thread_rng();
-	STARWARS_CHARACTERS[rng.gen_range(0..STARWARS_CHARACTERS_LEN)].to_string()
+	STARWARS_CHARACTERS[seeder::gen_range(0..STARWARS_CHARACTERS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn call_squadron() -> String {
-	let mut rng = rand::thread_rng();
-	CALL_SQUADRONS[rng.gen_range(0..CALL_SQUADRONS_LEN)].to_string()
+	CALL_SQUADRONS[seeder::gen_range(0..CALL_SQUADRONS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn call_number() -> String {
-	let mut rng = rand::thread_rng();
-	CALL_NUMBERS[rng.gen_range(0..CALL_NUMBERS_LEN)].to_string()
+	CALL_NUMBERS[seeder::gen_range(0..CALL_NUMBERS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
@@ -29,32 +26,27 @@ pub fn call_sign() -> String {
 
 #[wasm_bindgen]
 pub fn droid() -> String {
-	let mut rng = rand::thread_rng();
-	DROIDS[rng.gen_range(0..DROIDS_LEN)].to_string()
+	DROIDS[seeder::gen_range(0..DROIDS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn starwars_planet() -> String {
-	let mut rng = rand::thread_rng();
-	PLANETS[rng.gen_range(0..PLANETS_LEN)].to_string()
+	PLANETS[seeder::gen_range(0..PLANETS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn species() -> String {
-	let mut rng = rand::thread_rng();
-	SPECIES[rng.gen_range(0..SPECIES_LEN)].to_string()
+	SPECIES[seeder::gen_range(0..SPECIES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn vehicle() -> String {
-	let mut rng = rand::thread_rng();
-	VEHICLES[rng.gen_range(0..VEHICLES_LEN)].to_string()
+	VEHICLES[seeder::gen_range(0..VEHICLES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn wookie_word() -> String {
-	let mut rng = rand::thread_rng();
-	WOOKIE_WORDS[rng.gen_range(0..WOOKIE_WORDS_LEN)].to_string()
+	WOOKIE_WORDS[seeder::gen_range(0..WOOKIE_WORDS_LEN)].to_string()
 }
 
 static STARWARS_CHARACTERS: [&'static str; 60] = [
@@ -683,226 +675,194 @@ lazy_static! {
 
 #[wasm_bindgen]
 pub fn admiral_ackbar_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"admiral_ackbar").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn ahsoka_tano_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"ahsoka_tano").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn anakin_skywalker_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"anakin_skywalker").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn asajj_ventress_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"asajj_ventress").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn bendu_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"bendu").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn boba_fett_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"boba_fett").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn c_3po_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"c_3po").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn count_dooku_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"count_dooku").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn darth_caedus_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"darth_caedus").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn darth_vader_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"darth_vader").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn emperor_palpatine_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"emperor_palpatine").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn finn_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"finn").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn general_hux_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"general_hux").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn grand_admiral_thrawn_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP
 		.get(&"grand_admiral_thrawn")
 		.unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn grand_moff_tarkin_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"grand_moff_tarkin").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn greedo_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"greedo").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn han_solo_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"han_solo").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn jabba_the_hutt_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"jabba_the_hutt").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn jar_jar_binks_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"jar_jar_binks").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn k_2so_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"k_2so").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn kylo_ren_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"kylo_ren").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn lando_calrissian_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"lando_calrissian").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn leia_organa_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"leia_organa").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn luke_skywalker_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"luke_skywalker").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn mace_windu_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"mace_windu").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn maz_kanata_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"maz_kanata").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn obi_wan_kenobi_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"obi_wan_kenobi").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn padme_amidala_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"padme_amidala").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn qui_gon_jinn_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"qui_gon_jinn").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn rey_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"rey").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn shmi_skywalker_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"shmi_skywalker").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }
 
 #[wasm_bindgen]
 pub fn yoda_quote() -> String {
-	let mut rng = rand::thread_rng();
 	let aa = CHARACTER_QUOTES_HASHMAP.get(&"yoda").unwrap();
-	aa[rng.gen_range(0..aa.len())].to_string()
+	aa[seeder::gen_range(0..aa.len())].to_string()
 }

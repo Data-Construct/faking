@@ -1,16 +1,14 @@
-use rand::Rng;
+use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn title() -> String {
-	let mut rng = rand::thread_rng();
-	TITLES[rng.gen_range(0..TITLES_LEN)].to_string()
+	TITLES[seeder::gen_range(0..TITLES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
 pub fn publisher() -> String {
-	let mut rng = rand::thread_rng();
-	PUBLISHERS[rng.gen_range(0..PUBLISHERS_LEN)].to_string()
+	PUBLISHERS[seeder::gen_range(0..PUBLISHERS_LEN)].to_string()
 }
 
 static TITLES: [&'static str; 190] = [
