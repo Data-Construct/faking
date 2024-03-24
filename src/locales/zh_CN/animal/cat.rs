@@ -1,13 +1,13 @@
 use rand::Rng;
 use wasm_bindgen::prelude::*;
 
-pub fn cat() -> String {
-	let mut rng = rand::thread_rng();
-	ZH_CN__CAT[rng.gen_range(0..ZH_CN__CAT_LEN)].to_string()
-}
+// pub fn cat() -> String {
+// 	let mut rng = rand::thread_rng();
+// 	ZH_CN__CAT[rng.gen_range(0..ZH_CN__CAT_LEN)].to_string()
+// }
 
-#[wasm_bindgen(js_namespace = ZH)]
-pub fn n_cat() -> String {
+#[wasm_bindgen(js_name = animal_cat, js_namespace = ZH)]
+pub fn cat() -> String {
 	let mut rng = rand::thread_rng();
 	ZH_CN__CAT[rng.gen_range(0..ZH_CN__CAT_LEN)].to_string()
 }
