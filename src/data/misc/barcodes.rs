@@ -17,7 +17,7 @@ pub fn ean_13() -> String {
 }
 
 #[wasm_bindgen]
-pub fn ean_13_with_composite_symbology(l: i64) -> String {
+pub fn ean_13_with_composite_symbology(_l: i64) -> String {
   get_ean_with_composite_symbology(CONST_EAN_13)
 }
 
