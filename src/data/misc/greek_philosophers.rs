@@ -1,6 +1,4 @@
-use rand::Rng;
 use wasm_bindgen::prelude::*;
-
 use crate::utils::seeder;
 
 #[wasm_bindgen]
