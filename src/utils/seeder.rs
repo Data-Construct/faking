@@ -12,6 +12,11 @@ pub fn set_seed(i: u64) {
   *guard = Some(i);
 }
 
+pub fn get_seed() -> Option<u64> {
+  let guard = SEED.read().unwrap();
+  return *guard;
+}
+
 pub fn get_rng() -> StdRng {
   let guard = SEED.read().unwrap();
   

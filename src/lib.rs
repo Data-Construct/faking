@@ -110,8 +110,6 @@ mod utils {
 
 #[cfg(test)]
 mod tests {
-  const SEED_VALUE: u64 = 1;
-
 	#[test]
 	fn it_works() {
 		// let result = add(2, 2);
@@ -120,9 +118,7 @@ mod tests {
 
   #[test]
   fn test_greek_philosopher_names() {
-    use crate::utils::seeder;
-    seeder::set_seed(SEED_VALUE);
-    
+    setup_rng();
 
     use crate::misc::greek_philosophers;
     let name: String = greek_philosophers::greek_philosopher_names();
@@ -132,13 +128,26 @@ mod tests {
 
   #[test]
   fn test_greek_philosopher_quotes() {
-    use crate::utils::seeder;
-    seeder::set_seed(SEED_VALUE);
-    
+    setup_rng();
 
     use crate::misc::greek_philosophers;
     let quote: String = greek_philosophers::greek_philosopher_quotes();
     let expected: String = "Good habits formed at youth make all the difference.".to_owned();
     assert_eq!(expected, quote);
+  }
+
+  /*
+    Test variable setup.
+   */
+  use std::sync::Once;
+
+  static STARTUP_RUN: Once = Once::new();
+  const SEED_VALUE: u64 = 1;
+
+  fn setup_rng() {
+    STARTUP_RUN.call_once(|| {
+      use crate::utils::seeder;
+      seeder::set_seed(SEED_VALUE);
+    });
   }
 }
