@@ -31,7 +31,7 @@ cargo add data-faking
 use data_faking as faking;
 
 fn main() {
-  println!("{}", faking::defaults::uuids::uuid_v4());
+  println!("{}", faking::defaults::types::f64());
 }
 ```
 
@@ -44,5 +44,21 @@ npm i --save-dev data-faking
 ```typescript
 import * as faking from "data-faking";
 
-console.log(faking.uuid_v4());
+console.log(faking.f64());
 ```
+
+## Randomness seed
+
+If you want consistent results, you can set your own seed:
+
+```rust
+faking.set_seed(2);
+println!("{}", faking::defaults::types::f64());
+```
+
+```typescript
+faking.set_seed(BigInt(2));
+console.log(faking.f64());
+```
+
+NOTE: uuids is currently the only data generator category that doesn't yet support seeded generation, expect results to differ for that one case.

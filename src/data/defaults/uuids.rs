@@ -4,6 +4,7 @@ use uuid::Uuid;
 use wasm_bindgen::prelude::*;
 
 // TODO: this needs to support seed repro
+// TODO: need date time generator functions built out for seed repro
 
 /// as per [new_v1](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.new_v1)
 pub fn uuid_v1() -> Uuid {
