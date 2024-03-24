@@ -3,7 +3,7 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn mac_address(prefix: Option<String>) -> String {
-  let mut macBuilder: Vec<i32> = vec![];
+  let mut mac_builder: Vec<i32> = vec![];
   if let Some(arg) = prefix {
     let tokens = arg.split(":");
     for t in tokens {
@@ -12,20 +12,20 @@ pub fn mac_address(prefix: Option<String>) -> String {
       if i > MAC_RANGE_MAX {
         i = MAC_RANGE_MAX;
       }
-      macBuilder.push(i);
+      mac_builder.push(i);
     }
   }
 
   let mut rng = rand::thread_rng();
-  for _ in 0..(MAC_SEGMENT_NUM-macBuilder.len()) {
-    macBuilder.push(rng.gen_range(MAC_RANGE_MIN..MAC_RANGE_MAX));
+  for _ in 0..(MAC_SEGMENT_NUM-mac_builder.len()) {
+    mac_builder.push(rng.gen_range(MAC_RANGE_MIN..MAC_RANGE_MAX));
   }
 
-  let mut macTokens: Vec<String> = vec![];
-  for i in macBuilder {
-    macTokens.push(format!("{:x}", i));
+  let mut mac_tokens: Vec<String> = vec![];
+  for i in mac_builder {
+    mac_tokens.push(format!("{:x}", i));
   }
-  let s = macTokens.join(":");
+  let s = mac_tokens.join(":");
   s
 }
 

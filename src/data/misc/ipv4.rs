@@ -27,12 +27,12 @@ pub fn ipv4_address_with_cidr() -> String {
 
 #[wasm_bindgen]
 pub fn ipv4_address_public() -> String {
-  let mut ctrl = 0;
+  let ctrl = 0;
 
   // Using 10,000 as a heuristic to ensure loop does not run forever.
   while ctrl < 10000 {
     let ip = ipv4_address();
-    if (isPrivateNetwork(&ip) || isReservedNetwork(&ip)) {
+    if is_private_network(&ip) || is_reserved_network(&ip) {
       continue;
     }
     return ip;
@@ -57,18 +57,18 @@ pub fn ipv4_address_private() -> String {
   slist.join(".")
 }
 
-fn isPrivateNetwork(ip: &String) -> bool {
+fn is_private_network(ip: &String) -> bool {
   for elem in PRIVATE_RANGES_REGEX.iter() {
-    if ((**elem).is_match(ip.as_str())) {
+    if (**elem).is_match(ip.as_str()) {
       return true;
     }
   }
   return false;
 }
 
-fn isReservedNetwork(ip: &String) -> bool {
+fn is_reserved_network(ip: &String) -> bool {
   for elem in RESERVED_RANGES_REGEX.iter() {
-    if ((**elem).is_match(ip.as_str())) {
+    if (**elem).is_match(ip.as_str()) {
       return true;
     }
   }

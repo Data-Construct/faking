@@ -64,7 +64,7 @@ pub fn uuid_v8() -> Uuid {
 /// string
 ///
 /// @example
-/// ```
+/// ```ignore
 /// faker.uuid_v1();
 /// ```
 pub fn uuid_v1_wasm() -> String {
@@ -78,7 +78,7 @@ pub fn uuid_v1_wasm() -> String {
 /// string
 ///
 /// @example
-/// ```
+/// ```ignore
 /// faker.uuid_v3();
 /// ```
 pub fn uuid_v3_wasm() -> String {
@@ -92,7 +92,7 @@ pub fn uuid_v3_wasm() -> String {
 /// string
 ///
 /// @example
-/// ```
+/// ```ignore
 /// faker.uuid_v4();
 /// ```
 pub fn uuid_v4_wasm() -> String {
@@ -106,7 +106,7 @@ pub fn uuid_v4_wasm() -> String {
 /// string
 ///
 /// @example
-/// ```
+/// ```ignore
 /// faker.uuid_v5();
 /// ```
 pub fn uuid_v5_wasm() -> String {
@@ -120,7 +120,7 @@ pub fn uuid_v5_wasm() -> String {
 /// string
 ///
 /// @example
-/// ```
+/// ```ignore
 /// faker.uuid_v6();
 /// ```
 pub fn uuid_v6_wasm() -> String {
@@ -134,7 +134,7 @@ pub fn uuid_v6_wasm() -> String {
 /// string
 ///
 /// @example
-/// ```
+/// ```ignore
 /// faker.uuid_v7();
 /// ```
 pub fn uuid_v7_wasm() -> String {
@@ -148,7 +148,7 @@ pub fn uuid_v7_wasm() -> String {
 /// string
 ///
 /// @example
-/// ```
+/// ```ignore
 /// faker.uuid_v8();
 /// ```
 pub fn uuid_v8_wasm() -> String {
