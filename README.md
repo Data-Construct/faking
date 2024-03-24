@@ -1,68 +1,47 @@
 <div align="center">
 
-  <h1><code>wasm-pack-template</code></h1>
+# @dataconstruct/data-faking
 
-  <strong>A template for kick starting a Rust and WebAssembly project using <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
+Generate massive amounts of fake (but realistic) data for testing and development.
 
-  <p>
-    <a href="https://travis-ci.org/rustwasm/wasm-pack-template"><img src="https://img.shields.io/travis/rustwasm/wasm-pack-template.svg?style=flat-square" alt="Build Status" /></a>
-  </p>
+[![Docs Status](https://docs.rs/data-faking/badge.svg)](https://docs.rs/data-faking)
+[![Latest Version](https://img.shields.io/crates/v/data-faking.svg)](https://crates.io/crates/data-faking)
 
-  <h3>
-    <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html">Tutorial</a>
-    <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
-  </h3>
+Try using our [playground](https://www.dataconstruct.io/organizations/playground/schemas) for your data gen needs, it supports code gen for much more than rust and javascript.
 
-  <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
 </div>
 
-## About
+## Features
+* Defaults data types - numbers, lorem ipsum, bools, uuids
+* People - generate names, emails, jobs
+* Locations - generate addresses for north america (more coming soon), and coordinates
+* Various media - games, show, and books from across the globe
+* API data - generate data resembling real apis (ex. stripe)
 
-[**📚 Read this template tutorial! 📚**][template-docs]
+> Note: We try to generate realistic data. The generated names, addresses, emails, phone numbers, and/or other data might be coincidentally valid information. Please do not send any of your messages / calls to them from your test setup.
 
-This template is designed for compiling Rust libraries into WebAssembly and
-publishing the resulting package to NPM.
+## Usage Rust
 
-Be sure to check out [other `wasm-pack` tutorials online][tutorials] for other
-templates and usages of `wasm-pack`.
-
-[tutorials]: https://rustwasm.github.io/docs/wasm-pack/tutorials/index.html
-[template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html
-
-## 🚴 Usage
-
-### 🐑 Use `cargo generate` to Clone this Template
-
-[Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
-
-```
-cargo generate --git https://github.com/rustwasm/wasm-pack-template.git --name my-project
-cd my-project
+```bash
+cargo add data-faking
 ```
 
-### 🛠️ Build with `wasm-pack build`
+```rust
+use data_faking as faking;
 
-```
-wasm-pack build --target bundler
-```
-
-### 🔬 Test in Headless Browsers with `wasm-pack test`
-
-```
-wasm-pack test --headless --firefox
+fn main() {
+  println!("{}", faking::defaults::uuids::uuid_v4());
+}
 ```
 
-### 🎁 Publish to NPM with `wasm-pack publish`
+## Usage Javascript / Typescript
 
+```bash
+npm i --save-dev data-faking
 ```
-wasm-pack publish
+
+```typescript
+import * as faking from "data-faking";
+
+console.log(faking.uuid_v4());
 ```
-
-## 🔋 Batteries Included
-
-* [`wasm-bindgen`](https://github.com/rustwasm/wasm-bindgen) for communicating
-  between WebAssembly and JavaScript.
-* [`console_error_panic_hook`](https://github.com/rustwasm/console_error_panic_hook)
-  for logging panic messages to the developer console.
-* `LICENSE-APACHE` and `LICENSE-MIT`: most Rust projects are licensed this way, so these are included for you
