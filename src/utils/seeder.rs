@@ -2,16 +2,19 @@ use std::sync::RwLock;
 use rand::{Rng,SeedableRng};
 use rand::distributions::uniform::{SampleRange, SampleUniform};
 use rand::rngs::StdRng;
+use wasm_bindgen::prelude::*;
 
 lazy_static! {
   static ref SEED: RwLock<Option<u64>> = RwLock::new(None);
 }
 
+#[wasm_bindgen]
 pub fn set_seed(i: u64) {
   let mut guard = SEED.write().unwrap();
   *guard = Some(i);
 }
 
+#[wasm_bindgen]
 pub fn get_seed() -> Option<u64> {
   let guard = SEED.read().unwrap();
   return *guard;
@@ -19,7 +22,7 @@ pub fn get_seed() -> Option<u64> {
 
 pub fn get_rng() -> StdRng {
   let guard = SEED.read().unwrap();
-  
+
   let rng = match *guard {
     Some(i) => {
       StdRng::seed_from_u64(i)
@@ -32,8 +35,8 @@ pub fn get_rng() -> StdRng {
   return rng;
 }
 
-pub fn get_value_from_range<T, R>(range: R) -> T 
-where 
+pub fn get_value_from_range<T, R>(range: R) -> T
+where
   T: SampleUniform,
   R: SampleRange<T>
 {
