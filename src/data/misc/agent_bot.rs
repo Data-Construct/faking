@@ -1,4 +1,4 @@
-use std::{collections::HashMap};
+use std::collections::HashMap;
 use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 

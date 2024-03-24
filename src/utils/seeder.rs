@@ -1,4 +1,5 @@
 use rand::distributions::uniform::{SampleRange, SampleUniform};
+use rand::distributions::{Distribution, Standard};
 use rand::{Rng, SeedableRng};
 use rand_pcg::Pcg64Mcg;
 use std::cell::RefCell;
@@ -32,4 +33,11 @@ where
 	R: SampleRange<T>,
 {
 	RNG.with(|rng| rng.borrow_mut().gen_range(range))
+}
+
+pub fn gen<T>() -> T
+where
+	Standard: Distribution<T>,
+{
+	RNG.with(|rng| rng.borrow_mut().gen())
 }
