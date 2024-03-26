@@ -38,6 +38,8 @@ pub mod data {
 		}
 	}
 
+	pub mod it;
+
 	pub mod misc {
 		pub mod adjective;
 		pub mod agent_bot;
@@ -60,10 +62,7 @@ pub mod data {
 		pub mod food;
 		pub mod greek_philosophers;
 		pub mod industry_segments;
-		pub mod ipv4;
-		pub mod ipv6;
 		pub mod lorem_ipsum;
-		pub mod mac_address;
 		pub mod marketing;
 		pub mod measurements;
 		pub mod military;
