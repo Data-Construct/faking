@@ -17,6 +17,7 @@ pub mod data {
 	pub mod defaults {
 		pub mod colors;
 		pub mod crypto;
+		pub mod date;
 		pub mod longitude_latitude;
 		pub mod types;
 		pub mod uuids;
@@ -47,7 +48,6 @@ pub mod data {
 		pub mod commerce;
 		pub mod compass;
 		pub mod currencies;
-		pub mod date;
 		pub mod demographic;
 		pub mod device;
 		pub mod fashion;
