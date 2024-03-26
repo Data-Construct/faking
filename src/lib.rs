@@ -4,7 +4,6 @@ extern crate lazy_static;
 pub use self::data::blockchain;
 pub use self::data::countries;
 pub use self::data::defaults;
-pub use self::data::media;
 pub use self::data::misc;
 
 pub mod locales;
@@ -77,29 +76,6 @@ pub mod data {
 		pub mod stripe;
 		pub mod subscription;
 		pub mod tea;
-	}
-	pub mod media {
-		pub mod elderscrolls;
-		pub mod friends;
-		pub mod games;
-		pub mod hp_lovecraft;
-		pub mod kpop;
-		pub mod lord_of_the_rings;
-		pub mod manga;
-		pub mod mario;
-		pub mod minecraft;
-		pub mod movies;
-		pub mod one_piece;
-		pub mod pokemon;
-		pub mod seinfeld;
-		pub mod silicon_valley;
-		pub mod simpsons;
-		pub mod spongebob;
-		pub mod starwars;
-		pub mod starwars_yoda;
-		pub mod studio_ghibli;
-		pub mod the_hobbit;
-		pub mod tolkein;
 	}
 }
 
