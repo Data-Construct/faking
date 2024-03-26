@@ -8,12 +8,16 @@ pub use self::data::misc;
 
 pub mod locales;
 
+
 pub mod data {
+	pub mod api;
+
 	pub mod blockchain {
 		pub mod bitcoin;
 		pub mod cryptocurrency;
 		pub mod ethereum;
 	}
+
 	pub mod defaults {
 		pub mod colors;
 		pub mod crypto;
@@ -22,6 +26,7 @@ pub mod data {
 		pub mod types;
 		pub mod uuids;
 	}
+
 	pub mod countries {
 		pub mod nations;
 
@@ -32,6 +37,7 @@ pub mod data {
 			pub mod addresses;
 		}
 	}
+
 	pub mod misc {
 		pub mod adjective;
 		pub mod agent_bot;
@@ -68,8 +74,6 @@ pub mod data {
 		pub mod shakespeare;
 		pub mod space;
 		pub mod sports;
-		pub mod stripe;
-		pub mod subscription;
 		pub mod tea;
 	}
 }
