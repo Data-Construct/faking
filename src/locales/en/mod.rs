@@ -1,1 +1,2 @@
-pub mod  animal;
+pub mod animal;
+pub mod religion;

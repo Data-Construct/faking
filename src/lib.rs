@@ -101,9 +101,6 @@ pub mod data {
 		pub mod the_hobbit;
 		pub mod tolkein;
 	}
-	pub mod religion {
-		pub mod bible;
-	}
 }
 
 pub mod utils {
