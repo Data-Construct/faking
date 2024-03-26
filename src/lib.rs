@@ -17,12 +17,8 @@ pub mod data {
 	pub mod defaults {
 		pub mod colors;
 		pub mod crypto;
-		pub mod emails;
 		pub mod longitude_latitude;
-		pub mod name;
-		pub mod phone_numbers;
 		pub mod types;
-		pub mod usernames;
 		pub mod uuids;
 	}
 	pub mod countries {
@@ -60,7 +56,6 @@ pub mod data {
 		pub mod industry_segments;
 		pub mod ipv4;
 		pub mod ipv6;
-		pub mod job;
 		pub mod lorem_ipsum;
 		pub mod mac_address;
 		pub mod marketing;
@@ -80,7 +75,7 @@ pub mod data {
 }
 
 pub mod utils {
-  pub mod seeder;
+	pub mod seeder;
 }
 
 #[cfg(test)]
@@ -91,38 +86,38 @@ mod tests {
 		// assert_eq!(result, 4);
 	}
 
-  #[test]
-  fn test_greek_philosopher_names() {
-    setup_rng();
+	#[test]
+	fn test_greek_philosopher_names() {
+		setup_rng();
 
-    use crate::misc::greek_philosophers;
-    let name: String = greek_philosophers::greek_philosopher_names();
-    let expected: String = "Galen".to_owned();
-    assert_eq!(expected, name);
-  }
+		use crate::misc::greek_philosophers;
+		let name: String = greek_philosophers::greek_philosopher_names();
+		let expected: String = "Galen".to_owned();
+		assert_eq!(expected, name);
+	}
 
-  #[test]
-  fn test_greek_philosopher_quotes() {
-    setup_rng();
+	#[test]
+	fn test_greek_philosopher_quotes() {
+		setup_rng();
 
-    use crate::misc::greek_philosophers;
-    let quote: String = greek_philosophers::greek_philosopher_quotes();
-    let expected: String = "Good habits formed at youth make all the difference.".to_owned();
-    assert_eq!(expected, quote);
-  }
+		use crate::misc::greek_philosophers;
+		let quote: String = greek_philosophers::greek_philosopher_quotes();
+		let expected: String = "Good habits formed at youth make all the difference.".to_owned();
+		assert_eq!(expected, quote);
+	}
 
-  /*
-    Test variable setup.
-   */
-  use std::sync::Once;
+	/*
+	 Test variable setup.
+	*/
+	use std::sync::Once;
 
-  static STARTUP_RUN: Once = Once::new();
-  const SEED_VALUE: u64 = 1;
+	static STARTUP_RUN: Once = Once::new();
+	const SEED_VALUE: u64 = 1;
 
-  fn setup_rng() {
-    STARTUP_RUN.call_once(|| {
-      use crate::utils::seeder;
-      seeder::set_seed(SEED_VALUE);
-    });
-  }
+	fn setup_rng() {
+		STARTUP_RUN.call_once(|| {
+			use crate::utils::seeder;
+			seeder::set_seed(SEED_VALUE);
+		});
+	}
 }

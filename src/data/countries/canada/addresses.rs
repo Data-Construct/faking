@@ -1,5 +1,5 @@
 use crate::utils::seeder;
-use crate::defaults::name::{last_name, neutral_first_name};
+use crate::locales::en::person::name::{last_name, neutral_first_name};
 
 pub fn street_suffix() -> String {
 	STREETSUFFIXES[seeder::gen_range(0..STREETSUFFIXES_LEN)].to_string()

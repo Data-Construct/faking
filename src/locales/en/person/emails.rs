@@ -1,6 +1,7 @@
-use crate::defaults::usernames;
+use crate::locales::en::person::usernames;
 use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
+
 
 #[wasm_bindgen]
 pub fn standard_generic_email() -> String {
