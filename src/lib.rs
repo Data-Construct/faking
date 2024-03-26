@@ -11,6 +11,7 @@ pub mod locales;
 pub mod data {
 	pub mod blockchain {
 		pub mod bitcoin;
+		pub mod cryptocurrency;
 		pub mod ethereum;
 	}
 	pub mod defaults {
@@ -49,7 +50,6 @@ pub mod data {
 		pub mod codes;
 		pub mod commerce;
 		pub mod compass;
-		pub mod cryptocurrency;
 		pub mod currencies;
 		pub mod date;
 		pub mod demographic;
