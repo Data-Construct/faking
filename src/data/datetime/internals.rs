@@ -1,8 +1,8 @@
 use chrono::NaiveDate;
 use crate::utils::seeder;
 
-const YEAR_MIN: i32 = (i32::MIN >> 13) + 1;
-const YEAR_MAX: i32 = (i32::MAX >> 13) - 1;
+pub const YEAR_MIN: i32 = (i32::MIN >> 13) + 1;
+pub const YEAR_MAX: i32 = (i32::MAX >> 13) - 1;
 
 pub fn gen_year() -> i32 {
   seeder::gen_range(YEAR_MIN..=YEAR_MAX)
