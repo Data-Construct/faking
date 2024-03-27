@@ -10,7 +10,7 @@ pub fn date_naive() -> String {
   if ndo.is_none() {
     return "".to_string();
   }
-  return ndo.unwrap().format(DATE_FORMAT);
+  return ndo.unwrap().format(DATE_FORMAT).to_string();
 }
 
 pub fn gen_date_naive() -> Option<NaiveDate> {

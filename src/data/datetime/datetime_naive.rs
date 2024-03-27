@@ -15,7 +15,7 @@ pub fn datetime_naive() -> String {
   if ndt.is_none() {
     return "".to_string();
   }
-  ndt.unwrap().format(DATETIME_FORMAT)
+  ndt.unwrap().format(DATETIME_FORMAT).to_string()
 }
 
 #[wasm_bindgen]
@@ -24,7 +24,7 @@ pub fn datetime_naive_milli() -> String {
   if ndt.is_none() {
     return "".to_string();
   }
-  ndt.unwrap().format(DATETIME_FORMAT_MILLI)
+  ndt.unwrap().format(DATETIME_FORMAT_MILLI).to_string()
 }
 
 #[wasm_bindgen]
@@ -33,7 +33,7 @@ pub fn datetime_naive_micro() -> String {
   if ndt.is_none() {
     return "".to_string();
   }
-  ndt.unwrap().format(DATETIME_FORMAT_MICRO)
+  ndt.unwrap().format(DATETIME_FORMAT_MICRO).to_string()
 }
 
 #[wasm_bindgen]
@@ -42,7 +42,7 @@ pub fn datetime_naive_nano() -> String {
   if ndt.is_none() {
     return "".to_string();
   }
-  ndt.unwrap().format(DATETIME_FORMAT_NANO)
+  ndt.unwrap().format(DATETIME_FORMAT_NANO).to_string()
 }
 
 pub fn gen_datetime_naive() -> Option<NaiveDateTime> {

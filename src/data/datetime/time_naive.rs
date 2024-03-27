@@ -13,7 +13,7 @@ pub fn time_naive() -> String {
   if nto.is_none() {
     return "".to_string();
   }
-  return nto.unwrap().format(TIME_FORMAT);
+  return nto.unwrap().format(TIME_FORMAT).to_string();
 }
 
 #[wasm_bindgen]
@@ -22,7 +22,7 @@ pub fn time_naive_milli() -> String {
   if nto.is_none() {
     return "".to_string();
   }
-  return nto.unwrap().format(TIME_FORMAT_MILLI);
+  return nto.unwrap().format(TIME_FORMAT_MILLI).to_string();
 }
 
 #[wasm_bindgen]
@@ -31,7 +31,7 @@ pub fn time_naive_micro() -> String {
   if nto.is_none() {
     return "".to_string();
   }
-  return nto.unwrap().format(TIME_FORMAT_MICRO);
+  return nto.unwrap().format(TIME_FORMAT_MICRO).to_string();
 }
 
 #[wasm_bindgen]
@@ -40,7 +40,7 @@ pub fn time_naive_nano() -> String {
   if nto.is_none() {
     return "".to_string();
   }
-  return nto.unwrap().format(TIME_FORMAT_NANO);
+  return nto.unwrap().format(TIME_FORMAT_NANO).to_string();
 }
 
 pub fn gen_time_naive() -> Option<NaiveTime> {
