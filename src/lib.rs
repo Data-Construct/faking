@@ -56,8 +56,6 @@ pub mod data {
 		pub mod compass;
 		pub mod cryptocurrency;
 		pub mod currencies;
-		pub mod date_old;
-    pub mod date;
 		pub mod demographic;
 		pub mod device;
 		pub mod fashion;
