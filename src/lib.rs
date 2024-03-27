@@ -3,6 +3,7 @@ extern crate lazy_static;
 
 pub use self::data::blockchain;
 pub use self::data::countries;
+pub use self::data::datetime;
 pub use self::data::defaults;
 pub use self::data::media;
 pub use self::data::misc;
@@ -25,6 +26,9 @@ pub mod data {
 		pub mod usernames;
 		pub mod uuids;
 	}
+
+  pub mod datetime;
+
 	pub mod countries {
 		pub mod nations;
 
@@ -52,7 +56,8 @@ pub mod data {
 		pub mod compass;
 		pub mod cryptocurrency;
 		pub mod currencies;
-		pub mod date;
+		pub mod date_old;
+    pub mod date;
 		pub mod demographic;
 		pub mod device;
 		pub mod fashion;
