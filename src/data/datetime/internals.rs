@@ -15,7 +15,7 @@ pub fn gen_month() -> u32 {
   seeder::gen_range(MONTH_MIN..=MONTH_MAX)
 }
 
-pub fn gen_days(year: u32, month: u32) -> u32 {
+pub fn gen_days(year: i32, month: u32) -> u32 {
   let days_max = get_days_in_month(year, month);
   seeder::gen_range(1..=days_max)
 }
