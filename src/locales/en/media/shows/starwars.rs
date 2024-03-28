@@ -21,7 +21,7 @@ pub fn call_number() -> String {
 pub fn call_sign() -> String {
 	let call_num = call_number();
 	let call_squad = call_squadron();
-	return format!("{} {}", call_num, call_squad);
+	return concat_string!(call_num, " ", call_squad);
 }
 
 #[wasm_bindgen]

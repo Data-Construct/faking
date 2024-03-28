@@ -15,7 +15,7 @@ pub fn rh_factory() -> String {
 pub fn group() -> String {
 	let blood_type = blood_type();
 	let rh_factor = rh_factory();
-	return format!("{}{}", blood_type, rh_factor);
+	return concat_string!(blood_type, rh_factor);
 }
 
 static BLOOD_TYPES: [&'static str; 4] = [

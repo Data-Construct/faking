@@ -33,5 +33,5 @@ pub fn latitude() -> String {
 pub fn coordinates() -> String {
 	let lon = longitude();
 	let lat = latitude();
-	format!("{} {}", lon, lat)
+	concat_string!(lon, " ", lat)
 }
