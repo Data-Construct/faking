@@ -17,7 +17,7 @@ pub fn name_suffix() -> String {
 pub fn restaurant_full_name() -> String {
 	let prefix = name_prefix();
 	let suffix = name_suffix();
-	return format!("{} {}", prefix, suffix);
+	return concat_string!(prefix, " ", suffix);
 }
 
 #[wasm_bindgen]

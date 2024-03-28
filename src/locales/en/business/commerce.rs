@@ -47,9 +47,8 @@ pub fn full_product_name() -> String {
 	let product_adjective = product_adjective();
 	let product_material = material();
 	let product_type = product();
-	return format!(
-		"{} {} {}",
-		product_adjective, product_material, product_type
+	return concat_string!(
+		product_adjective, " ", product_material, " ", product_type
 	);
 }
 
@@ -57,7 +56,7 @@ pub fn full_product_name() -> String {
 pub fn full_promotion_code() -> String {
 	let promotion_code_adjective = promotion_code_adjective();
 	let promotion_code_noun = promotion_code_noun();
-	return format!("{} {}", promotion_code_adjective, promotion_code_noun,);
+	return concat_string!(promotion_code_adjective, " ", promotion_code_noun);
 }
 
 #[wasm_bindgen]

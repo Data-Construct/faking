@@ -3,9 +3,10 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn phone_number_with_country_code() -> String {
-	format!(
-		"+{} {}",
+	concat_string!(
+    "+".to_string(),
 		COUNTRYCODES[seeder::gen_range(0..COUNTRYCODES_LEN)].to_string(),
+    " ".to_string(),
 		phone_number()
 	)
 }
@@ -13,23 +14,20 @@ pub fn phone_number_with_country_code() -> String {
 #[wasm_bindgen]
 pub fn phone_number() -> String {
 	let format = seeder::gen_range(0..6);
-	let exchange_code = format!(
-		"{}{}{}",
-		seeder::gen_range(0..10),
-		seeder::gen_range(0..10),
-		seeder::gen_range(0..10)
+	let exchange_code = concat_string!(
+		seeder::gen_range(0..10).to_string(),
+		seeder::gen_range(0..10).to_string(),
+		seeder::gen_range(0..10).to_string()
 	);
-	let line_code = format!(
-		"{}{}{}{}",
-		seeder::gen_range(0..10),
-		seeder::gen_range(0..10),
-		seeder::gen_range(0..10),
-		seeder::gen_range(0..10)
+	let line_code = concat_string!(
+		seeder::gen_range(0..10).to_string(),
+		seeder::gen_range(0..10).to_string(),
+		seeder::gen_range(0..10).to_string(),
+		seeder::gen_range(0..10).to_string()
 	);
 
 	match format {
-		0 => format!(
-			"{}{}{}",
+		0 => concat_string!(
 			AREACODES[seeder::gen_range(0..AREACODES_LEN)].to_string(),
 			exchange_code,
 			line_code

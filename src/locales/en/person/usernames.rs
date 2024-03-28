@@ -23,16 +23,15 @@ pub fn random_username() -> String {
 	let format = seeder::gen_range(0..5);
 
 	match format {
-		0 => format!("{}{}", username_adjective(), username_proper_name()),
-		1 => format!("{}{}", username_adjective(), username_word()),
-		2 => format!(
-			"{}{}{}",
+		0 => concat_string!(username_adjective(), username_proper_name()),
+		1 => concat_string!(username_adjective(), username_word()),
+		2 => concat_string!(
 			username_adjective(),
 			username_word(),
-			seeder::gen_range(0..1000)
+			seeder::gen_range(0..1000).to_string()
 		),
-		3 => format!("{}{}", username_word(), seeder::gen_range(0..1000)),
-		4 => format!("{}{}", username_proper_name(), seeder::gen_range(0..1000)),
+		3 => concat_string!(username_word(), seeder::gen_range(0..1000).to_string()),
+		4 => concat_string!(username_proper_name(), seeder::gen_range(0..1000).to_string()),
 		_ => "".to_string(),
 	}
 }
@@ -42,12 +41,12 @@ pub fn random_username_from_input(word: &str) -> String {
 	let format = seeder::gen_range(0..6);
 
 	match format {
-		0 => format!("{}{}", word, seeder::gen_range(0..1000)),
-		1 => format!("{}{}", username_adjective(), word),
-		2 => format!("{}{}{}", "x", word, "x"),
-		3 => format!("{}{}", word, seeder::gen_range(0..1000)),
-		4 => format!("{}{}{}", username_adjective(), word, seeder::gen_range(0..1000)),
-		5 => format!("{}{}{}{}", "x", word, seeder::gen_range(0..1000), "x"),
+		0 => concat_string!(word, seeder::gen_range(0..1000).to_string()),
+		1 => concat_string!(username_adjective(), word),
+		2 => concat_string!("x", word, "x"),
+		3 => concat_string!(word, seeder::gen_range(0..1000).to_string()),
+		4 => concat_string!(username_adjective(), word, seeder::gen_range(0..1000).to_string()),
+		5 => concat_string!("x", word, seeder::gen_range(0..1000).to_string(), "x"),
 		_ => "".to_string(),
 	}
 }
@@ -58,16 +57,14 @@ pub fn corporate_username_from_input(first_name: &str, last_name: &str) -> Strin
 	let lower_case_fname = first_name.to_lowercase();
 	let lower_case_lname = last_name.to_ascii_lowercase();
 	match format {
-		0 => format!(
-			"{}{}",
-			lower_case_fname.chars().next().unwrap(),
+		0 => concat_string!(
+			lower_case_fname.chars().next().unwrap().to_string(),
 			lower_case_lname
 		),
-		1 => format!(
-			"{}{}{}",
-			lower_case_fname.chars().next().unwrap(),
+		1 => concat_string!(
+			lower_case_fname.chars().next().unwrap().to_string(),
 			lower_case_lname,
-			seeder::gen_range(0..1000)
+			seeder::gen_range(0..1000).to_string()
 		),
 		_ => "".to_string(),
 	}
