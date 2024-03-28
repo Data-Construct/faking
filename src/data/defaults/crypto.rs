@@ -1,4 +1,4 @@
-use crate::misc::lorem_ipsum::lorem_ipsum_sentence;
+use crate::locales::en::misc::lorem_ipsum::lorem_ipsum_sentence;
 use bitcoin::hashes::{sha1, sha256, sha512, Hash};
 use wasm_bindgen::prelude::*;
 

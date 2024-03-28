@@ -6,6 +6,8 @@ use wasm_bindgen::prelude::*;
 // TODO: this needs to support seed repro
 // TODO: need date time generator functions built out for seed repro
 
+use crate::locales::en::person::name::{last_name};
+
 /// as per [new_v1](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.new_v1)
 pub fn uuid_v1() -> Uuid {
 	Uuid::new_v1(
@@ -24,7 +26,7 @@ pub fn uuid_v1() -> Uuid {
 pub fn uuid_v3() -> Uuid {
 	Uuid::new_v3(
 		&Uuid::NAMESPACE_DNS,
-		crate::data::defaults::name::last_name().as_bytes(),
+		last_name().as_bytes(),
 	)
 }
 
@@ -37,7 +39,7 @@ pub fn uuid_v4() -> Uuid {
 pub fn uuid_v5() -> Uuid {
 	Uuid::new_v5(
 		&Uuid::NAMESPACE_DNS,
-		crate::data::defaults::name::last_name().as_bytes(),
+		last_name().as_bytes(),
 	)
 }
 

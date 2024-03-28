@@ -1,7 +1,7 @@
 use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
-use crate::defaults::name::{neutral_first_name, last_name};
+use crate::locales::en::person::name::{last_name, neutral_first_name};
 
 #[wasm_bindgen]
 pub fn city_prefix() -> String {
