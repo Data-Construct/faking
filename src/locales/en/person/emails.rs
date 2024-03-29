@@ -20,21 +20,19 @@ pub fn standard_generic_email() -> String {
 pub fn standard_public_email() -> String {
 	let username = usernames::random_username();
 	let domain = PUBLIC_EMAIL_DOMAINS[seeder::gen_range(0..PUBLIC_EMAIL_DOMAINS_LEN)].to_string();
-	format!("{}{}{}{}", username, "@", domain, ".com")
+  build_email(username, domain)
 }
 
 #[wasm_bindgen]
 pub fn standard_public_email_alias() -> String {
 	let format = seeder::gen_range(0..2);
 	let username = match format {
-		0 => format!(
-			"{}{}{}",
+		0 => concat_string!(
 			usernames::random_username(),
 			"+",
 			seeder::gen_range(0..100).to_string()
 		),
-		1 => format!(
-			"{}{}{}",
+		1 => concat_string!(
 			usernames::random_username(),
 			"+",
 			BUSINESS_EMAIL_DOMAINS[seeder::gen_range(0..BUSINESS_EMAIL_DOMAINS_LEN)].to_string()
@@ -42,14 +40,14 @@ pub fn standard_public_email_alias() -> String {
 		_ => "".to_string(),
 	};
 	let domain = PUBLIC_EMAIL_DOMAINS[seeder::gen_range(0..PUBLIC_EMAIL_DOMAINS_LEN)].to_string();
-	format!("{}{}{}{}", username, "@", domain, ".com")
+  build_email(username, domain)
 }
 
 #[wasm_bindgen]
 pub fn standard_business_email() -> String {
 	let username = usernames::random_username();
 	let domain = BUSINESS_EMAIL_DOMAINS[seeder::gen_range(0..BUSINESS_EMAIL_DOMAINS_LEN)].to_string();
-	format!("{}{}{}{}", username, "@", domain, ".com")
+  build_email(username, domain)
 }
 
 #[wasm_bindgen]
@@ -58,14 +56,18 @@ pub fn standard_government_email() -> String {
 	let domain =
 		GOVERNMENT_EMAIL_DOMAINS[seeder::gen_range(0..GOVERNMENT_EMAIL_DOMAINS_LEN)].to_string();
 	//Some government emails end with .gov domain
-	format!("{}{}{}{}", username, "@", domain, ".com")
+  build_email(username, domain)
 }
 
 #[wasm_bindgen]
 pub fn standard_account_email(first_name: &str, last_name: &str) -> String {
 	let username = usernames::corporate_username_from_input(first_name, last_name);
 	let domain = PUBLIC_EMAIL_DOMAINS[seeder::gen_range(0..PUBLIC_EMAIL_DOMAINS_LEN)].to_string();
-	format!("{}{}{}{}", username, "@", domain, ".com")
+  build_email(username, domain)
+}
+
+fn build_email(username: String, domain: String) -> String {
+  concat_string!(username, "@", domain, ".com")
 }
 
 static PUBLIC_EMAIL_DOMAINS: [&'static str; 6] = [

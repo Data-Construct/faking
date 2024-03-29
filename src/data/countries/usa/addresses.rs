@@ -20,8 +20,8 @@ pub fn street_name() -> String {
     let format = seeder::gen_range(0..2);
 
     match format{
-        0=>format!("{} {}", neutral_first_name(), street_suffix()),
-        1=>format!("{} {}", last_name(), street_suffix()),
+        0=>concat_string!(neutral_first_name(), " ", street_suffix()),
+        1=>concat_string!(last_name(), " ", street_suffix()),
         _=>"".to_string()
     }
 }
@@ -34,10 +34,10 @@ pub fn city() -> String {
     let format = seeder::gen_range(0..4);
 
     match format{
-        0=>format!("{} {}{}", city_prefix(), neutral_first_name(), city_suffix()),
-        1=>format!("{} {}", city_prefix(), neutral_first_name()),
-        2=>format!("{}{}", neutral_first_name(), city_suffix()),
-        3=>format!("{}{}", last_name(), city_suffix()),
+        0=>concat_string!(city_prefix(), " ", neutral_first_name(), city_suffix()),
+        1=>concat_string!(city_prefix(), " ", neutral_first_name()),
+        2=>concat_string!(neutral_first_name(), city_suffix()),
+        3=>concat_string!(last_name(), city_suffix()),
         _=>"".to_string()
     }
 }
@@ -98,16 +98,16 @@ pub fn zip_code(state: &str) -> String {
         "WY"=>"831",
         _=>"",
     };
-    format!("{}{}", zip_format, seeder::gen_range(10..99))
+    concat_string!(zip_format, seeder::gen_range(10..99).to_string())
 }
 
 pub fn street_address() -> String {
     let format = seeder::gen_range(3..6);
 
     match format{
-        5=>format!("{} {}", seeder::gen_range(10000..99999), street_name()),
-        4=>format!("{} {}", seeder::gen_range(1000..9999), street_name()),
-        3=>format!("{} {}", seeder::gen_range(100..999), street_name()),
+        5=>concat_string!(seeder::gen_range(10000..99999).to_string(), " ", street_name()),
+        4=>concat_string!(seeder::gen_range(1000..9999).to_string(), " ", street_name()),
+        3=>concat_string!(seeder::gen_range(100..999).to_string(), " ", street_name()),
         _=>"".to_string()
     }
 }
@@ -118,14 +118,14 @@ pub fn full_address() -> String {
     let zipcode = zip_code(&state);
 
     match format{
-        0=>format!("{}, {}, {} {}", street_address(), city(), state, zipcode),
-        1=>format!("{} {}, {}, {} {}", street_address(), secondary_address(), city(), state, zipcode),
+      0=>format!("{}, {}, {} {}", street_address(), city(), state, zipcode),
+      1=>format!("{} {}, {}, {} {}", street_address(), secondary_address(), city(), state, zipcode),
         _=>"".to_string()
     }
 }
 
 pub fn secondary_address() -> String {
-    format!("{} {}", SECONDARY_FORMATS[seeder::gen_range(0..SECONDARY_FORMATS_LEN)], seeder::gen_range(100..999))
+  concat_string!(SECONDARY_FORMATS[seeder::gen_range(0..SECONDARY_FORMATS_LEN)].to_string(), " ", seeder::gen_range(100..999).to_string())
 }
 
 static STREETSUFFIXES: [&'static str; 225] = [

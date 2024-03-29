@@ -9,8 +9,8 @@ pub fn street_name() -> String {
 	let format = seeder::gen_range(0..2);
 
 	match format {
-		0 => format!("{} {}", neutral_first_name(), street_suffix()),
-		1 => format!("{} {}", last_name(), street_suffix()),
+		0 => concat_string!(neutral_first_name(), " ", street_suffix()),
+		1 => concat_string!(last_name(), " ", street_suffix()),
 		_ => "".to_string(),
 	}
 }
@@ -61,14 +61,13 @@ pub fn province_code(province: &str, city: &str) -> String {
 		"NU" => "X",
 		_ => "",
 	};
-	format!(
-		"{}{}{}{}{}{}",
+	concat_string!(
 		postal_start,
-		seeder::gen_range(1..9),
-		seeder::gen_range(b'A'..b'Z') as char,
-		seeder::gen_range(1..9),
-		seeder::gen_range(b'A'..b'Z') as char,
-		seeder::gen_range(1..9)
+		seeder::gen_range(1..9).to_string(),
+		(seeder::gen_range(b'A'..b'Z') as char).to_string(),
+		seeder::gen_range(1..9).to_string(),
+		(seeder::gen_range(b'A'..b'Z') as char).to_string(),
+		seeder::gen_range(1..9).to_string()
 	)
 }
 
@@ -112,10 +111,10 @@ pub fn full_address() -> String {
 }
 
 pub fn secondary_address() -> String {
-	format!(
-		"{} {}",
-		SECONDARY_FORMATS[seeder::gen_range(0..SECONDARY_FORMATS_LEN)],
-		seeder::gen_range(100..999)
+	concat_string!(
+		SECONDARY_FORMATS[seeder::gen_range(0..SECONDARY_FORMATS_LEN)].to_string(),
+    " ",
+		seeder::gen_range(100..999).to_string()
 	)
 }
 
