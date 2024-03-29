@@ -10,8 +10,10 @@ jobs:
     steps:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.1
-      - uses: actions/checkout@v3
-        working-directory: ./docs
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            docs
       - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
