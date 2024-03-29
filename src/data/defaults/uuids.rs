@@ -1,21 +1,15 @@
-use rand::{Rng, SeedableRng};
-use rand_isaac::IsaacRng;
 use uuid::Uuid;
 use wasm_bindgen::prelude::*;
 
 // TODO: this needs to support seed repro
 // TODO: need date time generator functions built out for seed repro
 
-use crate::locales::en::person::name::{last_name};
+use crate::{locales::en::person::name::last_name, utils::seeder};
 
 /// as per [new_v1](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.new_v1)
 pub fn uuid_v1() -> Uuid {
 	Uuid::new_v1(
-		uuid::Timestamp::from_unix(
-			&uuid::Context::new(crate::data::defaults::types::u16()),
-			1497624119,
-			1234,
-		),
+		new_timestamp(),
 		&[
 			1, 2, 3, 4, 5, 6,
 		],
@@ -45,19 +39,19 @@ pub fn uuid_v5() -> Uuid {
 
 /// as per [now_v6](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.now_v6)
 pub fn uuid_v6() -> Uuid {
-	Uuid::now_v6(&[
-		1, 2, 3, 4, 5, 6,
-	])
+  let ts = new_timestamp();
+  let node_id = seeder::gen::<[u8; 6]>();
+	Uuid::new_v6(ts, &node_id)
 }
 
 /// as per [now_v7](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.now_v7)
 pub fn uuid_v7() -> Uuid {
-	Uuid::now_v7()
+	Uuid::new_v7(new_timestamp())
 }
 
 /// as per [new_v8](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.new_v8)
 pub fn uuid_v8() -> Uuid {
-	Uuid::new_v8(IsaacRng::gen::<[u8; 16]>(&mut IsaacRng::seed_from_u64(6)))
+  Uuid::new_v8(seeder::gen::<[u8; 16]>())
 }
 
 //
@@ -158,4 +152,14 @@ pub fn uuid_v7_wasm() -> String {
 /// ```
 pub fn uuid_v8_wasm() -> String {
 	uuid_v8().to_string()
+}
+
+fn new_timestamp() -> uuid::Timestamp {
+  let context = uuid::Context::new(crate::data::defaults::types::u16());
+  let (seconds, nanos) = crate::data::datetime::unix::unix_gen();
+  uuid::Timestamp::from_unix(
+    &context,
+    seconds,
+    nanos
+  )
 }
