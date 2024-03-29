@@ -5,6 +5,7 @@ const withNextra = require('nextra')({
 
 module.exports = {
   ...withNextra(),
+  basePath: '/faking',
   images: {
     unoptimized: true,
   },
