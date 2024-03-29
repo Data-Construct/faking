@@ -11,9 +11,7 @@ jobs:
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.1
       - uses: actions/checkout@v3
-        with:
-          sparse-checkout: 'faking/docs'
-          sparse-checkout-cone-mode: false
+        working-directory: ./docs
       - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
