@@ -1,2 +1,15 @@
 pub mod animals;
 pub mod cat;
+pub mod bear;
+pub mod bird;
+pub mod cetacean;
+pub mod cow;
+pub mod crocodilia;
+pub mod dog;
+pub mod fish;
+pub mod horse;
+pub mod insect;
+pub mod snake;
+pub mod rodent;
+pub mod rabbit;
+pub mod lion;
