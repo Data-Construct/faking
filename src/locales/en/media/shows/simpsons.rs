@@ -247,7 +247,7 @@ static QUOTES: [&'static str; 19] = [
     "D'oh!",
     "That's it! You people have stood in my way long enough. I'm going to clown college!",
     "Son, if you really want something in this life, you have to work for it. Now quiet! They're about to announce the lottery numbers.",
-    "What’s the point of going out? We’re just gonna wind up back home anyway.",
+    "What's the point of going out? We're just gonna wind up back home anyway.",
     "Cheating is the gift man gives himself.",
     "Books are useless! I only ever read one book, To Kill A Mockingbird, and it gave me absolutely no insight on how to kill mockingbirds!",
     "Sorry, Mom, the mob has spoken.",
@@ -255,7 +255,7 @@ static QUOTES: [&'static str; 19] = [
     "To alcohol! The cause of, and solution to, all of life's problems.",
     "Trust me, Bart, it's better to walk in on both your parents than on just one of them.",
     "Oh, loneliness and cheeseburgers are a dangerous mix.",
-    "When will I learn? The answers to life’s problems aren’t at the bottom of a bottle, they’re on TV!"
+    "When will I learn? The answers to life's problems aren't at the bottom of a bottle, they're on TV!"
 ];
 static QUOTES_LEN: usize = QUOTES.len();
 

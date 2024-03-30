@@ -86,7 +86,7 @@ static COMPANIES_LEN: usize = COMPANIES.len();
 static QUOTES: [&'static str; 17] = [
   "I don't want to live in a world where someone else is making the world a better place better than we are.",
   "I firmly believe we can only achieve greatness if first, we achieve goodness",
-  "Line ’em up, nuts to butts",
+  "Line 'em up, nuts to butts",
   "Let me ask you. How fast do you think you could jerk off every guy in this room? Because I know how long it would take me. And I can prove it",
   "It's weird. They always travel in groups of five. These programmers, there's always a tall, skinny white guy; short, skinny Asian guy; fat guy with a ponytail; some guy with crazy facial hair; and then an East Indian guy. It's like they trade guys until they all have the right group.",
   "Jian-Yang, what're you doing? This is Palo Alto. People are lunatics about smoking here. We don't enjoy all the freedoms that you have in China.",

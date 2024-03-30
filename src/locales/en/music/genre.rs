@@ -51,7 +51,7 @@ static EN_GENRE: [&'static str; 269] = [
     "Chicago Blues",
     "Chicago House",
     "Chicano",
-    "Children’s Music",
+    "Children's Music",
     "Chill",
     "Choral",
     "Christian",

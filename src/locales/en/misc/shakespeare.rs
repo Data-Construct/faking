@@ -47,7 +47,7 @@ static AS_YOU_LIKE_IT: [&'static str; 8] = [
   "I like this place and willingly could waste my time in it.",
   "But Oh, how bitter a thing it is to look into happiness through another man's eyes.",
   "Blow, blow, thou winter wind, thou art not so unkind as man's ingratitude.",
-  "True is it that we have seen better days and have with holy bell been knolled to church, and sat at good men’s feasts and wiped our eyes of drops that sacred pity hath engendered.",
+  "True is it that we have seen better days and have with holy bell been knolled to church, and sat at good men's feasts and wiped our eyes of drops that sacred pity hath engendered.",
   "For ever and a day.",
   "The fool doth think he is wise, but the wise man knows himself to be a fool."
 ];
@@ -73,7 +73,7 @@ static ROMEO_AND_JULIET: [&'static str; 10] = [
   "Wisely and slow; they stumble that run fast.",
   "Tempt not a desperate man.",
   "For you and I are past our dancing days.",
-  "Oh, she doth teach the torches to burn bright! It seems she hangs upon the cheek of night like a rich jewel in an Ethiope’s ear, beauty too rich for use, for earth too dear.",
+  "Oh, she doth teach the torches to burn bright! It seems she hangs upon the cheek of night like a rich jewel in an Ethiope's ear, beauty too rich for use, for earth too dear.",
   "See how she leans her cheek upon her hand. Oh, that I were a glove upon that hand that I might touch that cheek!",
   "Not stepping o'er the bounds of modesty."
 ];
