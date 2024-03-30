@@ -47,7 +47,11 @@ pub fn uuid_v6() -> Uuid {
 
 /// as per [now_v7](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.now_v7)
 pub fn uuid_v7() -> Uuid {
-	Uuid::new_v7(new_timestamp())
+  let (secs, nanos) = crate::data::datetime::unix::unix_gen();
+  let millis = (secs * 1000).saturating_add(nanos as u64 / 1_000_000);
+  let bytes = seeder::gen::<[u8; 10]>();
+  let built = uuid::Builder::from_unix_timestamp_millis(millis, &bytes);
+	built.into_uuid()
 }
 
 /// as per [new_v8](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.new_v8)
