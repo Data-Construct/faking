@@ -1,9 +1,6 @@
 use uuid::Uuid;
 use wasm_bindgen::prelude::*;
 
-// TODO: this needs to support seed repro
-// TODO: need date time generator functions built out for seed repro
-
 use crate::{locales::en::person::name::last_name, utils::seeder};
 
 /// as per [new_v1](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.new_v1)
@@ -47,7 +44,7 @@ pub fn uuid_v6() -> Uuid {
 
 /// as per [now_v7](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.now_v7)
 pub fn uuid_v7() -> Uuid {
-  let (secs, nanos) = crate::data::datetime::unix::unix_gen();
+  let (secs, nanos) = crate::data::datetime::unix::unix_ts_gen();
   let millis = (secs * 1000).saturating_add(nanos as u64 / 1_000_000);
   let bytes = seeder::gen::<[u8; 10]>();
   let built = uuid::Builder::from_unix_timestamp_millis(millis, &bytes);
@@ -161,7 +158,7 @@ pub fn uuid_v8_wasm() -> String {
 
 fn new_timestamp() -> uuid::Timestamp {
   let context = uuid::Context::new(crate::data::defaults::types::u16());
-  let (seconds, nanos) = crate::data::datetime::unix::unix_gen();
+  let (seconds, nanos) = crate::data::datetime::unix::unix_ts_gen();
   uuid::Timestamp::from_unix(
     &context,
     seconds,
