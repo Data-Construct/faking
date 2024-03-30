@@ -2,13 +2,25 @@ use wasm_bindgen::prelude::*;
 use chrono::{NaiveDate, TimeDelta, Utc};
 use crate::utils::seeder;
 
-use super::internals::{gen_days, gen_month, gen_year, YEAR_MAX, YEAR_MIN};
+use super::internals::{gen_days, gen_month, gen_year_epoch, gen_year_unsafe, YEAR_EPOCH_MAX, YEAR_EPOCH_MIN};
 
 const DATE_FORMAT: &str = "%Y-%m-%d";
 
 #[wasm_bindgen]
 pub fn date_naive() -> String {
   let ndo = gen_date_naive();
+  if ndo.is_none() {
+    return "".to_string();
+  }
+  return ndo.unwrap().format(DATE_FORMAT).to_string();
+}
+
+#[wasm_bindgen]
+pub fn date_naive_unsafe() -> String {
+  let year = gen_year_unsafe();
+  let month = gen_month();
+  let day = gen_days(year, month);
+  let ndo = NaiveDate::from_ymd_opt(year, month, day);
   if ndo.is_none() {
     return "".to_string();
   }
@@ -89,7 +101,7 @@ pub fn date_naive_after_today() -> String {
 }
 
 pub fn gen_date_naive() -> Option<NaiveDate> {
-  let year = gen_year();
+  let year = gen_year_epoch();
   let month = gen_month();
   let day = gen_days(year, month);
   NaiveDate::from_ymd_opt(year, month, day)
@@ -103,26 +115,26 @@ pub fn gen_date_naive_between(min: NaiveDate, max: NaiveDate) -> Option<NaiveDat
 }
 
 pub fn gen_date_naive_before(before: NaiveDate) -> Option<NaiveDate> {
-  let min = NaiveDate::from_ymd(YEAR_MIN, 1, 1);
+  let min = NaiveDate::from_ymd(YEAR_EPOCH_MIN, 1, 1);
   gen_date_naive_between(min, before)
 }
 
 pub fn gen_date_naive_before_today() -> Option<NaiveDate> {
   let now = Utc::now();
   let now_nd = now.naive_utc();
-  let min = NaiveDate::from_ymd(YEAR_MIN, 1, 1);
+  let min = NaiveDate::from_ymd(YEAR_EPOCH_MIN, 1, 1);
   gen_date_naive_between(min, now_nd.date())
 }
 
 pub fn gen_date_naive_after(after: NaiveDate) -> Option<NaiveDate> {
-  let max = NaiveDate::from_ymd(YEAR_MAX, 12, 31);
+  let max = NaiveDate::from_ymd(YEAR_EPOCH_MAX, 12, 31);
   gen_date_naive_between(after, max)
 }
 
 pub fn gen_date_naive_after_today() -> Option<NaiveDate> {
   let now = Utc::now();
   let now_nd = now.naive_utc();
-  let max = NaiveDate::from_ymd(YEAR_MAX, 12, 31);
+  let max = NaiveDate::from_ymd(YEAR_EPOCH_MAX, 12, 31);
   gen_date_naive_between(now_nd.date(), max)
 }
 

@@ -1,15 +1,23 @@
 use chrono::NaiveDate;
 use crate::utils::seeder;
 
+pub const YEAR_EPOCH_MIN: i32 = 1970;
+pub const YEAR_EPOCH_MAX: i32 = 2038;
+
+pub fn gen_year_epoch() -> i32 {
+  seeder::gen_range(YEAR_EPOCH_MIN..=YEAR_EPOCH_MAX)
+}
+
 pub const YEAR_MIN: i32 = (i32::MIN >> 13) + 1;
 pub const YEAR_MAX: i32 = (i32::MAX >> 13) - 1;
 
-pub fn gen_year() -> i32 {
-  seeder::gen_range(YEAR_MIN..=YEAR_MAX)
+// Ranges for the Naive Date max and min.
+pub fn gen_year_unsafe() -> i32 {
+  seeder::gen_range(0..=YEAR_MAX)
 }
 
-const MONTH_MIN: u32 = 0;
-const MONTH_MAX: u32 = 11;
+const MONTH_MIN: u32 = 1;
+const MONTH_MAX: u32 = 12;
 
 pub fn gen_month() -> u32 {
   seeder::gen_range(MONTH_MIN..=MONTH_MAX)
