@@ -4,7 +4,7 @@ use crate::{locales::en::misc::colors, utils::seeder};
 
 const FORMAT_BASE: &str = "data:image/svg+xml;";
 
-#[wasm_bindgen]
+// #[wasm_bindgen]
 pub fn image_uri(props: Option<URI_Properties>) -> String {
   let mut height = seeder::gen_range(1..4000);
   let mut width = seeder::gen_range(1..4000);
@@ -69,7 +69,7 @@ fn to_svg_encode(svg: String) -> String {
   format!("{}charset=UTF-8,{}", FORMAT_BASE, encoded_text)
 }
 
-#[wasm_bindgen]
+// #[wasm_bindgen]
 #[derive(Clone)]
 pub struct URI_Properties {
   pub height: Option<u16>,

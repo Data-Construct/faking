@@ -5,7 +5,7 @@ use crate::{locales::en::misc::{colors, lorem_ipsum}, utils::seeder};
 
 const URL_BASE: &str = "https://via.placeholder.com";
 
-#[wasm_bindgen]
+// #[wasm_bindgen]
 pub fn image_placeholder(props: Option<Placeholder_Properties>) -> String {
   let mut height = seeder::gen_range(1..4000);
   let mut width = seeder::gen_range(1..4000);
@@ -59,7 +59,7 @@ pub fn image_placeholder(props: Option<Placeholder_Properties>) -> String {
   format!("{}/{}x{}/{}/{}.{}?text={}", URL_BASE, width.to_string(), height.to_string(), background_color, text_color, image_format, encoded_text)
 }
 
-#[wasm_bindgen]
+// #[wasm_bindgen]
 #[derive(Clone)]
 pub struct Placeholder_Properties {
     pub height: Option<u16>,

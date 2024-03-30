@@ -4,7 +4,7 @@ use crate::utils::seeder;
 
 const URL_BASE: &str = "https://loremflickr.com";
 
-#[wasm_bindgen]
+// #[wasm_bindgen]
 pub fn image_flickr(props: Option<Flickr_Properties>) -> String {
   let mut height = seeder::gen_range(1..4000);
   let mut width = seeder::gen_range(1..4000);
@@ -44,7 +44,7 @@ pub fn image_flickr(props: Option<Flickr_Properties>) -> String {
   format!("{}/{}/{}/{}?lock={}", URL_BASE, width.to_string(), height.to_string(), category, lock.to_string())
 }
 
-#[wasm_bindgen]
+// #[wasm_bindgen]
 #[derive(Clone)]
 pub struct Flickr_Properties {
     pub height: Option<u16>,
