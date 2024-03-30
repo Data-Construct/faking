@@ -45,13 +45,21 @@ pub const NANO_MAX: i32 = 23;
 // MySQL - TIMESTAMP has a range of '1970-01-01 00:00:01' UTC to '2038-01-19 03:14:07' UTC.
 // MySQL - DATETIME supported range is '1000-01-01 00:00:00' to '9999-12-31 23:59:59'.
 
+fn zero_pad_string(arg: i32) -> String {
+    if arg < 10 {
+        format!("0{}",arg)
+    } else {
+        arg.to_string()
+    }
+}
+
 #[wasm_bindgen]
 pub fn sql_time() -> String {
 	format!(
 		"{}:{}:{}",
-		seeder::gen_range(HOURS_MIN..=HOURS_MAX),
-		seeder::gen_range(MINUTES_MIN..=MINUTES_MAX),
-		seeder::gen_range(SECONDS_MIN..=SECONDS_MAX)
+		zero_pad_string(seeder::gen_range(HOURS_MIN..=HOURS_MAX)),
+		zero_pad_string(seeder::gen_range(MINUTES_MIN..=MINUTES_MAX)),
+		zero_pad_string(seeder::gen_range(SECONDS_MIN..=SECONDS_MAX))
 	)
 }
 
@@ -59,9 +67,9 @@ pub fn sql_time() -> String {
 pub fn sql_server_time() -> String {
 	format!(
 		"{}:{}:{}.{}{}{}{}{}{}{}",
-		seeder::gen_range(HOURS_MIN..=HOURS_MAX),
-		seeder::gen_range(MINUTES_MIN..=MINUTES_MAX),
-		seeder::gen_range(SECONDS_MIN..=SECONDS_MAX),
+		zero_pad_string(seeder::gen_range(HOURS_MIN..=HOURS_MAX)),
+		zero_pad_string(seeder::gen_range(MINUTES_MIN..=MINUTES_MAX)),
+		zero_pad_string(seeder::gen_range(SECONDS_MIN..=SECONDS_MAX)),
 
         seeder::gen_range(0..=9),
         seeder::gen_range(0..=9),
@@ -77,9 +85,9 @@ pub fn sql_server_time() -> String {
 pub fn sql_date() -> String {
 	format!(
 		"{}-{}-{}",
-		seeder::gen_range(YEAR_MIN..=YEAR_MAX),
-		seeder::gen_range(MONTH_MIN..=MONTH_MAX),
-		seeder::gen_range(DAYS_MIN..=DAYS_MAX)
+		zero_pad_string(seeder::gen_range(YEAR_MIN..=YEAR_MAX)),
+		zero_pad_string(seeder::gen_range(MONTH_MIN..=MONTH_MAX)),
+		zero_pad_string(seeder::gen_range(DAYS_MIN..=DAYS_MAX))
 	)
 }
 
@@ -87,13 +95,13 @@ pub fn sql_date() -> String {
 pub fn sql_datetime() -> String {
 	format!(
 		"{}-{}-{} {}:{}:{}.{}{}{}{}{}",
-		seeder::gen_range(YEAR_MIN..=YEAR_MAX),
-		seeder::gen_range(MONTH_MIN..=MONTH_MAX),
-		seeder::gen_range(DAYS_MIN..=DAYS_MAX),
+		zero_pad_string(seeder::gen_range(YEAR_MIN..=YEAR_MAX)),
+		zero_pad_string(seeder::gen_range(MONTH_MIN..=MONTH_MAX)),
+		zero_pad_string(seeder::gen_range(DAYS_MIN..=DAYS_MAX)),
 
-		seeder::gen_range(HOURS_MIN..=HOURS_MAX),
-		seeder::gen_range(MINUTES_MIN..=MINUTES_MAX),
-		seeder::gen_range(SECONDS_MIN..=SECONDS_MAX),
+		zero_pad_string(seeder::gen_range(HOURS_MIN..=HOURS_MAX)),
+		zero_pad_string(seeder::gen_range(MINUTES_MIN..=MINUTES_MAX)),
+		zero_pad_string(seeder::gen_range(SECONDS_MIN..=SECONDS_MAX)),
 
         seeder::gen_range(0..=9),
         seeder::gen_range(0..=9),
@@ -107,13 +115,13 @@ pub fn sql_datetime() -> String {
 pub fn sql_server_datetime() -> String {
 	format!(
 		"{}-{}-{} {}:{}:{}.{}{}{}",
-		seeder::gen_range(YEAR_MIN..=YEAR_MAX),
-		seeder::gen_range(MONTH_MIN..=MONTH_MAX),
-		seeder::gen_range(DAYS_MIN..=DAYS_MAX),
+		zero_pad_string(seeder::gen_range(YEAR_MIN..=YEAR_MAX)),
+		zero_pad_string(seeder::gen_range(MONTH_MIN..=MONTH_MAX)),
+		zero_pad_string(seeder::gen_range(DAYS_MIN..=DAYS_MAX)),
 
-		seeder::gen_range(HOURS_MIN..=HOURS_MAX),
-		seeder::gen_range(MINUTES_MIN..=MINUTES_MAX),
-		seeder::gen_range(SECONDS_MIN..=SECONDS_MAX),
+		zero_pad_string(seeder::gen_range(HOURS_MIN..=HOURS_MAX)),
+		zero_pad_string(seeder::gen_range(MINUTES_MIN..=MINUTES_MAX)),
+		zero_pad_string(seeder::gen_range(SECONDS_MIN..=SECONDS_MAX)),
 
         seeder::gen_range(0..=9),
         seeder::gen_range(0..=9),
@@ -125,13 +133,13 @@ pub fn sql_server_datetime() -> String {
 pub fn sql_server_datetime2() -> String {
 	format!(
 		"{}-{}-{} {}:{}:{}.{}{}{}{}{}{}{}",
-		seeder::gen_range(YEAR_MIN..=YEAR_MAX),
-		seeder::gen_range(MONTH_MIN..=MONTH_MAX),
-		seeder::gen_range(DAYS_MIN..=DAYS_MAX),
+		zero_pad_string(seeder::gen_range(YEAR_MIN..=YEAR_MAX)),
+		zero_pad_string(seeder::gen_range(MONTH_MIN..=MONTH_MAX)),
+		zero_pad_string(seeder::gen_range(DAYS_MIN..=DAYS_MAX)),
 
-		seeder::gen_range(HOURS_MIN..=HOURS_MAX),
-		seeder::gen_range(MINUTES_MIN..=MINUTES_MAX),
-		seeder::gen_range(SECONDS_MIN..=SECONDS_MAX),
+		zero_pad_string(seeder::gen_range(HOURS_MIN..=HOURS_MAX)),
+		zero_pad_string(seeder::gen_range(MINUTES_MIN..=MINUTES_MAX)),
+		zero_pad_string(seeder::gen_range(SECONDS_MIN..=SECONDS_MAX)),
 
         seeder::gen_range(0..=9),
         seeder::gen_range(0..=9),
