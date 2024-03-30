@@ -1,6 +1,10 @@
 pub mod animal;
 pub mod business;
-pub mod religion;
-pub mod person;
+pub mod location;
+pub mod media;
 pub mod misc;
+pub mod music;
 pub mod mythos;
+pub mod person;
+pub mod religion;
+pub mod vehicle;
