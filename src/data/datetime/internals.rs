@@ -13,7 +13,7 @@ pub const YEAR_MAX: i32 = (i32::MAX >> 13) - 1;
 
 // Ranges for the Naive Date max and min.
 pub fn gen_year_unsafe() -> i32 {
-  seeder::gen_range(0..=YEAR_MAX)
+  seeder::gen_range(YEAR_MIN..=YEAR_MAX)
 }
 
 const MONTH_MIN: u32 = 1;
