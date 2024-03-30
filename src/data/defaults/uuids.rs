@@ -26,7 +26,8 @@ pub fn uuid_v3() -> Uuid {
 
 /// as per [new_v4](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.new_v4)
 pub fn uuid_v4() -> Uuid {
-	Uuid::new_v4()
+  let built = uuid::Builder::from_random_bytes(seeder::gen::<[u8; 16]>());
+  built.into_uuid()
 }
 
 /// as per [new_v5](https://docs.rs/uuid/latest/uuid/struct.Uuid.html#method.new_v5)
