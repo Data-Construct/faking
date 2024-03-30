@@ -1,0 +1,61 @@
+use crate::utils::seeder;
+use wasm_bindgen::prelude::*;
+
+#[wasm_bindgen(js_name = location_state_abbr)]
+pub fn state_abbr() -> String {
+	EN_STATE_ABBR[seeder::gen_range(0..EN_STATE_ABBR_LEN)].to_string()
+}
+
+static EN_STATE_ABBR: [&'static str; 50] = [
+    "AL",
+    "AK",
+    "AZ",
+    "AR",
+    "CA",
+    "CO",
+    "CT",
+    "DE",
+    "FL",
+    "GA",
+    "HI",
+    "ID",
+    "IL",
+    "IN",
+    "IA",
+    "KS",
+    "KY",
+    "LA",
+    "ME",
+    "MD",
+    "MA",
+    "MI",
+    "MN",
+    "MS",
+    "MO",
+    "MT",
+    "NE",
+    "NV",
+    "NH",
+    "NJ",
+    "NM",
+    "NY",
+    "NC",
+    "ND",
+    "OH",
+    "OK",
+    "OR",
+    "PA",
+    "RI",
+    "SC",
+    "SD",
+    "TN",
+    "TX",
+    "UT",
+    "VT",
+    "VA",
+    "WA",
+    "WV",
+    "WI",
+    "WY",
+];
+static EN_STATE_ABBR_LEN: usize = EN_STATE_ABBR.len();
