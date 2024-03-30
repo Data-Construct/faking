@@ -1,5 +1,5 @@
 use rand::distributions::uniform::{SampleRange, SampleUniform};
-use rand::distributions::{Distribution, Standard};
+use rand::distributions::{DistIter, Distribution, Standard};
 use rand::{Rng, SeedableRng};
 use rand_pcg::Pcg64Mcg;
 use std::cell::RefCell;
@@ -40,4 +40,12 @@ where
 	Standard: Distribution<T>,
 {
 	RNG.with(|rng| rng.borrow_mut().gen())
+}
+
+pub fn sample_iter<T, D>(distr: D) -> DistIter<D, Pcg64Mcg, T>
+where
+    D: Distribution<T>,
+    Pcg64Mcg: Sized
+{
+  RNG.with(|rng| rng.borrow_mut().clone().sample_iter(distr))
 }

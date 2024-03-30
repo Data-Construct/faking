@@ -4,10 +4,13 @@ extern crate lazy_static;
 #[macro_use]
 extern crate concat_string;
 
+extern crate url;
+
 pub use self::data::blockchain;
 pub use self::data::countries;
 pub use self::data::datetime;
 pub use self::data::defaults;
+pub use self::data::image;
 
 pub mod locales;
 
@@ -42,6 +45,7 @@ pub mod data {
 		}
 	}
 
+  pub mod image;
 	pub mod it;
 }
 

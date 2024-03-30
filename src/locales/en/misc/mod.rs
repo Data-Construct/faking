@@ -4,6 +4,7 @@ pub mod barcodes;
 pub mod books;
 pub mod chess;
 pub mod codes;
+pub mod colors;
 pub mod compass;
 pub mod currencies;
 pub mod fashion;
