@@ -64,7 +64,4 @@ console.log(faking.f64());
 ### Unsupported Seeded Generation
 The following data generators do not support seeded generation:
 
-- [UUIDs](src/data/defaults/uuids.rs), any.
 - DateTime: Naive Date ([Before Today](src/data/datetime/date_naive.rs#L57) | [After Today](src/data/datetime/date_naive.rs#L83)).
-
-NOTE: uuids is currently the only data generator category that doesn't yet support seeded generation, expect results to differ for that one case.
