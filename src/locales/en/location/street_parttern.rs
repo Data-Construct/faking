@@ -4,7 +4,7 @@ use super::street_name::street_name;
 use super::street_suffix::street_suffix;
 use crate::locales::en::person::name;
 
-#[wasm_bindgen(js_name = location_city_parttern)]
+#[wasm_bindgen(js_name = location_street_parttern)]
 pub fn street_parttern() -> String {
 	let format = seeder::gen_range(0..5);
 
