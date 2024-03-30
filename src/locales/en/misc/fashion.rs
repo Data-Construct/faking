@@ -250,6 +250,6 @@ static FASHION_TERMS: [&'static str; 244] = [
 	"Warm colours",
 	"Weft",
 	"X-ray Fabric",
-	"70’s style",
+	"70's style",
 ];
 static FASHION_TERMS_LEN: usize = FASHION_TERMS.len();

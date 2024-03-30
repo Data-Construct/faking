@@ -93,7 +93,7 @@ static POEMS: [&'static str; 74] = [
   "Long live the Halflings! Praise them with great praise!",
   "To the Sea, to the Sea! The white gulls are crying",
   "Sing now, ye people of the Tower of Anor",
-  "Out of doubt, out of dark, to the day’s rising",
+  "Out of doubt, out of dark, to the day's rising",
   "The Road goes ever on and on",
   "Still around the corner there may wait",
 ];
