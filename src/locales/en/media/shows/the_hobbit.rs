@@ -85,7 +85,7 @@ static LOCATIONS: [&'static str; 38] = [
   "The Shire",
   "Rivendell",
   "The Misty Mountains",
-  "Beorn's Hall",
+  "Beorns Hall",
   "Mirkwood",
   "Esgaroth",
   "Erebor",

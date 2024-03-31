@@ -7,3 +7,4 @@ pub mod time_naive;
 pub mod unix;
 pub mod weekday;
 pub mod year;
+pub mod sql;

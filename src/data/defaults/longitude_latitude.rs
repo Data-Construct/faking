@@ -12,7 +12,7 @@ pub fn longitude() -> String {
 	let minutes = seeder::gen_range(0..61);
 	let seconds: f32 = seeder::gen_range(0.0..60.0);
 
-	format!("{}°{}'{:.4}\"{}", degrees, minutes, seconds, dir)
+	format!("{}°{}{:.4}\"{}", degrees, minutes, seconds, dir)
 }
 
 #[wasm_bindgen]
@@ -26,7 +26,7 @@ pub fn latitude() -> String {
 	let minutes = seeder::gen_range(0..61);
 	let seconds: f32 = seeder::gen_range(0.0..60.0);
 
-	format!("{}°{}'{:.4}\"{}", degrees, minutes, seconds, dir)
+	format!("{}°{}{:.4}\"{}", degrees, minutes, seconds, dir)
 }
 
 #[wasm_bindgen]

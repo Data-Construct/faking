@@ -44,7 +44,7 @@ static CHARACTERS: [&'static str; 23] = [
 static CHARACTERS_LEN: usize = CHARACTERS.len();
 
 static GAMES: [&'static str; 11] = [
-	"Luigi's Mansion",
+	"Luigis Mansion",
 	"Super Mario Bros.",
 	"Super Mario World",
 	"Super Mario Kart",
@@ -71,9 +71,9 @@ static LOCATIONS: [&'static str; 17] = [
 	"Bubblaine",
 	"Mount Volbono",
 	"Crumbleden",
-	"Bowser's Castle",
+	"Bowsers Castle",
 	"Honeylune Ridge",
-	"Peach's Castle",
+	"Peachs Castle",
 	"Rabbit Ridge",
 	"Culmina Crater",
 ];

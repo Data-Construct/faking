@@ -114,9 +114,9 @@ static SERIAL: [&'static str; 26] = [
 	"Yr9Vt13BlgvXO9zgJTPuCLv6F82r5S",
 	"trDuJXhT8PnD3JEtw4lsluEuYSn1Xh",
 	"VMTnd2mMQWvjbtNcZh7UIdULKb1mMo",
-	"Pbn8^`LkKPi4QJ79xk3SnW'_DbV*CL",
+	"Pbn8^`LkKPi4QJ79xk3SnW_DbV*CL",
 	"Hk4BoF=%ud/PV4K-/NvEq28Q/&HNq7",
-	"_usDGH^%'4dSYvUtH39qu3*hbi3V+z",
+	"_usDGH^%4dSYvUtH39qu3*hbi3V+z",
 	"&XwUS6yR2N&+Z`$94eK@XzFp/p/ie^",
 	"tL&^J@24CVF=zP46Lxixk`_a#=o6c5",
 ];

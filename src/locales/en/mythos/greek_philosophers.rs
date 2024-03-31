@@ -62,7 +62,7 @@ static QUOTES: [&'static str; 20] = [
 	"Know how to listen, and you will profit even from those who talk badly.",
 	"A few vices are sufficient to darken many virtues.",
 	"It is impossible to begin to learn that which one thinks one already knows.",
-	"It's not what happens to you, but how you react to it that matters.",
+	"Its not what happens to you, but how you react to it that matters.",
 	"The mind is not a vessel to be filled but a fire to be kindled.",
 	"Good habits formed at youth make all the difference.",
 ];

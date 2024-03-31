@@ -152,7 +152,7 @@ static ANCIENT_OLYMPICS_LEN: usize = ANCIENT_OLYMPICS.len();
 
 static UNUSUAL: [&'static str; 21] = [
 	"Apple Racing",
-	"Ban'ei",
+	"Banei",
 	"Bathtubbing",
 	"Bed racing",
 	"Bossaball",
