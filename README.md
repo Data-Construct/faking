@@ -10,6 +10,7 @@ Generate massive amounts of fake (but realistic) data for testing and developmen
 
 Try using our [playground](https://www.dataconstruct.io/organizations/playground/schemas) for your data gen needs, it supports code gen for much more than rust and javascript.
 
+[Docs (WIP)](https://data-construct.github.io/faking)
 </div>
 
 ## Features
