@@ -1,6 +1,6 @@
 [package]
 name = "data-faking"
-version = "0.0.16"
+version = "0.1.0"
 edition = "2021"
 license = "MPL-2.0"
 description = "Generate massive amounts of fake data"
