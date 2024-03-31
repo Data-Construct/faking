@@ -1,7 +1,16 @@
 pub mod airline;
 pub mod animal;
 pub mod business;
+pub mod location;
+pub mod media;
 pub mod misc;
+pub mod music;
 pub mod mythos;
 pub mod person;
 pub mod religion;
+pub mod vehicle;
+pub mod word;
+pub mod hacker;
+pub mod company;
+pub mod food;
+pub mod color;

@@ -99,7 +99,7 @@ static NAMES: [&'static str; 151] = [
 	"Slowbro",
 	"Magnemite",
 	"Magneton",
-	"Farfetch'd",
+	"Farfetchd",
 	"Doduo",
 	"Dodrio",
 	"Seel",

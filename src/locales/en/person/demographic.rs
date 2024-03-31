@@ -242,9 +242,9 @@ static EDUCATIONAL_ATTAINMENT: [&'static str; 13] = [
 	"Regular high school diploma",
 	"GED or alternative credential",
 	"Some college",
-	"Associate's degree",
-	"Bachelor's degree",
-	"Master's degree",
+	"Associates degree",
+	"Bachelors degree",
+	"Masters degree",
 	"Professional degree",
 	"Doctorate degree",
 ];

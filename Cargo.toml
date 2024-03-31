@@ -1,6 +1,6 @@
 [package]
 name = "data-faking"
-version = "0.0.12"
+version = "0.1.0"
 edition = "2021"
 license = "MPL-2.0"
 description = "Generate massive amounts of fake data"
@@ -45,6 +45,8 @@ rand_isaac = "0.3.0"
 regex = "1.10.3"
 rand_pcg = "0.3.1"
 concat-string = "1.0.1"
+url = "2.5.0"
+base64 = "0.22.0"
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.34"

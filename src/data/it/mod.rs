@@ -1,4 +1,5 @@
 pub mod agent_bot;
+pub mod agent_user;
 pub mod device;
 pub mod ipv4;
 pub mod ipv6;

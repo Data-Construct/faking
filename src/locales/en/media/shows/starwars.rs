@@ -224,7 +224,7 @@ static SPECIES: [&'static str; 15] = [
 	"Dathomirian",
 	"Gamorreans",
 	"Kaminoan",
-	"Twi'lek",
+	"Twilek",
 	"Porg",
 ];
 static SPECIES_LEN: usize = SPECIES.len();
@@ -256,7 +256,7 @@ static VEHICLES: [&'static str; 36] = [
 	"MTT",
 	"Phantom II",
 	"Republic Attack Gunship",
-	"Rey's Speeder",
+	"Reys Speeder",
 	"Ghost",
 	"U-Wing",
 	"Y-Wing Starfighter",
@@ -301,9 +301,9 @@ lazy_static! {
 		m.insert(
 			"admiral_ackbar",
 			vec![
-				"It's a trap!".to_owned(),
-				"The Shield is down! Commence attack on the Death Star's main reactor.".to_owned(),
-				"We have no choice, General Calrissian! Our cruisers can't repel firepower of that magnitude!".to_owned(),
+				"It is a trap!".to_owned(),
+				"The Shield is down! Commence attack on the Death Stars main reactor.".to_owned(),
+				"We have no choice, General Calrissian! Our cruisers can not repel firepower of that magnitude!".to_owned(),
 			],
 		);
 
@@ -311,15 +311,15 @@ lazy_static! {
 			"ahsoka_tano",
 			vec![
 				"Suicide is not the Jedi way, Master.".to_owned(),
-				"Let's just say my master will always do what needs to be done. I'm not even sure how peacetime will agree with him.".to_owned(),
-				"Sorry to interrupt your playtime, Grumpy, but wouldn't you prefer a challenge?".to_owned()
+				"Lets just say my master will always do what needs to be done. I am not even sure how peacetime will agree with him.".to_owned(),
+				"Sorry to interrupt your playtime, Grumpy, but would not you prefer a challenge?".to_owned()
 			],
 		);
 
 		m.insert(
 			"anakin_skywalker",
 			vec![
-				"I've got a bad feeling about this.".to_owned(),
+				"I have got a bad feeling about this.".to_owned(),
 				"Just for once, let me look on you with my own eyes.".to_owned(),
 				"Jedi business, go back to your drinks!".to_owned(),
 			],
@@ -328,7 +328,7 @@ lazy_static! {
 		m.insert(
 			"asajj_ventress",
 			vec![
-				"You're tenacious, Jedi.".to_owned(),
+				"You are tenacious, Jedi.".to_owned(),
 				"Not even the dark side can give you that power.".to_owned(),
 			],
 		);
@@ -345,8 +345,8 @@ lazy_static! {
 		m.insert(
 			"boba_fett",
 			vec![
-				"He's no good to me dead.".to_owned(),
-				"You can run, but you'll only die tired.".to_owned(),
+				"Hes no good to me dead.".to_owned(),
+				"You can run, but you will only die tired.".to_owned(),
 			],
 		);
 
@@ -355,19 +355,19 @@ lazy_static! {
 			vec![
 				"I have a bad feeling about this.".to_owned(),
 				"R2-D2, you know better than to trust a strange computer!".to_owned(),
-				"You’ll be malfunctioning within a day, you nearsighted scrap pile.".to_owned(),
-				"I'm terribly sorry about all this. After all, he's only a Wookiee!".to_owned(),
-				"Don’t you call me a mindless philosopher, you overweight glob of grease!".to_owned(),
-				"We're doomed.".to_owned(),
+				"You will be malfunctioning within a day, you nearsighted scrap pile.".to_owned(),
+				"I am terribly sorry about all this. After all, he is only a Wookiee!".to_owned(),
+				"Do not you call me a mindless philosopher, you overweight glob of grease!".to_owned(),
+				"We are doomed.".to_owned(),
 				"I suggest a new strategy, R2. Let the Wookiee win.".to_owned(),
-				"We seem to be made to suffer. It's our lot in life.".to_owned(),
-				"I'm backwards, you filthy furball!".to_owned(),
-				"If I told you half the things I've heard about this Jabba the Hutt, you'd probably short circuit.".to_owned(),
-				"Don’t worry about Master Luke. I’m sure he’ll be all right. He’s quite clever, you know… for a human being.".to_owned(),
-				"I can’t abide these Jawas. Disgusting creatures.".to_owned(),
-				"It's against my programming to impersonate a deity.".to_owned(),
-				"Just you reconsider playing that message for him! No, I don't think he likes you at all. No, I don't like you either.".to_owned(),
-				"Now don't you forget this! Why I should stick my neck out for you is far beyond my capacity!".to_owned()
+				"We seem to be made to suffer. It is our lot in life.".to_owned(),
+				"I am backwards, you filthy furball!".to_owned(),
+				"If I told you half the things I have heard about this Jabba the Hutt, youd probably short circuit.".to_owned(),
+				"Do not worry about Master Luke. I am sure hell be all right. Hes quite clever, you know… for a human being.".to_owned(),
+				"I can not abide these Jawas. Disgusting creatures.".to_owned(),
+				"It is against my programming to impersonate a deity.".to_owned(),
+				"Just you reconsider playing that message for him! No, I do not think he likes you at all. No, I do not like you either.".to_owned(),
+				"Now do not you forget this! Why I should stick my neck out for you is far beyond my capacity!".to_owned()
 			],
 		);
 
@@ -375,7 +375,7 @@ lazy_static! {
 			"count_dooku",
 			vec![
 				"Twice the pride, double the fall.".to_owned(),
-				"Your swords, please. We don't want to make a mess of things in front of the Chancellor.".to_owned(),
+				"Your swords, please. We do not want to make a mess of things in front of the Chancellor.".to_owned(),
 				"What if I told you that the Republic was now under the control of a dark lord of the Sith?".to_owned()
 			],
 		);
@@ -383,9 +383,9 @@ lazy_static! {
 		m.insert(
 			"darth_caedus",
 			vec![
-				"You're smarter than a tree, aren't you?".to_owned(),
+				"You are smarter than a tree, are not you?".to_owned(),
 				"Possessions are burdens. What you have can always be taken away, so wealth breeds fear.".to_owned(),
-				"I just feel—I don't know. I hated it. I wanted it out of me. I wanted it dead—but, you know, while it was in me…it made me part of something. Like in the Nursery. During the fight, it was almost like having the Force again. Now—".to_owned()
+				"I just feel—I do not know. I hated it. I wanted it out of me. I wanted it dead—but, you know, while it was in me…it made me part of something. Like in the Nursery. During the fight, it was almost like having the Force again. Now—".to_owned()
 			],
 		);
 
@@ -395,8 +395,8 @@ lazy_static! {
 				"I find your lack of faith disturbing.".to_owned(),
 				"You are a member of the Rebel Alliance, and a traitor.".to_owned(),
 				"You are unwise to lower your defenses!".to_owned(),
-				"I am altering the deal. Pray I don't alter it any further.".to_owned(),
-				"Perhaps you think you're being treated unfairly?".to_owned(),
+				"I am altering the deal. Pray I do not alter it any further.".to_owned(),
+				"Perhaps you think you are being treated unfairly?".to_owned(),
 				"The circle is now complete. When I left you, I was but the learner. Now I am the master.".to_owned(),
 				"Obi-Wan was wise to hide her from me. Now, his failure is complete. If you will not turn to the Dark Side… then perhaps she will.".to_owned(),
 				"Search your feelings, you know it to be true!".to_owned(),
@@ -413,12 +413,12 @@ lazy_static! {
 			"emperor_palpatine",
 			vec![
 				"Only now, at the end, do you understand…".to_owned(),
-				"Oh, I'm afraid the deflector shield will be quite operational when your friends arrive.".to_owned(),
+				"Oh, I am afraid the deflector shield will be quite operational when your friends arrive.".to_owned(),
 				"There is a great disturbance in the Force.".to_owned(),
 				"Give in to your anger. With each passing moment you make yourself more my servant.".to_owned(),
 				"Let the hate flow through you!".to_owned(),
 				"Your feeble skills are no match for the power of the Dark Side.".to_owned(),
-				"Your hate has made you powerful. Now fulfill your destiny, and take your father's place at my side.".to_owned(),
+				"Your hate has made you powerful. Now fulfill your destiny, and take your fathers place at my side.".to_owned(),
 				"So be it, Jedi.".to_owned(),
 				"The Force is strong with him. The son of Skywalker must not become a Jedi.".to_owned()
 			],
@@ -429,15 +429,15 @@ lazy_static! {
 			vec![
 				"Droid, please!".to_owned(),
 				"Sanitation".to_owned(),
-				"Solo, we'll figure it out. We'll use the Force.".to_owned(),
-				"I'm a big deal in the Resistance. Which puts a real target on my back.".to_owned(),
+				"Solo, well figure it out. Well use the Force.".to_owned(),
+				"I am a big deal in the Resistance. Which puts a real target on my back.".to_owned(),
 			],
 		);
 
 		m.insert(
 			"general_hux",
 			vec![
-				"I won't have you question my methods.".to_owned(),
+				"I will not have you question my methods.".to_owned(),
 				"Careful, Ren, that your personal interests not interfere with orders from Leader Snoke.".to_owned()
 			],
 		);
@@ -445,7 +445,7 @@ lazy_static! {
 		m.insert(
 			"grand_admiral_thrawn",
 			vec![
-				"I will start my operations here, and pull the rebels apart piece by piece. They'll be the architects of their own destruction.".to_owned(),
+				"I will start my operations here, and pull the rebels apart piece by piece. Theyll be the architects of their own destruction.".to_owned(),
 				"War is in your blood. I studied the art of war, worked to perfect it, but you? You were forged by it.".to_owned()
 			],
 		);
@@ -454,33 +454,33 @@ lazy_static! {
 			"grand_moff_tarkin",
 			vec![
 				"Now, witness the power of this fully operational battle station.".to_owned(),
-				"The Jedi are extinct. Their fire has gone out of the universe. You, my friend, are all that's left of their religion.".to_owned()
+				"The Jedi are extinct. Their fire has gone out of the universe. You, my friend, are all that is left of their religion.".to_owned()
 			],
 		);
 
 		m.insert(
 			"greedo",
 			vec![
-				"Koona t'chuta Solo? (Going somewhere Solo?)".to_owned(),
-				"Soong peetch alay. (It's too late.)".to_owned(),
+				"Koona tchuta Solo? (Going somewhere Solo?)".to_owned(),
+				"Soong peetch alay. (It is too late.)".to_owned(),
 				"Ee mara tom tee tok maky cheesa. (You should have paid him when you had the chance.)".to_owned(),
 				"Jabba won neechee kochba mu shanee wy tonny wya uska. (Jabba put a price on your head so large, every bounty hunter in the galaxy will be looking for you.)".to_owned(),
-				"Chosky nowy u chusu. (I'm lucky I found you first.)".to_owned(),
+				"Chosky nowy u chusu. (I am lucky I found you first.)".to_owned(),
 				"El jaya kulpa intick kuny ku suwa. (If you give it to me, I might forget I found you.)".to_owned(),
-				"Semal hi teek teek. (Jabba's through with you.)".to_owned(),
+				"Semal hi teek teek. (Jabbas through with you.)".to_owned(),
 				"Sone guru ye buya nyah oo won spasteega koo shu coon bon duwa weeptee. (He has no time for smugglers who drop their shipments at the first sign of an Imperial cruiser.)".to_owned(),
 				"Talk Jabba. (Tell that to Jabba.)".to_owned(),
 				"Boompa kom bok nee aht am bompah. (He may only take your ship.)".to_owned(),
-				"Nuklee numaa (that's the idea.)".to_owned(),
-				"Ches ko ba tuta creesta crenko ya kolska! (This is something I've been looking forward to for a long time.)".to_owned()
+				"Nuklee numaa (that is the idea.)".to_owned(),
+				"Ches ko ba tuta creesta crenko ya kolska! (This is something I have been looking forward to for a long time.)".to_owned()
 			],
 		);
 
 		m.insert(
 			"han_solo",
 			vec![
-				"It's the ship that made the Kessel Run in less than 12 parsecs.".to_owned(),
-				"She may not look like much, but she's got it where it counts, kid.".to_owned(),
+				"It is the ship that made the Kessel Run in less than 12 parsecs.".to_owned(),
+				"She may not look like much, but she is got it where it counts, kid.".to_owned(),
 				"Never tell me the odds".to_owned(),
 				"Well, you said you wanted to be around when I made a mistake.".to_owned(),
 				"No reward is worth this.".to_owned(),
@@ -489,8 +489,8 @@ lazy_static! {
 				"I have a really bad feeling about this.".to_owned(),
 				"Ungh. And I thought they smelled bad on the outside.".to_owned(),
 				"I have a bad feeling about this.".to_owned(),
-				"Bounty hunters! We don't need this scum.".to_owned(),
-				"If they follow standard Imperial procedure, they'll dump their garbage before they go to light-speed.".to_owned(),
+				"Bounty hunters! We do not need this scum.".to_owned(),
+				"If they follow standard Imperial procedure, they will dump their garbage before they go to light-speed.".to_owned(),
 				"Hokey religions and ancient weapons are no match for a good blaster at your side, kid.".to_owned()
 			],
 		);
@@ -501,15 +501,15 @@ lazy_static! {
 				"Solo, la pa loiya Solo! (Solo, come out of there! Solo!)".to_owned(),
 				"Bone duwa pweepway? (Have you now?)".to_owned(),
 				"Han, ma bookie, keel-ee calleya ku kah. (Han, my boy, you disappoint me.)".to_owned(),
-				"Wanta dah moolee-rah... (Why haven't you paid me…)".to_owned(),
+				"Wanta dah moolee-rah... (Why have not you paid me…)".to_owned(),
 				"Mon kee chees kreespa Greedo? (And why did you fry poor Greedo?)".to_owned(),
-				"Han, ma kee chee zay. (Han, I can't make exceptions.)".to_owned(),
+				"Han, ma kee chee zay. (Han, I can not make exceptions.)".to_owned(),
 				"Hassa ba una kulkee malia... (What if everyone who smuggled for me… eveela deesa… their cargo at the sight… dwa spasteega el was nwo yana da gooloo? (of an Imperial starship?)".to_owned(),
-				"Han, ma bookie, baldo nee anna dodo da eena. (You're the best.)".to_owned(),
+				"Han, ma bookie, baldo nee anna dodo da eena. (You are the best.)".to_owned(),
 				"See fa doi dee yaba… for an extra twenty percent… do ee deen. (Okay, fifteen percent.)".to_owned(),
 				"Ee ya ba ma dookie massa... (But if you fail me again...)".to_owned(),
-				"Eek bon chee ko pa na green. (I'll put a price on your head so big...)".to_owned(),
-				"na meeto do buny dunko la cho ya. (you won't be able to get near a civilized system.)".to_owned(),
+				"Eek bon chee ko pa na green. (I will put a price on your head so big...)".to_owned(),
+				"na meeto do buny dunko la cho ya. (you will not be able to get near a civilized system.)".to_owned(),
 				"Boska! (Come on!)".to_owned()
 			],
 		);
@@ -526,7 +526,7 @@ lazy_static! {
 				"Mesa cause one, two-y little bitty axadentes, huh? Yud say boom de gasser, den crashin der bosses heyblibber, den banished.".to_owned(),
 				"Mesa called Jar-Jar Binks. Mesa your humble servant.".to_owned(),
 				"My forgotten, da Bosses will do terrible tings to me, TERRRRRIBLE is me going back der!".to_owned(),
-				"Mesa day startin pretty okee-day with a brisky morning munchy, then BOOM! Gettin very scared and grabbin that Jedi and POW! Mesa here! Mesa gettin' very very scared!".to_owned()
+				"Mesa day startin pretty okee-day with a brisky morning munchy, then BOOM! Gettin very scared and grabbin that Jedi and POW! Mesa here! Mesa gettin very very scared!".to_owned()
 			],
 		);
 
@@ -535,7 +535,7 @@ lazy_static! {
 			vec![
 				"I have a bad feeling about…".to_owned(),
 				"That is a bad idea. I think so, and so does Cassian. What do I know? My specialty is just strategic analysis.".to_owned(),
-				"There you are. I'm standing by as you requested, although there's a problem on the horizon. There's no horizon.".to_owned()
+				"There you are. I am standing by as you requested, although there is a problem on the horizon. There is no horizon.".to_owned()
 
 			],
 		);
@@ -551,9 +551,9 @@ lazy_static! {
 		m.insert(
 			"lando_calrissian",
 			vec![
-				"Why you slimy, double-crossing, no-good swindler. You've got a lot of guts coming here, after what you pulled.".to_owned(),
-				"How you doin' Chewbacca? Still hanging around with this loser?".to_owned(),
-				"But how could they be jamming us if they don't know that we're coming?".to_owned(),
+				"Why you slimy, double-crossing, no-good swindler. You have got a lot of guts coming here, after what you pulled.".to_owned(),
+				"How you doin Chewbacca? Still hanging around with this loser?".to_owned(),
+				"But how could they be jamming us if they do not know that we are coming?".to_owned(),
 				"This deal is getting worse all the time.".to_owned()
 			],
 		);
@@ -564,10 +564,10 @@ lazy_static! {
 				"You do have your moments. Not many, but you have them.".to_owned(),
 				"I have a bad feeling about this.".to_owned(),
 				"Would somebody get this big walking carpet out of my way?".to_owned(),
-				"Aren't you a little short for a Stormtrooper?".to_owned(),
-				"Help me Obi-Wan Kenobi. You're my only hope.".to_owned(),
+				"Arent you a little short for a Stormtrooper?".to_owned(),
+				"Help me Obi-Wan Kenobi. You are my only hope.".to_owned(),
 				"Why, you stuck-up, half-witted, scruffy-looking nerf herder!".to_owned(),
-				"Governor Tarkin, I should've expected to find you holding Vader's leash. I recognized your foul stench when I was brought on board.".to_owned(),
+				"Governor Tarkin, I should have expected to find you holding Vaders leash. I recognized your foul stench when I was brought on board.".to_owned(),
 				"Somebody has to save our skins. Into the garbage chute, flyboy!".to_owned()
 			],
 		);
@@ -577,13 +577,13 @@ lazy_static! {
 			vec![
 				"But I was going into Tosche Station to pick up some power converters!".to_owned(),
 				"I have a very bad feeling about this.".to_owned(),
-				"It's not impossible. I used to bullseye womp rats in my T-16 back home; they're not much bigger than two meters.".to_owned(),
+				"It is not impossible. I used to bullseye womp rats in my T-16 back home; they are not much bigger than two meters.".to_owned(),
 				"You know, that little droid is going to cause me a lot of trouble.".to_owned(),
-				"If you're saying that coming here was a bad idea, I'm starting to agree with you.".to_owned(),
-				"You'll find I'm full of surprises!".to_owned(),
+				"If you are saying that coming here was a bad idea, I am starting to agree with you.".to_owned(),
+				"You will find I am full of surprises!".to_owned(),
 				"Your overconfidence is your weakness.".to_owned(),
 				"You serve your master well. And you will be rewarded.".to_owned(),
-				"Threepio, tell them if they don't do as you wish, you'll become angry and use your magic.".to_owned(),
+				"Threepio, tell them if they do not do as you wish, you will become angry and use your magic.".to_owned(),
 				"I am a Jedi, like my father before me.".to_owned()
 			],
 		);
@@ -605,14 +605,14 @@ lazy_static! {
 			"obi_wan_kenobi",
 			vec![
 				"An elegant weapon for a more civilized age.".to_owned(),
-				"You don’t need to see his identification. These aren’t the droids you’re looking for.".to_owned(),
+				"You do not need to see his identification. These are not the droids you are looking for.".to_owned(),
 				"You will never find a more wretched hive of scum and villainy. We must be cautious.".to_owned(),
-				"Who's the more foolish; the fool, or the fool who follows him?".to_owned(),
+				"Whos the more foolish; the fool, or the fool who follows him?".to_owned(),
 				"I have a bad feeling about this.".to_owned(),
 				"Strike me down, and I will become more powerful than you could possibly imagine.".to_owned(),
 				"In my experience there is no such thing as luck.".to_owned(),
 				"The Force will be with you. Always.".to_owned(),
-				"That's no moon. It's a space station.".to_owned(),
+				"That is no moon. It is a space station.".to_owned(),
 				"I felt a great disturbance in the Force, as if millions of voices suddenly cried out in terror and were suddenly silenced.".to_owned(),
 				"Use the Force, Luke.".to_owned()
 			],
@@ -622,8 +622,8 @@ lazy_static! {
 			"padme_amidala",
 			vec![
 				"So this is how liberty dies. With thunderous applause.".to_owned(),
-				"Ani? My goodness, you've grown.".to_owned(),
-				"Anakin, you're breaking my heart. You're going down a path I can't follow.".to_owned(),
+				"Ani? My goodness, you have grown.".to_owned(),
+				"Anakin, you are breaking my heart. You are going down a path I can not follow.".to_owned(),
 				"Hold me, like you did by the lake on Naboo; so long ago when there was nothing but our love. No politics, no plotting, no war.".to_owned(),
 				"I was not elected to watch my people suffer and die while you discuss this invasion in a committee!".to_owned()
 			],
@@ -639,16 +639,16 @@ lazy_static! {
 			vec![
 				"You will remove these restraints and leave this cell with the door open."
 					.to_owned(),
-				"The garbage'll do".to_owned(),
+				"The garbagell do".to_owned(),
 			],
 		);
 
 		m.insert(
 			"shmi_skywalker",
 			vec![
-				"You can't stop change any more than you can stop the suns from setting."
+				"You can not stop change any more than you can stop the suns from setting."
 					.to_owned(),
-				"The Republic doesn't exist out here. We must survive on our own.".to_owned(),
+				"The Republic does not exist out here. We must survive on our own.".to_owned(),
 			],
 		);
 
