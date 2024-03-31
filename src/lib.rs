@@ -55,7 +55,7 @@ pub mod utils {
 
 // #[cfg(test)]
 // mod tests {
-//   use crate::{defaults::uuids::{uid_v4}, utils::seeder};
+//   use crate::{utils::seeder};
 
 // 	#[test]
 // 	fn it_works() {
