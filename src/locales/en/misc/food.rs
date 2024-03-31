@@ -995,9 +995,9 @@ static MEASUREMENT_SIZES: [&'static str; 6] = [
     "1/4",
     "1/3",
     "1/2",
-    "'1'",
-    "'2'",
-    "'3'",
+    "1",
+    "2",
+    "3",
 ];
 static MEASUREMENT_SIZES_LEN: usize = MEASUREMENT_SIZES.len();
 

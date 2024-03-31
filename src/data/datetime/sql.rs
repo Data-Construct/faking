@@ -23,7 +23,7 @@ pub const YEAR_MAX: i32 = 2037;
 pub const MONTH_MIN: i32 = 1;
 pub const MONTH_MAX: i32 = 12;
 
-// NOTE(clearfeld): TEMP use chrono to get days in month dont use 28 limit
+// NOTE(clearfeld): TEMP use chrono to get days in month do not use 28 limit
 pub const DAYS_MIN: i32 = 1;
 pub const DAYS_MAX: i32 = 28;
 

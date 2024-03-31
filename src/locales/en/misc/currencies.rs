@@ -151,7 +151,7 @@ static NAMES: [&'static str; 169] = [
     "Somoni",
     "Manat",
     "Tunisian Dinar",
-    "Pa'anga",
+    "Paanga",
     "Turkish Lira",
     "Trinidad and Tobago Dollar",
     "New Taiwan Dollar",

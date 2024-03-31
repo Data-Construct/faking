@@ -3,30 +3,26 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn longitude() -> String {
-	let mut degrees = seeder::gen_range(-90..91);
+	let mut degrees: f32 = seeder::gen_range(-90.0..90.0);
 	let mut dir = 'N';
-	if degrees < 0 {
+	if degrees < 0.0 {
 		dir = 'S';
-		degrees = degrees * -1;
+		degrees = degrees * -1.0;
 	}
-	let minutes = seeder::gen_range(0..61);
-	let seconds: f32 = seeder::gen_range(0.0..60.0);
 
-	format!("{}°{}'{:.4}\"{}", degrees, minutes, seconds, dir)
+	format!("{:.7}°{}", degrees, dir)
 }
 
 #[wasm_bindgen]
 pub fn latitude() -> String {
-	let mut degrees = seeder::gen_range(-180..181);
+	let mut degrees: f32 = seeder::gen_range(-180.0..180.0);
 	let mut dir = 'E';
-	if degrees < 0 {
+	if degrees < 0.0 {
 		dir = 'W';
-		degrees = degrees * -1;
+		degrees = degrees * -1.0;
 	}
-	let minutes = seeder::gen_range(0..61);
-	let seconds: f32 = seeder::gen_range(0.0..60.0);
 
-	format!("{}°{}'{:.4}\"{}", degrees, minutes, seconds, dir)
+	format!("{:.7}°{}", degrees, dir)
 }
 
 #[wasm_bindgen]

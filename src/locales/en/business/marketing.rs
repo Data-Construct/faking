@@ -30,7 +30,7 @@ static BUZZWORDS: [&'static str; 53] = [
 	"put a bow on it",
 	"give you some time back",
 	"bandwidth-constrained",
-	"had to 'punt' on that",
+	"had to punt on that",
 	"home stretch",
 	"get a pulse on",
 	"value add",
@@ -58,7 +58,7 @@ static BUZZWORDS: [&'static str; 53] = [
 	"best practice",
 	"bleeding edge",
 	"out of pocket",
-	"let's take this offline",
+	"let us take this offline",
 	"branding",
 ];
 static BUZZWORDS_LEN: usize = BUZZWORDS.len();

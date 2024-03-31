@@ -54,7 +54,7 @@ static LOCATIONS: [&'static str; 16] = [
     "Kingsport",
     "Leng",
     "Miskatonic",
-    "R'lyeh",
+    "Rlyeh",
     "Yuggoth",
     "Irem",
     "Yaddith",
