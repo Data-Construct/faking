@@ -192,7 +192,7 @@ static TITLES: [&'static str; 190] = [
 	"The Way of All Flesh",
 	"The Way Through the Woods",
 	"The Wealth of Nations",
-	"Whats Become of Waring",
+	"What is Become of Waring",
 	"When the Green Woods Laugh",
 	"Where Angels Fear to Tread",
 	"The Widening Gyre",

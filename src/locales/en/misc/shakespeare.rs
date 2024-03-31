@@ -69,7 +69,7 @@ static ROMEO_AND_JULIET: [&'static str; 10] = [
   "O Romeo, Romeo! Wherefore art thou Romeo?",
   "But soft! What light through yonder window breaks? It is the east, and Juliet is the sun.",
   "Good night, good night! Parting is such sweet sorrow, that I shall say good night till it be morrow.",
-  "Whats in a name? That which we call a rose by any other name would smell as sweet.",
+  "What is in a name? That which we call a rose by any other name would smell as sweet.",
   "Wisely and slow; they stumble that run fast.",
   "Tempt not a desperate man.",
   "For you and I are past our dancing days.",

@@ -312,7 +312,7 @@ lazy_static! {
 			vec![
 				"Suicide is not the Jedi way, Master.".to_owned(),
 				"Lets just say my master will always do what needs to be done. I am not even sure how peacetime will agree with him.".to_owned(),
-				"Sorry to interrupt your playtime, Grumpy, but wouldnt you prefer a challenge?".to_owned()
+				"Sorry to interrupt your playtime, Grumpy, but would not you prefer a challenge?".to_owned()
 			],
 		);
 
@@ -346,7 +346,7 @@ lazy_static! {
 			"boba_fett",
 			vec![
 				"Hes no good to me dead.".to_owned(),
-				"You can run, but youll only die tired.".to_owned(),
+				"You can run, but you will only die tired.".to_owned(),
 			],
 		);
 
@@ -355,7 +355,7 @@ lazy_static! {
 			vec![
 				"I have a bad feeling about this.".to_owned(),
 				"R2-D2, you know better than to trust a strange computer!".to_owned(),
-				"Youll be malfunctioning within a day, you nearsighted scrap pile.".to_owned(),
+				"You will be malfunctioning within a day, you nearsighted scrap pile.".to_owned(),
 				"I am terribly sorry about all this. After all, he is only a Wookiee!".to_owned(),
 				"Do not you call me a mindless philosopher, you overweight glob of grease!".to_owned(),
 				"We are doomed.".to_owned(),
@@ -383,7 +383,7 @@ lazy_static! {
 		m.insert(
 			"darth_caedus",
 			vec![
-				"You are smarter than a tree, arent you?".to_owned(),
+				"You are smarter than a tree, are not you?".to_owned(),
 				"Possessions are burdens. What you have can always be taken away, so wealth breeds fear.".to_owned(),
 				"I just feel—I do not know. I hated it. I wanted it out of me. I wanted it dead—but, you know, while it was in me…it made me part of something. Like in the Nursery. During the fight, it was almost like having the Force again. Now—".to_owned()
 			],
@@ -490,7 +490,7 @@ lazy_static! {
 				"Ungh. And I thought they smelled bad on the outside.".to_owned(),
 				"I have a bad feeling about this.".to_owned(),
 				"Bounty hunters! We do not need this scum.".to_owned(),
-				"If they follow standard Imperial procedure, theyll dump their garbage before they go to light-speed.".to_owned(),
+				"If they follow standard Imperial procedure, they will dump their garbage before they go to light-speed.".to_owned(),
 				"Hokey religions and ancient weapons are no match for a good blaster at your side, kid.".to_owned()
 			],
 		);
@@ -501,7 +501,7 @@ lazy_static! {
 				"Solo, la pa loiya Solo! (Solo, come out of there! Solo!)".to_owned(),
 				"Bone duwa pweepway? (Have you now?)".to_owned(),
 				"Han, ma bookie, keel-ee calleya ku kah. (Han, my boy, you disappoint me.)".to_owned(),
-				"Wanta dah moolee-rah... (Why havent you paid me…)".to_owned(),
+				"Wanta dah moolee-rah... (Why have not you paid me…)".to_owned(),
 				"Mon kee chees kreespa Greedo? (And why did you fry poor Greedo?)".to_owned(),
 				"Han, ma kee chee zay. (Han, I can not make exceptions.)".to_owned(),
 				"Hassa ba una kulkee malia... (What if everyone who smuggled for me… eveela deesa… their cargo at the sight… dwa spasteega el was nwo yana da gooloo? (of an Imperial starship?)".to_owned(),
@@ -553,7 +553,7 @@ lazy_static! {
 			vec![
 				"Why you slimy, double-crossing, no-good swindler. You have got a lot of guts coming here, after what you pulled.".to_owned(),
 				"How you doin Chewbacca? Still hanging around with this loser?".to_owned(),
-				"But how could they be jamming us if they do not know that were coming?".to_owned(),
+				"But how could they be jamming us if they do not know that we are coming?".to_owned(),
 				"This deal is getting worse all the time.".to_owned()
 			],
 		);
@@ -580,10 +580,10 @@ lazy_static! {
 				"It is not impossible. I used to bullseye womp rats in my T-16 back home; they are not much bigger than two meters.".to_owned(),
 				"You know, that little droid is going to cause me a lot of trouble.".to_owned(),
 				"If you are saying that coming here was a bad idea, I am starting to agree with you.".to_owned(),
-				"Youll find I am full of surprises!".to_owned(),
+				"You will find I am full of surprises!".to_owned(),
 				"Your overconfidence is your weakness.".to_owned(),
 				"You serve your master well. And you will be rewarded.".to_owned(),
-				"Threepio, tell them if they do not do as you wish, youll become angry and use your magic.".to_owned(),
+				"Threepio, tell them if they do not do as you wish, you will become angry and use your magic.".to_owned(),
 				"I am a Jedi, like my father before me.".to_owned()
 			],
 		);
@@ -605,7 +605,7 @@ lazy_static! {
 			"obi_wan_kenobi",
 			vec![
 				"An elegant weapon for a more civilized age.".to_owned(),
-				"You do not need to see his identification. These arent the droids you are looking for.".to_owned(),
+				"You do not need to see his identification. These are not the droids you are looking for.".to_owned(),
 				"You will never find a more wretched hive of scum and villainy. We must be cautious.".to_owned(),
 				"Whos the more foolish; the fool, or the fool who follows him?".to_owned(),
 				"I have a bad feeling about this.".to_owned(),

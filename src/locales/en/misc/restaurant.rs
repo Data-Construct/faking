@@ -166,7 +166,7 @@ static RESTAURANT_DESCRIPTION: [&'static str; 14] = [
 static RESTAURANT_DESCRIPTION_LEN: usize = RESTAURANT_DESCRIPTION.len();
 
 static RESTAURANT_REVIEW: [&'static str; 17] = [
-    "For dinner we ordered the shrimp enchiladas, chicken enchiladas, chicken burrito, chimichangas, and steak quesadillas. Everything was so tasty and amazing. I wasnt surprised because the food at the FiDi location is the best so I figured this location would be just as good and it was!!! The enchiladas with the green sauce is to die for. My go to at the FiDi location is usually the chicken enchiladas but I decided to try something new and the shrimp enchiladas did not disappoint.",
+    "For dinner we ordered the shrimp enchiladas, chicken enchiladas, chicken burrito, chimichangas, and steak quesadillas. Everything was so tasty and amazing. I was not surprised because the food at the FiDi location is the best so I figured this location would be just as good and it was!!! The enchiladas with the green sauce is to die for. My go to at the FiDi location is usually the chicken enchiladas but I decided to try something new and the shrimp enchiladas did not disappoint.",
     "For dessert, we ordered the chocolate drizzled churros and they were delicious too! They even came with some fresh fruit (blueberries and strawberries).",
     "Overall, the evening was a smash and I am so glad there is a new location closer to my office!!",
     "Brand new. Great design. Odd to hear pop music in a Mexican establishment. Music is a bit loud. It should be background.",
@@ -181,7 +181,7 @@ static RESTAURANT_REVIEW: [&'static str; 17] = [
     "Ambience was good, service was no nonsense but friendly.",
     "I would have to say that each piece was fresh and had their own slight unique flavor twist to it, pushing the line between traditional edomae and fusion. The Hokkaido uni and the ocean trout topped with cook seaweed was the highlights of the meal. But each piece served was really something special.",
     "Staff was very accommodating but the chef were no nonsense. The ambiance is clean and tranquil which is perfect if you are looking to have a conversation with a date or a friend.",
-    "My only critique would be that the rice could of used more vingaer and for them to use real wasabi. Also the variety of fish in stock wasnt a lot but hopefully that can change over time. The cost justify the quality you are getting. A solid 4 stars.",
+    "My only critique would be that the rice could of used more vingaer and for them to use real wasabi. Also the variety of fish in stock was not a lot but hopefully that can change over time. The cost justify the quality you are getting. A solid 4 stars.",
     "In terms of omakase, they had a few options but the one we chose was the 87 dollar version which include sashimi and sushi."
 ];
 static RESTAURANT_REVIEW_LEN: usize = RESTAURANT_REVIEW.len();

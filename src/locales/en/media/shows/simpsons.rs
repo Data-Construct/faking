@@ -247,7 +247,7 @@ static QUOTES: [&'static str; 19] = [
     "Doh!",
     "That is it! You people have stood in my way long enough. I am going to clown college!",
     "Son, if you really want something in this life, you have to work for it. Now quiet! They are about to announce the lottery numbers.",
-    "Whats the point of going out? We are just gonna wind up back home anyway.",
+    "What is the point of going out? We are just gonna wind up back home anyway.",
     "Cheating is the gift man gives himself.",
     "Books are useless! I only ever read one book, To Kill A Mockingbird, and it gave me absolutely no insight on how to kill mockingbirds!",
     "Sorry, Mom, the mob has spoken.",
@@ -255,7 +255,7 @@ static QUOTES: [&'static str; 19] = [
     "To alcohol! The cause of, and solution to, all of lifes problems.",
     "Trust me, Bart, it is better to walk in on both your parents than on just one of them.",
     "Oh, loneliness and cheeseburgers are a dangerous mix.",
-    "When will I learn? The answers to lifes problems arent at the bottom of a bottle, they are on TV!"
+    "When will I learn? The answers to lifes problems are not at the bottom of a bottle, they are on TV!"
 ];
 static QUOTES_LEN: usize = QUOTES.len();
 
@@ -568,7 +568,7 @@ static EPISODE_TITLES: [&'static str; 666] = [
 	"C.E.Doh",
 	"Scuse Me While I Miss the Sky",
 	"Three Gays of the Condo",
-	"Dude, Wheres My Ranch?",
+	"Dude, Where is My Ranch?",
 	"Old Yeller-Belly",
 	"Brake My Wife, Please",
 	"The Bart of War",

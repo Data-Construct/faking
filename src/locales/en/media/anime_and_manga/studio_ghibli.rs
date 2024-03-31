@@ -120,7 +120,7 @@ static QUOTES: [&'static str; 70] = [
 	"Well have to share your roof for a while, sir, if you do not mind. - My Neighbor Totoro",
 	"Believing in your friends and embracing that belief by forgiving failure. These feelings have vanished from our hearts. - Princess Mononoke",
 	"I am not the girl you are looking for. - Howls Moving Castle",
-	"I finally understand. I wasnt waiting to be rescued. I was waiting for someone to show me my way out. - Princess Mononoke",
+	"I finally understand. I was not waiting to be rescued. I was waiting for someone to show me my way out. - Princess Mononoke",
 	"I have always liked you. From the first time I met you. But I was too stupid to realize what it meant to like someone. - Whisper of the Heart",
 	"I have been waiting for this moment for a long time. - Howls Moving Castle",
 	"I am not afraid to die. I would do anything to get you humans out of my forest. - Princess Mononoke",

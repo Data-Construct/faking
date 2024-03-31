@@ -89,7 +89,7 @@ static QUOTES: [&'static str; 17] = [
   "Line em up, nuts to butts",
   "Let me ask you. How fast do you think you could jerk off every guy in this room? Because I know how long it would take me. And I can prove it",
   "It is weird. They always travel in groups of five. These programmers, there is always a tall, skinny white guy; short, skinny Asian guy; fat guy with a ponytail; some guy with crazy facial hair; and then an East Indian guy. It is like they trade guys until they all have the right group.",
-  "Jian-Yang, whatre you doing? This is Palo Alto. People are lunatics about smoking here. We do not enjoy all the freedoms that you have in China.",
+  "Jian-Yang, what are you doing? This is Palo Alto. People are lunatics about smoking here. We do not enjoy all the freedoms that you have in China.",
   "Well, you just brought piss to a shit fight, you little cunt!",
   "Hitler actually played the bassoon. So technically Hitler was the Hitler of music.",
   "I simply imagine that my skeleton is me and my body is my house. That way I am always home.",
