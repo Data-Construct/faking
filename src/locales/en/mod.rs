@@ -1,3 +1,4 @@
+pub mod airline;
 pub mod animal;
 pub mod business;
 pub mod location;
