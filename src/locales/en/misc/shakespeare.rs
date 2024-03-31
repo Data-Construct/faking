@@ -31,7 +31,7 @@ static HAMLET: [&'static str; 16] = [
   "What a piece of work is man! How noble in reason, how infinite in faculty! In form and moving how express and admirable! In action how like an angel, in apprehension how like a god! The beauty of the world. The paragon of animals.",
   "The lady doth protest too much, methinks.",
   "A little more than kin, and less than kind.",
-  "The plays the thing wherein Ill catch the conscience of the king.",
+  "The plays the thing wherein I will catch the conscience of the king.",
   "Brevity is the soul of wit.",
   "Doubt thou the stars are fire, doubt that the sun doth move, doubt truth to be a liar, but never doubt I love.",
   "Rich gifts wax poor when givers prove unkind.",

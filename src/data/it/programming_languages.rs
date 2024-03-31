@@ -52,7 +52,7 @@ static NAMES: [&'static str; 726] = [
 	"AngelScript",
 	"Apex (Salesforce.com)",
 	"APL",
-	"App Inventor for Androids visual block language",
+	"MIT App Inventor",
 	"AppleScript",
 	"APT",
 	"Arc",

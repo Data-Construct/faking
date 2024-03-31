@@ -17,7 +17,7 @@ static YODA_QUOTES: [&'static str; 37] = [
     "Through the Force, things you will see. Other places. The future - the past. Old friends long gone.",
     "Ow, ow, OW! On my ear you are!",
     "The dark side clouds everything. Impossible to see the future is.",
-    "Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And well you should not. For my ally is the Force, and a powerful ally it is. Life creates it, makes it grow. Its energy surrounds us and binds us. Luminous beings are we, not this crude matter. You must feel the Force around you; here, between you, me, the tree, the rock, everywhere, yes. Even between the land and the ship.",
+    "Size matters not. Look at me. Judge me by my size, do you? Hmm? Hmm. And well you should not. For my ally is the Force, and a powerful ally it is. Life creates it, makes it grow. It is energy surrounds us and binds us. Luminous beings are we, not this crude matter. You must feel the Force around you; here, between you, me, the tree, the rock, everywhere, yes. Even between the land and the ship.",
     "Younglings, younglings gather round.",
     "Luminous beings are we - not this crude matter.",
     "Clear your mind must be, if you are to find the villains behind this plot.",

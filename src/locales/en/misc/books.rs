@@ -96,7 +96,7 @@ static TITLES: [&'static str; 190] = [
 	"In Death Ground",
 	"In Dubious Battle",
 	"An Instant In The Wind",
-	"Its a Battlefield",
+	"It is a Battlefield",
 	"Jacob Have I Loved",
 	"O Jerusalem!",
 	"Jesting Pilate",

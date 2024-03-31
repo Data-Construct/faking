@@ -58,7 +58,7 @@ static BUZZWORDS: [&'static str; 53] = [
 	"best practice",
 	"bleeding edge",
 	"out of pocket",
-	"lets take this offline",
+	"let us take this offline",
 	"branding",
 ];
 static BUZZWORDS_LEN: usize = BUZZWORDS.len();
