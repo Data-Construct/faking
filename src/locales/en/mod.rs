@@ -9,3 +9,7 @@ pub mod person;
 pub mod religion;
 pub mod vehicle;
 pub mod word;
+pub mod hacker;
+pub mod company;
+pub mod food;
+pub mod color;
