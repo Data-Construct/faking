@@ -6408,7 +6408,6 @@ static USERNAME_WORDS: [&'static str; 25487] = [
 	"canonic",
 	"Canopus",
 	"canopy",
-	"can't",
 	"cant",
 	"Cantabrigian",
 	"cantaloupe",

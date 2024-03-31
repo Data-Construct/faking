@@ -130,8 +130,8 @@ static QUOTES: [&'static str; 12] = [
   "May the wind under your wings bear you where the sun sails and the moon walks.",
   "Where theres life theres hope.",
   "So comes snow after fire, and even dragons have their endings.",
-  "\"Where did you go to, if I may ask?\" said Thorin to Gandalf as they rode along. \"To look ahead\" said he. \"And what brought you back in the nick of time?\" \"Looking behind\" said he.",
-  "\"You have nice manners for a thief and a liar\", said the dragon.",
+  "Where did you go to, if I may ask? said Thorin to Gandalf as they rode along. To look ahead said he. And what brought you back in the nick of time? Looking behind said he.",
+  "You have nice manners for a thief and a liar, said the dragon.",
   "May the hair on your toes never fall out!",
   "The road goes ever on and on...",
   "Never laugh at live dragons, Bilbo you fool!"

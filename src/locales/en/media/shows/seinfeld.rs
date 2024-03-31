@@ -64,7 +64,7 @@ static QUOTES: [&'static str; 55] = [
   "Borrowing money from a friend is like having sex. It just completely changes the relationship.",
   "When you look annoyed all the time, people think that you're busy.",
   "I spend so much time trying to get their clothes off, I never thought of taking mine off.",
-  "If you can't say something bad about a relationship, you shouldn't say anything at all.",
+  "If you cant say something bad about a relationship, you shouldn't say anything at all.",
   "I need the secure packaging of Jockeys. My boys needs a house!",
   "The sea was angry that day, my friends, like an old man trying to send back soup in a deli...",
   "Elaine, breaking up is like knocking over a Coke machine. You can’t do it in one push; you gotta rock it back and forth a few times and then it goes over.",

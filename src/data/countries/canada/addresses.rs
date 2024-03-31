@@ -503,7 +503,7 @@ static CITIES_ON: [&'static str; 182] = [
 	"Sioux Lookout::P",
 	"Smiths Falls::K",
 	"Springwater::L",
-	"St Mary's::N",
+	"St Marys::N",
 	"Stittsville::K",
 	"Souffville::L",
 	"Stratford::N",

@@ -303,7 +303,7 @@ lazy_static! {
 			vec![
 				"It's a trap!".to_owned(),
 				"The Shield is down! Commence attack on the Death Star's main reactor.".to_owned(),
-				"We have no choice, General Calrissian! Our cruisers can't repel firepower of that magnitude!".to_owned(),
+				"We have no choice, General Calrissian! Our cruisers cant repel firepower of that magnitude!".to_owned(),
 			],
 		);
 
@@ -503,7 +503,7 @@ lazy_static! {
 				"Han, ma bookie, keel-ee calleya ku kah. (Han, my boy, you disappoint me.)".to_owned(),
 				"Wanta dah moolee-rah... (Why haven't you paid me…)".to_owned(),
 				"Mon kee chees kreespa Greedo? (And why did you fry poor Greedo?)".to_owned(),
-				"Han, ma kee chee zay. (Han, I can't make exceptions.)".to_owned(),
+				"Han, ma kee chee zay. (Han, I cant make exceptions.)".to_owned(),
 				"Hassa ba una kulkee malia... (What if everyone who smuggled for me… eveela deesa… their cargo at the sight… dwa spasteega el was nwo yana da gooloo? (of an Imperial starship?)".to_owned(),
 				"Han, ma bookie, baldo nee anna dodo da eena. (You're the best.)".to_owned(),
 				"See fa doi dee yaba… for an extra twenty percent… do ee deen. (Okay, fifteen percent.)".to_owned(),
@@ -623,7 +623,7 @@ lazy_static! {
 			vec![
 				"So this is how liberty dies. With thunderous applause.".to_owned(),
 				"Ani? My goodness, you've grown.".to_owned(),
-				"Anakin, you're breaking my heart. You're going down a path I can't follow.".to_owned(),
+				"Anakin, you're breaking my heart. You're going down a path I cant follow.".to_owned(),
 				"Hold me, like you did by the lake on Naboo; so long ago when there was nothing but our love. No politics, no plotting, no war.".to_owned(),
 				"I was not elected to watch my people suffer and die while you discuss this invasion in a committee!".to_owned()
 			],
@@ -646,7 +646,7 @@ lazy_static! {
 		m.insert(
 			"shmi_skywalker",
 			vec![
-				"You can't stop change any more than you can stop the suns from setting."
+				"You cant stop change any more than you can stop the suns from setting."
 					.to_owned(),
 				"The Republic doesn't exist out here. We must survive on our own.".to_owned(),
 			],
