@@ -356,9 +356,9 @@ lazy_static! {
 				"I have a bad feeling about this.".to_owned(),
 				"R2-D2, you know better than to trust a strange computer!".to_owned(),
 				"Youll be malfunctioning within a day, you nearsighted scrap pile.".to_owned(),
-				"I am terribly sorry about all this. After all, hes only a Wookiee!".to_owned(),
+				"I am terribly sorry about all this. After all, he is only a Wookiee!".to_owned(),
 				"Do not you call me a mindless philosopher, you overweight glob of grease!".to_owned(),
-				"Were doomed.".to_owned(),
+				"We are doomed.".to_owned(),
 				"I suggest a new strategy, R2. Let the Wookiee win.".to_owned(),
 				"We seem to be made to suffer. It is our lot in life.".to_owned(),
 				"I am backwards, you filthy furball!".to_owned(),
@@ -454,7 +454,7 @@ lazy_static! {
 			"grand_moff_tarkin",
 			vec![
 				"Now, witness the power of this fully operational battle station.".to_owned(),
-				"The Jedi are extinct. Their fire has gone out of the universe. You, my friend, are all thats left of their religion.".to_owned()
+				"The Jedi are extinct. Their fire has gone out of the universe. You, my friend, are all that is left of their religion.".to_owned()
 			],
 		);
 
@@ -471,7 +471,7 @@ lazy_static! {
 				"Sone guru ye buya nyah oo won spasteega koo shu coon bon duwa weeptee. (He has no time for smugglers who drop their shipments at the first sign of an Imperial cruiser.)".to_owned(),
 				"Talk Jabba. (Tell that to Jabba.)".to_owned(),
 				"Boompa kom bok nee aht am bompah. (He may only take your ship.)".to_owned(),
-				"Nuklee numaa (thats the idea.)".to_owned(),
+				"Nuklee numaa (that is the idea.)".to_owned(),
 				"Ches ko ba tuta creesta crenko ya kolska! (This is something I have been looking forward to for a long time.)".to_owned()
 			],
 		);
@@ -480,7 +480,7 @@ lazy_static! {
 			"han_solo",
 			vec![
 				"It is the ship that made the Kessel Run in less than 12 parsecs.".to_owned(),
-				"She may not look like much, but shes got it where it counts, kid.".to_owned(),
+				"She may not look like much, but she is got it where it counts, kid.".to_owned(),
 				"Never tell me the odds".to_owned(),
 				"Well, you said you wanted to be around when I made a mistake.".to_owned(),
 				"No reward is worth this.".to_owned(),
@@ -551,7 +551,7 @@ lazy_static! {
 		m.insert(
 			"lando_calrissian",
 			vec![
-				"Why you slimy, double-crossing, no-good swindler. Youve got a lot of guts coming here, after what you pulled.".to_owned(),
+				"Why you slimy, double-crossing, no-good swindler. You have got a lot of guts coming here, after what you pulled.".to_owned(),
 				"How you doin Chewbacca? Still hanging around with this loser?".to_owned(),
 				"But how could they be jamming us if they do not know that were coming?".to_owned(),
 				"This deal is getting worse all the time.".to_owned()
@@ -567,7 +567,7 @@ lazy_static! {
 				"Arent you a little short for a Stormtrooper?".to_owned(),
 				"Help me Obi-Wan Kenobi. You are my only hope.".to_owned(),
 				"Why, you stuck-up, half-witted, scruffy-looking nerf herder!".to_owned(),
-				"Governor Tarkin, I shouldve expected to find you holding Vaders leash. I recognized your foul stench when I was brought on board.".to_owned(),
+				"Governor Tarkin, I should have expected to find you holding Vaders leash. I recognized your foul stench when I was brought on board.".to_owned(),
 				"Somebody has to save our skins. Into the garbage chute, flyboy!".to_owned()
 			],
 		);
@@ -612,7 +612,7 @@ lazy_static! {
 				"Strike me down, and I will become more powerful than you could possibly imagine.".to_owned(),
 				"In my experience there is no such thing as luck.".to_owned(),
 				"The Force will be with you. Always.".to_owned(),
-				"Thats no moon. It is a space station.".to_owned(),
+				"That is no moon. It is a space station.".to_owned(),
 				"I felt a great disturbance in the Force, as if millions of voices suddenly cried out in terror and were suddenly silenced.".to_owned(),
 				"Use the Force, Luke.".to_owned()
 			],

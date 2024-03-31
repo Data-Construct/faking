@@ -146,7 +146,7 @@ static ACHIEVEMENTS: [&'static str; 111] = [
 	"Total Beelocation",
 	"Trampoline",
 	"Treasure Hunter",
-	"Were being attacked!",
+	"We are being attacked!",
 	"When Pigs Fly",
 	"Where Have You Been?",
 	"You Need a Mint",

@@ -396,7 +396,7 @@ static QUOTES: [&'static str; 99] = [
 	"Peoples dreams… Never end! - Teach Marshall D. (Blackbeard)",
 	"I will die smiling! Because if you ever think of me in the future, I want you to remember me smiling. - Donquixote Rosinante",
 	"Wake up princess, I am tired of your useless ideals. It is gotten pathetic. What good are your happy ideals if you can not do anything to make them a reality? They are nothing but dreams, and your dreams do not stand a chance. - Sir Crocodile",
-	"I couldnt confess my feelings for you, so I watched you from afar, being happy with someone else. - Sanji",
+	"I could not confess my feelings for you, so I watched you from afar, being happy with someone else. - Sanji",
 	"If you kill yourself, I will kill you! - Zoro Roronoa",
 	"Do not start a fight if you can not end it. - Sanji",
 	"I do not care what the society says. I have never regretted doing anything. I will survive and do what I want to. - Roronoa Zoro",
