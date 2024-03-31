@@ -8,3 +8,5 @@ pub mod mythos;
 pub mod person;
 pub mod religion;
 pub mod vehicle;
+pub mod hacker;
+pub mod company;
