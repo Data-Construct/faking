@@ -14,3 +14,5 @@ pub mod hacker;
 pub mod company;
 pub mod food;
 pub mod color;
+pub mod app;
+pub mod lorem;
