@@ -3,3 +3,4 @@ pub mod he;
 pub mod ja;
 pub mod ko;
 pub mod zh_CN;
+pub mod base;
