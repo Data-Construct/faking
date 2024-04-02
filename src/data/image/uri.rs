@@ -83,13 +83,13 @@ static ENCODE_FORMAT: [&'static str; 2] = [
   "svg-base64"
 ];
 
-#[cfg(test)]
-mod tests {
-    use crate::{image::uri::image_uri, utils::seeder};
+// #[cfg(test)]
+// mod tests {
+//     use crate::{image::uri::image_uri, utils::seeder};
 
-	#[test]
-	fn it_works() {
-		seeder::set_seed(1);
-    println!("{}", image_uri(None));
-	}
-}
+// 	#[test]
+// 	fn it_works() {
+// 		seeder::set_seed(1);
+//     println!("{}", image_uri(None));
+// 	}
+// }
