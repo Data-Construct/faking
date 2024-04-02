@@ -5,3 +5,4 @@ pub mod datetime;
 pub mod defaults;
 pub mod image;
 pub mod it;
+pub mod base;
