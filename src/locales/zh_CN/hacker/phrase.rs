@@ -3,7 +3,7 @@ use wasm_bindgen::prelude::*;
 use super::adjective::adjective;
 use super::noun::noun;
 use super::verb::verb;
-use crate::locales::base::hacker::abbreviation::abbreviation;
+use crate::data::base::hacker::abbreviation::abbreviation;
 
 #[wasm_bindgen(js_name = zh_CN_hacker_phrase)]
 pub fn phrase() -> String {
