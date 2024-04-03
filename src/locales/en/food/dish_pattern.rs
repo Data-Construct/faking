@@ -7,17 +7,7 @@ use super::meat::meat;
 use super::vegetable::vegetable;
 use super::ingredient::ingredient;
 use super::spice::spice;
-use crate::locales::en::person::name::male_first_name;
-use crate::locales::en::person::name::female_first_name;
-
-fn first_name() -> String {
-    let format = seeder::gen_range(0..2);
-
-	match format {
-        0 => male_first_name(),
-        _ => female_first_name(),
-    }
-}
+use crate::locales::en::person::name::first_name;
 
 #[wasm_bindgen(js_name = food_dish_parttern)]
 pub fn dish_parttern() -> String {
