@@ -8,17 +8,14 @@ use crate::locales::en::person::name;
 
 #[wasm_bindgen(js_name = location_city_parttern)]
 pub fn city_parttern() -> String {
-	let format = seeder::gen_range(0..10);
+	let format = seeder::gen_range(0..5);
 
 	match format {
-		0 => city_prefix::city_prefix() + " " + &name::male_first_name() + " " + &city_suffix::city_suffix(),
-		1 => city_prefix::city_prefix() + " " + &name::female_first_name() + " " + &city_suffix::city_suffix(),
-		2 => city_prefix::city_prefix() + " " + &name::male_first_name(),
-		3 => city_prefix::city_prefix() + " " + &name::female_first_name(),
-		4 => name::male_first_name() + " " + &city_suffix::city_suffix(),
-        5 => name::female_first_name() + " " + &city_suffix::city_suffix(),
-        6 => name::last_name() + " " + &city_suffix::city_suffix(),
-        7 => name::last_name() + " " + &city_suffix::city_suffix(),
-        _ => city_name::city_name(),
+		0 => city_prefix::city_prefix() + " " + &name::first_name() + &city_suffix::city_suffix(),
+		1 => city_prefix::city_prefix() + " " + &name::first_name(),
+		2 => name::first_name() + &city_suffix::city_suffix(),
+        3 => name::last_name() + &city_suffix::city_suffix(),
+        4 => city_name::city_name(),
+		_ => "".to_string(),
 	}
 }

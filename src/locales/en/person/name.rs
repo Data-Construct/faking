@@ -54,6 +54,60 @@ pub fn last_name() -> String {
 	LAST_NAME[seeder::gen_range(0..LAST_NAME_LEN)].to_string()
 }
 
+#[wasm_bindgen]
+pub fn first_name() -> String {
+	let format = seeder::gen_range(0..3);
+
+	match format {
+		0 => male_first_name(),
+		1 => female_first_name(),
+        2 => neutral_first_name(),
+        _ => "".to_string(),
+	}
+}
+
+#[wasm_bindgen]
+pub fn name() -> String {
+	let format = seeder::gen_range(0..12);
+
+	match format {
+		0 => format!("{} {} {}", male_prefix(), male_first_name(), last_name()),
+		1 => format!("{} {} {}", female_prefix(), female_first_name(), last_name()),
+        2 => format!("{} {} {}", first_name(), last_name(), suffix()),
+        3 => format!("{} {} {}", first_name(), last_name(), suffix()),
+        4 => format!("{} {}", first_name(), last_name()),
+        5 => format!("{} {}", first_name(), last_name()),
+		6 => format!("{} {}", first_name(), last_name()),
+        7 => format!("{} {}", first_name(), last_name()),
+		8 => format!("{} {}", first_name(), last_name()),
+        9 => format!("{} {}", first_name(), last_name()),
+		10 => format!("{} {}", first_name(), last_name()),
+        11 => format!("{} {}", first_name(), last_name()),
+		_ => "".to_string(),
+	}
+}
+
+#[wasm_bindgen]
+pub fn name_with_middle() -> String {
+	let format = seeder::gen_range(0..12);
+
+	match format {
+		0 => format!("{} {} {} {}", male_prefix(), male_first_name(), last_name(), last_name()),
+		1 => format!("{} {} {} {}", female_prefix(), female_first_name(), last_name(), last_name()),
+        2 => format!("{} {} {} {}", first_name(), last_name(), last_name(), suffix()),
+        3 => format!("{} {} {} {}", first_name(), last_name(), last_name(), suffix()),
+        4 => format!("{} {} {}", first_name(), last_name(), last_name()),
+        5 => format!("{} {} {}", first_name(), last_name(), last_name()),
+		6 => format!("{} {} {}", first_name(), last_name(), last_name()),
+        7 => format!("{} {} {}", first_name(), last_name(), last_name()),
+		8 => format!("{} {} {}", first_name(), last_name(), last_name()),
+        9 => format!("{} {} {}", first_name(), last_name(), last_name()),
+		10 => format!("{} {} {}", first_name(), last_name(), last_name()),
+        11 => format!("{} {} {}", first_name(), last_name(), last_name()),
+		_ => "".to_string(),
+	}
+}
+
 pub static MALE_PREFIX: [&'static str; 3] = [
 	"Mr.",
 	"Rev.",

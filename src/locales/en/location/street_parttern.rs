@@ -6,14 +6,13 @@ use crate::locales::en::person::name;
 
 #[wasm_bindgen(js_name = location_street_parttern)]
 pub fn street_parttern() -> String {
-	let format = seeder::gen_range(0..5);
+	let format = seeder::gen_range(0..3);
 
 	// repeat the line to equal to probability
 	match format {
-		0 => name::male_first_name() + " " + &street_suffix(),
-        1 => name::female_first_name() + " " + &street_suffix(),
-        2 => name::last_name() + " " + &street_suffix(),
-        3 => name::last_name() + " " + &street_suffix(),
-		_ => street_name(),
+		0 => name::first_name() + " " + &street_suffix(),
+        1 => name::last_name() + " " + &street_suffix(),
+		2 => street_name(),
+		_ => "".to_string(),
 	}
 }
