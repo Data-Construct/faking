@@ -9,7 +9,7 @@ use super::ingredient::ingredient;
 use super::spice::spice;
 use crate::locales::en::person::name::first_name;
 
-#[wasm_bindgen(js_name = food_dish_parttern)]
+#[wasm_bindgen(js_name = food_dish_pattern)]
 pub fn dish_parttern() -> String {
 	let format = seeder::gen_range(0..15);
 
