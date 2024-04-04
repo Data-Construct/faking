@@ -1,5 +1,5 @@
 pub mod city_name;
-pub mod city_parttern;
+pub mod city_pattern;
 pub mod city_prefix;
 pub mod city_suffix;
 pub mod country;
@@ -8,6 +8,6 @@ pub mod direction;
 pub mod direction_abbr;
 pub mod state;
 pub mod state_abbr;
-pub mod street_parttern;
+pub mod street_pattern;
 pub mod street_name;
 pub mod street_suffix;
