@@ -1,5 +1,4 @@
-pub mod adjective;
-pub mod ingverb;
 pub mod noun;
+pub mod adjective;
 pub mod verb;
 pub mod phrase;

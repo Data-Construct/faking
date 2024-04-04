@@ -4,7 +4,7 @@ use super::adjective::adjective;
 use super::ingverb::ingverb;
 use super::noun::noun;
 use super::verb::verb;
-use super::abbreviation::abbreviation;
+use crate::data::base::hacker::abbreviation::abbreviation;
 
 #[wasm_bindgen(js_name = hacker_phrase)]
 pub fn phrase() -> String {
@@ -22,4 +22,3 @@ pub fn phrase() -> String {
         _ => "".to_string(),
 	}
 }
-

@@ -1,0 +1,160 @@
+# Commerce
+
+Module to generate commerce related data.
+
+## Overview
+
+Capable of generating serveral commerce related data such as [departments](#department), [materials](#material) and [products](#product).
+
+## department
+
+Returns a random commerce department.
+
+***Returns***: string
+
+```rust
+use data_faking::locales::en as faking;
+
+fn main() {
+    println!("{}", faking::business::commerce::department())
+}
+
+//Books
+```
+[View Source](https://github.com/Data-Construct/faking/blob/main/src/locales/en/business/commerce.rs)
+
+## product_adjective
+
+Returns a random product adjective.
+
+***Returns***: string
+
+```rust
+use data_faking::locales::en as faking;
+
+fn main() {
+    println!("{}", faking::business::commerce::product_adjective())
+}
+
+//Ergonomic
+```
+[View Source](https://github.com/Data-Construct/faking/blob/main/src/locales/en/business/commerce.rs)
+
+## material
+
+Returns a random material.
+
+***Returns***: string
+
+```rust
+use data_faking::locales::en as faking;
+
+fn main() {
+    println!("{}", faking::business::commerce::material())
+}
+
+//Plastic
+```
+[View Source](https://github.com/Data-Construct/faking/blob/main/src/locales/en/business/commerce.rs)
+
+## product
+
+Returns a random product.
+
+***Returns***: string
+
+```rust
+use data_faking::locales::en as faking;
+
+fn main() {
+    println!("{}", faking::business::commerce::product())
+}
+
+//Chair
+```
+[View Source](https://github.com/Data-Construct/faking/blob/main/src/locales/en/business/commerce.rs)
+
+## promotion_code_adjective
+
+Returns a random promotion code adjective.
+
+***Returns***: string
+
+```rust
+use data_faking::locales::en as faking;
+
+fn main() {
+    println!("{}", faking::business::commerce::promotion_code_adjective())
+}
+
+//Special
+```
+[View Source](https://github.com/Data-Construct/faking/blob/main/src/locales/en/business/commerce.rs)
+
+## promotion_code_noun
+
+Returns a random promotion code noun.
+
+***Returns***: string
+
+```rust
+use data_faking::locales::en as faking;
+
+fn main() {
+    println!("{}", faking::business::commerce::promotion_code_noun())
+}
+
+//Discount
+```
+[View Source](https://github.com/Data-Construct/faking/blob/main/src/locales/en/business/commerce.rs)
+
+## brand_commerce
+
+Returns a random commerce brand.
+
+***Returns***: string
+
+```rust
+use data_faking::locales::en as faking;
+
+fn main() {
+    println!("{}", faking::business::commerce::brand_commerce())
+}
+
+//Samsung
+```
+[View Source](https://github.com/Data-Construct/faking/blob/main/src/locales/en/business/commerce.rs)
+
+## vendor
+
+Returns a random commerce vendor.
+
+***Returns***: string
+
+```rust
+use data_faking::locales::en as faking;
+
+fn main() {
+    println!("{}", faking::business::commerce::vendor())
+}
+
+//Amazon
+```
+[View Source](https://github.com/Data-Construct/faking/blob/main/src/locales/en/business/commerce.rs)
+
+## full_promotion_code
+
+Returns combined string with a promotion code adjective and noun.
+
+***Returns***: string
+
+```rust
+use data_faking::locales::en as faking;
+
+fn main() {
+    println!("{}", faking::business::commerce::full_promotion_code())
+}
+
+//Special Discount
+```
+[View Source](https://github.com/Data-Construct/faking/blob/main/src/locales/en/business/commerce.rs)

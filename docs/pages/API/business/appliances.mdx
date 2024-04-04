@@ -1,0 +1,43 @@
+# Appliances
+
+Module to generate appliance related data.
+
+## Overview
+
+Generate a random appliace brand or equipment.
+
+## brand
+
+Returns a random appliance brand.
+
+***Returns***: string
+
+```rust
+use data_faking::locales::en as faking;
+
+fn main() {
+    println!("{}", faking::business::appliances::brand())
+}
+
+//LG
+```
+
+[View Source](https://github.com/Data-Construct/faking/blob/main/src/locales/en/business/appliances.rs)
+
+## equipment
+
+Returns a random appliance equipment.
+
+***Returns***: string
+
+```rust
+use data_faking::locales::en as faking;
+
+fn main() {
+    println!("{}", faking::business::appliances::equipment())
+}
+
+//Air purifier
+```
+
+[View Source](https://github.com/Data-Construct/faking/blob/main/src/locales/en/business/appliances.rs)

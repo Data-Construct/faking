@@ -1,12 +1,12 @@
 use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
-#[wasm_bindgen(js_name = hacker_abbreviation)]
+#[wasm_bindgen(js_name = base_hacker_abbreviation)]
 pub fn abbreviation() -> String {
-	EN_ABBREVIATION[seeder::gen_range(0..EN_ABBREVIATION_LEN)].to_string()
+	BASE_ABBREVIATION[seeder::gen_range(0..BASE_ABBREVIATION_LEN)].to_string()
 }
 
-static EN_ABBREVIATION: [&'static str; 42] = [
+static BASE_ABBREVIATION: [&'static str; 42] = [
     "ADP",
     "AGP",
     "AI",
@@ -50,4 +50,4 @@ static EN_ABBREVIATION: [&'static str; 42] = [
     "XML",
     "XSS",
 ];
-static EN_ABBREVIATION_LEN: usize = EN_ABBREVIATION.len();
+static BASE_ABBREVIATION_LEN: usize = BASE_ABBREVIATION.len();
