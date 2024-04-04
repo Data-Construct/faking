@@ -1,12 +1,12 @@
 use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = programming_language_name)]
 pub fn name() -> String {
 	NAMES[seeder::gen_range(0..NAMES_LEN)].to_string()
 }
 
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = programming_language_creator)]
 pub fn creator() -> String {
 	CREATORS[seeder::gen_range(0..CREATORS_LEN)].to_string()
 }

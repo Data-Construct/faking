@@ -1,10 +1,13 @@
+use wasm_bindgen::prelude::*;
 use crate::utils::seeder;
 use crate::locales::en::person::name::{last_name, neutral_first_name};
 
+#[wasm_bindgen(js_name = canada_street_suffix)]
 pub fn street_suffix() -> String {
 	STREETSUFFIXES[seeder::gen_range(0..STREETSUFFIXES_LEN)].to_string()
 }
 
+#[wasm_bindgen(js_name = canada_street_name)]
 pub fn street_name() -> String {
 	let format = seeder::gen_range(0..2);
 
@@ -15,10 +18,12 @@ pub fn street_name() -> String {
 	}
 }
 
+#[wasm_bindgen(js_name = canada_province)]
 pub fn province() -> String {
 	PROVINCES[seeder::gen_range(0..PROVINCES_LEN)].to_string()
 }
 
+#[wasm_bindgen(js_name = canada_city)]
 pub fn city(province: &str) -> String {
 	match &province as &str {
 		"ON" => CITIES_ON[seeder::gen_range(0..CITIES_ON_LEN)].to_string(),
@@ -38,6 +43,7 @@ pub fn city(province: &str) -> String {
 	}
 }
 
+#[wasm_bindgen(js_name = canada_province_code)]
 pub fn province_code(province: &str, city: &str) -> String {
 	let postal_start = match &province as &str {
 		"ON" => {
@@ -71,6 +77,7 @@ pub fn province_code(province: &str, city: &str) -> String {
 	)
 }
 
+#[wasm_bindgen(js_name = canada_street_address)]
 pub fn street_address() -> String {
 	let format = seeder::gen_range(3..6);
 
@@ -82,6 +89,7 @@ pub fn street_address() -> String {
 	}
 }
 
+#[wasm_bindgen(js_name = canada_full_address)]
 pub fn full_address() -> String {
 	let format = seeder::gen_range(0..2);
 	let province = province();
@@ -110,6 +118,7 @@ pub fn full_address() -> String {
 	}
 }
 
+#[wasm_bindgen(js_name = canada_secondary_address)]
 pub fn secondary_address() -> String {
 	concat_string!(
 		SECONDARY_FORMATS[seeder::gen_range(0..SECONDARY_FORMATS_LEN)].to_string(),

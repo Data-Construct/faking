@@ -3,19 +3,22 @@ use wasm_bindgen::prelude::*;
 
 use crate::locales::en::person::name::{last_name, neutral_first_name};
 
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = usa_city_prefix)]
 pub fn city_prefix() -> String {
     CITYPREFIXES[seeder::gen_range(0..CITYPREFIXES_LEN)].to_string()
 }
 
+#[wasm_bindgen(js_name = usa_city_suffix)]
 pub fn city_suffix() -> String {
     CITYSUFFIXES[seeder::gen_range(0..CITYSUFFIXES_LEN)].to_string()
 }
 
+#[wasm_bindgen(js_name = usa_street_suffix)]
 pub fn street_suffix() -> String {
     STREETSUFFIXES[seeder::gen_range(0..STREETSUFFIXES_LEN)].to_string()
 }
 
+#[wasm_bindgen(js_name = usa_street_name)]
 pub fn street_name() -> String {
     let format = seeder::gen_range(0..2);
 
@@ -26,10 +29,12 @@ pub fn street_name() -> String {
     }
 }
 
+#[wasm_bindgen(js_name = usa_state)]
 pub fn state() -> String {
     STATES[seeder::gen_range(0..STATES_LEN)].to_string()
 }
 
+#[wasm_bindgen(js_name = usa_city)]
 pub fn city() -> String {
     let format = seeder::gen_range(0..4);
 
@@ -42,6 +47,7 @@ pub fn city() -> String {
     }
 }
 
+#[wasm_bindgen(js_name = usa_zip_code)]
 pub fn zip_code(state: &str) -> String {
     let zip_format = match &state as &str{
         "AL"=>"350",
@@ -101,6 +107,7 @@ pub fn zip_code(state: &str) -> String {
     concat_string!(zip_format, seeder::gen_range(10..99).to_string())
 }
 
+#[wasm_bindgen(js_name = usa_street_address)]
 pub fn street_address() -> String {
     let format = seeder::gen_range(3..6);
 
@@ -112,6 +119,7 @@ pub fn street_address() -> String {
     }
 }
 
+#[wasm_bindgen(js_name = usa_full_address)]
 pub fn full_address() -> String {
     let format = seeder::gen_range(0..2);
     let state = state();
@@ -124,6 +132,7 @@ pub fn full_address() -> String {
     }
 }
 
+#[wasm_bindgen(js_name = usa_secondary_address)]
 pub fn secondary_address() -> String {
   concat_string!(SECONDARY_FORMATS[seeder::gen_range(0..SECONDARY_FORMATS_LEN)].to_string(), " ", seeder::gen_range(100..999).to_string())
 }
