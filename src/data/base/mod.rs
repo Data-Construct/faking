@@ -3,3 +3,4 @@ pub mod color;
 pub mod location;
 pub mod internet;
 pub mod creditcards;
+pub mod car;
