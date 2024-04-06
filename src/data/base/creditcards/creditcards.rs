@@ -5,19 +5,19 @@ use std::iter;
 use chrono::{Datelike, Utc};
 
 #[wasm_bindgen]
-pub fn get_cc_number() -> String {
-    let cardnum = get_cc_number_and_issuer();
+pub fn get_credit_card_number() -> String {
+    let cardnum = get_credit_card_number_and_issuer();
     let cardnum_split = cardnum.split_once(": ").unwrap();
     cardnum_split.1.to_string()
 }
 
 #[wasm_bindgen]
-pub fn get_cc_issuer() -> String {
+pub fn get_credit_card_issuer() -> String {
     ISSUERS[seeder::gen_range(0..ISSUERS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn get_cc_number_and_issuer() -> String {
+pub fn get_credit_card_number_and_issuer() -> String {
     let mut card_number = String::from("");
     let issuer = ISSUERS[seeder::gen_range(0..ISSUERS_LEN)];
     const CHARSET: &[u8] = b"0123456789";
@@ -69,7 +69,7 @@ pub fn get_cc_number_and_issuer() -> String {
 }
 
 #[wasm_bindgen]
-pub fn get_cc_cvv() -> String {
+pub fn get_credit_card_cvv() -> String {
     const CHARSET: &[u8] = b"0123456789";
     let mut rng = rand::thread_rng();
     let one_char = || CHARSET[rng.gen_range(0..CHARSET.len())] as char;
@@ -78,7 +78,7 @@ pub fn get_cc_cvv() -> String {
 }
 
 #[wasm_bindgen]
-pub fn get_cc_expiry() -> String {
+pub fn get_credit_card_expiry() -> String {
     let mut rng = rand::thread_rng();
     let month = rng.gen_range(1..13);
     let now = Utc::now();
