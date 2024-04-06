@@ -6,22 +6,22 @@ pub fn windows_version() -> String {
 	WINDOWS_VERSIONS[seeder::gen_range(0..WINDOWS_VERSIONS_LEN)].to_string()
 }
 
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = windows_client_version)]
 pub fn client_version() -> String {
 	CLIENT_VERSIONS[seeder::gen_range(0..CLIENT_VERSIONS_LEN)].to_string()
 }
 
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = windows_server_version)]
 pub fn server_version() -> String {
 	SERVER_VERSIONS[seeder::gen_range(0..SERVER_VERSIONS_LEN)].to_string()
 }
 
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = windows_specialized_version)]
 pub fn specialized_version() -> String {
 	SPECIALIZED_VERSIONS[seeder::gen_range(0..SPECIALIZED_VERSIONS_LEN)].to_string()
 }
 
-#[wasm_bindgen]
+#[wasm_bindgen(js_name = windows_device_version)]
 pub fn device_version() -> String {
 	DEVICE_VERSIONS[seeder::gen_range(0..DEVICE_VERSIONS_LEN)].to_string()
 }
