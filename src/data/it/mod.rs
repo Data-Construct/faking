@@ -4,6 +4,7 @@ pub mod device;
 pub mod ipv4;
 pub mod ipv6;
 pub mod mac_address;
+pub mod macosx_versions;
 pub mod operating_systems;
 pub mod programming_languages;
 pub mod windows_versions;
