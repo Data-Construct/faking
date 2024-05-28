@@ -7,6 +7,18 @@ pub fn lorem_ipsum_word() -> String {
 }
 
 #[wasm_bindgen]
+pub fn lorem_ipsum_words(amount: i16) -> String {
+	let mut lorem_text = String::from("");
+
+	for n in 0..amount {
+		lorem_text.push_str(&lorem_ipsum_word());
+		lorem_text.push(' ');
+	}
+
+	lorem_text.to_string()
+}
+
+#[wasm_bindgen]
 pub fn lorem_ipsum_sentence() -> String {
 	let mut lorem_text = String::from("");
 
@@ -28,6 +40,42 @@ pub fn lorem_ipsum_sentence() -> String {
 }
 
 #[wasm_bindgen]
+pub fn lorem_ipsum_sentence_minmax(min_words: i16, max_words: i16) -> String {
+	let mut lorem_text = String::from("");
+
+	let word_amount = seeder::gen_range(min_words..max_words);
+	for n in 0..word_amount {
+		if n == 0 {
+			lorem_text.push_str(&capitalize_first(&lorem_ipsum_word()));
+			lorem_text.push(' ');
+		} else if n >= word_amount - 1 {
+			lorem_text.push_str(&lorem_ipsum_word());
+			lorem_text.push('.');
+		} else {
+			lorem_text.push_str(&lorem_ipsum_word());
+			lorem_text.push(' ');
+		}
+	}
+
+	lorem_text.to_string()
+}
+#[wasm_bindgen]
+pub fn lorem_ipsum_sentences(amount: i16, min_words: i16, max_words: i16) -> String {
+	let mut lorem_text = String::from("");
+
+	//let word_amount = seeder::gen_range(min_words..max_words);
+	for n in 0..amount {
+		if (n >= amount - 1) {
+			lorem_text.push_str(&lorem_ipsum_sentence_minmax(min_words, max_words));
+		} else {
+			lorem_text.push_str(&lorem_ipsum_sentence_minmax(min_words, max_words));
+			lorem_text.push(' ');
+		}
+	}
+
+	lorem_text.to_string()
+}
+#[wasm_bindgen]
 pub fn lorem_ipsum_paragraph() -> String {
 	let mut lorem_text = String::from("");
 
@@ -36,6 +84,27 @@ pub fn lorem_ipsum_paragraph() -> String {
 			lorem_text.push_str(&lorem_ipsum_sentence());
 		} else {
 			lorem_text.push_str(&lorem_ipsum_sentence());
+			lorem_text.push(' ');
+		}
+	}
+
+	lorem_text.to_string()
+}
+
+#[wasm_bindgen]
+pub fn lorem_ipsum_paragraph_minmax(
+	min_sentence: i16,
+	max_sentence: i16,
+	min_words: i16,
+	max_words: i16,
+) -> String {
+	let mut lorem_text = String::from("");
+	let sentence_amount = seeder::gen_range(min_sentence..max_sentence);
+	for n in 0..sentence_amount {
+		if n >= sentence_amount {
+			lorem_text.push_str(&lorem_ipsum_sentence_minmax(min_words, max_words));
+		} else {
+			lorem_text.push_str(&lorem_ipsum_sentence_minmax(min_words, max_words));
 			lorem_text.push(' ');
 		}
 	}
