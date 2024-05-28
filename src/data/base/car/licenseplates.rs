@@ -3,7 +3,7 @@ use wasm_bindgen::prelude::*;
 use rand::Rng;
 
 #[wasm_bindgen]
-pub fn random_vehicle_style() -> String {
+pub fn random_vehicle_licenseplates() -> String {
 	let format = FORMATS[seeder::gen_range(0..FORMATS_LEN)].to_string();
     let mut licensePlate = String::from("");
 
