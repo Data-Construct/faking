@@ -17,3 +17,6 @@ pub mod color;
 pub mod app;
 pub mod lorem;
 pub mod team;
+pub mod date;
+pub mod sport;
+pub mod tea;
