@@ -6,22 +6,22 @@ use wasm_bindgen::prelude::*;
 // Could add more languages
 
 #[wasm_bindgen]
-pub fn random_us_airport() -> String {
+pub fn us_airport() -> String {
 	US_AIRPORT_NAMES[seeder::gen_range(0..US_AIRPORT_NAMES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn random_us_airport_iata() -> String {
+pub fn us_airport_iata() -> String {
 	US_AIRPORT_CODES[seeder::gen_range(0..US_AIRPORT_CODES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn random_eu_airport() -> String {
+pub fn eu_airport() -> String {
 	EU_AIRPORT_NAMES[seeder::gen_range(0..EU_AIRPORT_NAMES_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn random_eu_airport_iata() -> String {
+pub fn eu_airport_iata() -> String {
 	EU_AIRPORT_CODES[seeder::gen_range(0..EU_AIRPORT_CODES_LEN)].to_string()
 }
 
