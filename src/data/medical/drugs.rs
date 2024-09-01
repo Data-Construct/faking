@@ -2,35 +2,35 @@ use crate::utils::seeder;
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-pub fn random_drug() -> String {
+pub fn drug() -> String {
 	let format = seeder::gen_range(0..4);
 
 	match format {
-		0 => random_depressants(),
-		1 => random_stimulants(),
-		2 => random_psychedelics_dissociatives(),
-		3 => random_narcotics(),
+		0 => depressants(),
+		1 => stimulants(),
+		2 => psychedelics_dissociatives(),
+		3 => narcotics(),
 		_ => "".to_string(),
 	}
 }
 
 #[wasm_bindgen]
-pub fn random_depressants() -> String {
+pub fn depressants() -> String {
 	DEPRESSANTS[seeder::gen_range(0..DEPRESSANTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn random_stimulants() -> String {
+pub fn stimulants() -> String {
 	STIMULANTS[seeder::gen_range(0..STIMULANTS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn random_psychedelics_dissociatives() -> String {
+pub fn psychedelics_dissociatives() -> String {
 	PSYCHEDELICS[seeder::gen_range(0..PSYCHEDELICS_LEN)].to_string()
 }
 
 #[wasm_bindgen]
-pub fn random_narcotics() -> String {
+pub fn narcotics() -> String {
 	NARCOTICS[seeder::gen_range(0..NARCOTICS_LEN)].to_string()
 }
 
