@@ -19,3 +19,4 @@ pub mod lorem;
 pub mod team;
 pub mod commerce;
 pub mod database;
+pub mod education;
