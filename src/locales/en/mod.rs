@@ -18,4 +18,6 @@ pub mod app;
 pub mod lorem;
 pub mod team;
 pub mod commerce;
+pub mod education;
+pub mod commerce;
 pub mod science;
